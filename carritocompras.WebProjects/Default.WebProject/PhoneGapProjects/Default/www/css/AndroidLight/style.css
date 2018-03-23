@@ -1,0 +1,1908 @@
+@font-face {
+font-family: 'A5_AndroidIcons';
+src: url(A5_AndroidIcons.eot) format("embedded-opentype"), url(A5_AndroidIcons.woff) format("woff"), url(A5_AndroidIcons.ttf) format("truetype"), url(A5_AndroidIcons.svg) format("svg");
+}
+html {
+-webkit-tap-highlight-color: transparent;
+-webkit-user-select: none;
+}
+button::-moz-focus-inner {
+border-width: 0;
+padding: 0;
+}
+.AndroidLightPage {
+color: #222222;
+background: #eee;
+font: 16px sans-serif;
+}
+.AndroidLightHeading {
+color: #222222;
+font: bold 16px sans-serif;
+}
+.AndroidLightText {
+color: #222222;
+font: 16px sans-serif;
+}
+.AndroidLightTextHighlight {
+color: #33b5e5;
+}
+.AndroidLightLink {
+color: #555555;
+font: 16px sans-serif;
+}
+.AndroidLightGroup {
+border: 1px solid #bbbbbb;
+border-top-style: none;
+padding: 8px;
+padding-top: 40px;
+margin-top: 2px;
+margin-bottom: 2px;
+}
+.AndroidLightGroupLabel {
+color: #222222;
+background: #d4d4d4;
+font: bold 12px sans-serif;
+border: 1px solid #bbbbbb;
+padding: 8px;
+margin-left: -9px;
+margin-right: -9px;
+margin-bottom: -33px;
+width: 100%;
+}
+.AndroidLightUILock {
+background: #000;
+opacity: .5;
+}
+/* Grid */
+.AndroidLightGrid {
+border: 1px solid #bbbbbb;
+border-radius: 3px;
+}
+.AndroidLightGridHeader {
+text-align: left;
+color: black;
+background: gainsboro;
+font: 12px sans-serif;
+border-bottom-style: solid;
+border-bottom-width: 1px;
+border-bottom-color: #bbbbbb;
+padding: 0px 14px;
+}
+.AndroidLightGridHeader .AndroidLightLink, .AndroidLightGridHeader span {
+text-decoration: none;
+color: black;
+font: bold 12px sans-serif;
+padding: 14px;
+display: inline-block;
+cursor: default;
+}
+.AndroidLightGridFooter {
+text-align: left;
+color: black;
+background: gainsboro;
+font: 12px sans-serif;
+padding: 0px 14px;
+}
+.AndroidLightGridFooter .AndroidLightLink, .AndroidLightGridFooter span {
+text-decoration: none;
+color: black;
+font: 12px sans-serif;
+padding: 14px;
+display: inline-block;
+cursor: default;
+}
+span.AndroidLightGridNav {
+padding: 0px;
+}
+.AndroidLightGridSummaryLabel, .AndroidLightGridSummaryData {
+background: gainsboro;
+font-size: 16px;
+padding: 14px;
+cursor: default;
+}
+.AndroidLightGridSummaryLabel {
+color: #555555;
+font: bold 12px sans-serif;
+}
+.AndroidLightGridQBE {
+background: #e6e6e6;
+font-size: 16px;
+border-bottom-style: solid;
+border-bottom-width: 1px;
+border-bottom-color: #bbbbbb;
+padding: 14px;
+cursor: default;
+}
+.AndroidLightGridDataHeader {
+color: black;
+background: gainsboro;
+font: bold 12px sans-serif;
+border-bottom-style: solid;
+border-bottom-width: 1px;
+border-bottom-color: #bbbbbb;
+padding: 8px 14px;
+}
+.AndroidLightGridData, .AndroidLightGridRowHeader {
+background: #eee;
+font-size: 16px;
+border-bottom-style: solid;
+border-bottom-width: 1px;
+border-bottom-color: #bbbbbb;
+padding: 14px;
+cursor: default;
+}
+.AndroidLightGridDataAlt {
+background: #ebebeb;
+font-size: 16px;
+border-bottom-style: solid;
+border-bottom-width: 1px;
+border-bottom-color: #bbbbbb;
+padding: 14px;
+cursor: default;
+}
+.AndroidLightGridRowSelected .AndroidLightGridData, .AndroidLightGridRowSelected .AndroidLightGridDataAlt {
+color: #222222;
+background: rgba(51, 181, 229, 0.5);
+}
+.AndroidLightGridDataError {
+color: #fd472a;
+background: rgba(253, 71, 42, 0.15);
+font-size: 16px;
+border-bottom-style: solid;
+border-bottom-width: 1px;
+border-bottom-color: #bbbbbb;
+padding: 14px;
+cursor: default;
+}
+.AndroidLightGrid > tbody > tr:last-child > td {
+border: none;
+}
+.AndroidLightGridForm {
+background: #e9e9e9;
+border: 1px solid #e1e1e1;
+}
+.AndroidLightGridFormLabel, .AndroidLightGridFormData {
+padding: 6px;
+}
+.AndroidLightGridFormLabel {
+font-size: 14px;
+font-weight: bold;
+}
+.AndroidLightGridFormDataError {
+color: #fd472a;
+background: rgba(253, 71, 42, 0.15);
+font-size: 16px;
+padding: 6px;
+cursor: default;
+}
+tr:nth-child(1) .AndroidLightGridFormLabel, tr:nth-child(1) .AndroidLightGridFormData, tr:nth-child(1) .AndroidLightGridFormDataError {
+border-top-style: none;
+}
+/* Dialog */
+.AndroidLightDialogLabel {
+color: black;
+font: bold 14px sans-serif;
+padding: 6px;
+}
+.AndroidLightDialogRSSeparator {
+border-top-style: solid;
+border-top-width: 1px;
+border-top-color: #a2a2a2;
+margin-top: 6px;
+line-height: 6px;
+}
+/* Buttons */
+.AndroidLightButton, .AndroidLightButtonConfirm, .AndroidLightButtonDeny, .AndroidLightButtonDD {
+color: #222222;
+background: #999999;
+font-size: 16px;
+border: none;
+border-top-style: solid;
+border-top-width: 1px;
+border-top-color: #a6a6a6;
+border-bottom-style: solid;
+border-bottom-width: 1px;
+border-bottom-color: #8c8c8c;
+padding: 5px 9px;
+margin: 3px;
+overflow: visible;
+vertical-align: middle;
+position: relative;
+outline: none;
+}
+.AndroidLightButtonPressed, .AndroidLightButtonDDPressed {
+color: #222222;
+background: #33b5e5;
+border-top-style: solid;
+border-top-width: 1px;
+border-top-color: #4abde8;
+border-bottom-style: solid;
+border-bottom-width: 1px;
+border-bottom-color: #1dade2;
+}
+.AndroidLightButtonPressed:before, .AndroidLightButtonDDPressed:before {
+border: 5px solid rgba(51, 181, 229, 0.5);
+display: block;
+position: absolute;
+top: -5px;
+left: -5px;
+width: 100%;
+height: 100%;
+border-radius: 5px;
+content: '';
+}
+.AndroidLightButtonConfirm {
+color: #fff;
+background: #94b435;
+border-top-style: solid;
+border-top-width: 1px;
+border-top-color: #a3c63d;
+border-bottom-style: solid;
+border-bottom-width: 1px;
+border-bottom-color: #84a02f;
+}
+.AndroidLightButtonConfirmPressed:before {
+border: 5px solid rgba(148, 180, 53, 0.5);
+display: block;
+position: absolute;
+top: -5px;
+left: -5px;
+width: 100%;
+height: 100%;
+border-radius: 5px;
+content: '';
+}
+.AndroidLightButtonDeny {
+color: #fff;
+background: #fd4246;
+border-top-style: solid;
+border-top-width: 1px;
+border-top-color: #fd5b5f;
+border-bottom-style: solid;
+border-bottom-width: 1px;
+border-bottom-color: #fd292d;
+}
+.AndroidLightButtonDenyPressed:before {
+border: 5px solid rgba(253, 66, 70, 0.5);
+display: block;
+position: absolute;
+top: -5px;
+left: -5px;
+width: 100%;
+height: 100%;
+border-radius: 5px;
+content: '';
+}
+.AndroidLightButtonDD {
+padding: 0px;
+position: relative;
+}
+.AndroidLightButtonDDContent, .AndroidLightButtonDDSplitContent {
+padding: 5px 9px;
+}
+.AndroidLightButtonDDDropdown {
+width: 32px;
+}
+.AndroidLightButtonDDSplitDropdown {
+border-left-style: solid;
+border-left-width: 1px;
+border-left-color: #a6a6a6;
+width: 32px;
+}
+.AndroidLightButtonDDPressed .AndroidLightButtonDDSplitDropdown {
+border-left-style: solid;
+border-left-width: 1px;
+border-left-color: #4abde8;
+}
+.AndroidLightButtonDD:after {
+font: 24px A5_AndroidIcons;
+margin-top: -13px;
+display: block;
+position: absolute;
+top: 50%;
+right: 4px;
+content: "c";
+}
+.AndroidLightButtonLeft, .AndroidLightButtonRight {
+color: #222222;
+background: transparent;
+font-size: 16px;
+border: none;
+padding: 6px 10px;
+margin: 2px;
+position: relative;
+outline: none;
+}
+.AndroidLightButtonLeft {
+padding-left: 16px;
+}
+.AndroidLightButtonRight {
+padding-right: 16px;
+}
+.AndroidLightButtonLeft:after {
+color: #888888;
+font: 24px A5_AndroidIcons;
+margin-top: -14px;
+display: block;
+position: absolute;
+top: 50%;
+left: -4px;
+content: "a";
+}
+.AndroidLightButtonRight:after {
+color: #888888;
+font: 24px A5_AndroidIcons;
+margin-top: -14px;
+display: block;
+position: absolute;
+top: 50%;
+right: -4px;
+content: "b";
+}
+.AndroidLightButtonLeftPressed, .AndroidLightButtonRightPressed, .AndroidLightButtonLeftPressed.AndroidLightButtonLeft:after, .AndroidLightButtonRightPressed.AndroidLightButtonRight:after {
+color: #33b5e5;
+}
+.AndroidLightButtonDisabled, .AndroidLightButtonConfirmDisabled, .AndroidLightButtonDenyDisabled, .AndroidLightButtonDDDisabled, .AndroidLightButtonDDDisabled .AndroidLightButtonDDSplitDropdown {
+opacity: .3;
+}
+.AndroidLightButtonGroupHF, .AndroidLightButtonGroupHM, .AndroidLightButtonGroupHL {
+color: #222222;
+background: #bbbbbb;
+border: none;
+border-left-style: solid;
+border-left-width: 1px;
+border-left-color: #a2a2a2;
+padding-bottom: 8px;
+margin: 0px;
+}
+.AndroidLightButtonGroupHF {
+border-left-style: none;
+}
+.AndroidLightButtonGroupHF.AndroidLightButtonPressed, .AndroidLightButtonGroupHM.AndroidLightButtonPressed, .AndroidLightButtonGroupHL.AndroidLightButtonPressed {
+border-bottom-style: solid;
+border-bottom-width: 3px;
+border-bottom-color: #33b5e5;
+padding-bottom: 5px;
+}
+.AndroidLightButtonGroupHF.AndroidLightButtonPressed:before, .AndroidLightButtonGroupHM.AndroidLightButtonPressed:before, .AndroidLightButtonGroupHL.AndroidLightButtonPressed:before {
+display: none;
+}
+.AndroidLightButtonGroupVF, .AndroidLightButtonGroupVM, .AndroidLightButtonGroupVL {
+color: #222222;
+background: #bbbbbb;
+border: none;
+border-top-style: solid;
+border-top-width: 1px;
+border-top-color: #a2a2a2;
+padding-right: 12px;
+margin: 0px;
+display: block;
+width: 100%;
+}
+.AndroidLightButtonGroupVF {
+border-top-style: none;
+}
+.AndroidLightButtonGroupVF.AndroidLightButtonPressed, .AndroidLightButtonGroupVM.AndroidLightButtonPressed, .AndroidLightButtonGroupVL.AndroidLightButtonPressed {
+border-right-style: solid;
+border-right-width: 3px;
+border-right-color: #33b5e5;
+padding-right: 9px;
+}
+.AndroidLightButtonGroupVF.AndroidLightButtonPressed:before, .AndroidLightButtonGroupVM.AndroidLightButtonPressed:before, .AndroidLightButtonGroupVL.AndroidLightButtonPressed:before {
+display: none;
+}
+/* Edits */
+.AndroidLightEdit {
+color: rgba(34, 34, 34, 0.9);
+background-color: transparent;
+background-image: url("editSide.png"), url("editSide.png");
+background-repeat: no-repeat, no-repeat;
+background-position: bottom left, bottom right;
+font-family: sans-serif;
+font-size: 16px;
+border: none;
+border-bottom-style: solid;
+border-bottom-width: 1px;
+border-bottom-color: rgba(34, 34, 34, 0.25);
+padding: 14px;
+xbackground: url("editSide.png") bottom left no-repeat, url("editSide.png") bottom right no-repeat;
+outline: none;
+}
+.AndroidLightEdit:focus {
+background-image: url("editSideFocus.png"), url("editSideFocus.png");
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #33b5e5;
+padding-bottom: 13px;
+xbackground: url("editSideFocus.png") bottom left no-repeat, url("editSideFocus.png") bottom right no-repeat;
+}
+input.AndroidLightEditError, textarea.AndroidLightEditError, select.AndroidLightEditError {
+color: #fd472a;
+background-color: rgba(253, 71, 42, 0.15);
+background-image: url("editSideError.png"), url("editSideError.png");
+border-color: #fd472a;
+}
+input.AndroidLightEditWatermark, textarea.AndroidLightEditWatermark, select.AndroidLightEditWatermark {
+color: rgba(34, 34, 34, 0.25);
+}
+input.AndroidLightEditWatermark.AndroidLightEditError, textarea.AndroidLightEditWatermark.AndroidLightEditError, select.AndroidLightEditWatermark.AndroidLightEditError {
+color: #fd735d;
+font-style: italic;
+}
+select.AndroidLightEdit option {
+background: #eee;
+}
+.AndroidLightEditRound {
+padding: 6px 13px;
+border-radius: 24px;
+}
+/* Edit Button Group */
+.AndroidLightEditBG {
+color: rgba(34, 34, 34, 0.9);
+background-image: url("editSide.png"), url("editBGDown.png");
+background-repeat: no-repeat, no-repeat;
+background-position: bottom left, bottom right;
+background-size: 1px 4px, 10px 10px;
+font-size: 16px;
+border: none;
+border-bottom-style: solid;
+border-bottom-width: 1px;
+border-bottom-color: rgba(34, 34, 34, 0.25);
+border-radius: 3px;
+box-sizing: border-box;
+-moz-box-sizing: border-box;
+-ms-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+}
+.AndroidLightEditBGEdit {
+color: #555555;
+background: transparent;
+font-size: 16px;
+border: none;
+padding: 14px;
+outline: none;
+}
+.AndroidLightEditBGButton {
+color: rgba(34, 34, 34, 0.25);
+background: url("editSide.png") no-repeat bottom left;
+}
+.AndroidLightEditBGFocus {
+background-image: url("editSideFocus.png"), url("editBGDownFocus.png");
+background-size: 2px 4px, 10px 10px;
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #33b5e5;
+xbackground: url("editSideFocus.png") bottom left no-repeat, url("editBGDownFocus.png") bottom right no-repeat;
+}
+.AndroidLightEditBGFocus .AndroidLightEditBGEdit {
+padding-bottom: 13px;
+}
+.AndroidLightEditBGFocus .AndroidLightEditBGButton {
+color: #33b5e5;
+background: url("editSideFocus.png") no-repeat bottom left;
+}
+.AndroidLightEditBGWatermark {
+color: rgba(34, 34, 34, 0.25);
+}
+.AndroidLightEditBGError {
+color: #fd472a;
+background-color: rgba(253, 71, 42, 0.15);
+background-image: url("editSideError.png"), url("editBGDownError.png");
+border-color: #fd472a;
+}
+.AndroidLightEditBGError .AndroidLightEditBGButton {
+background: url("editSideError.png") no-repeat bottom left;
+}
+.AndroidLightEditBGError .AndroidLightEditBGEdit {
+color: #fd472a;
+}
+.AndroidLightEditBGError .AndroidLightEditBGWatermark.AndroidLightEditBGEdit {
+color: #fd735d;
+font-style: italic;
+}
+/* List */
+.AndroidLightListItem {
+background: #eee;
+font-size: 16px;
+border-bottom-style: solid;
+border-bottom-width: 1px;
+border-bottom-color: rgba(34, 34, 34, 0.15);
+padding: 14px;
+cursor: default;
+outline: none;
+}
+.AndroidLightListItemSelected {
+color: #222222;
+background: #33b5e5;
+}
+.AndroidLightListTitle {
+color: rgba(34, 34, 34, 0.5);
+background: #eee;
+font: bold 12px sans-serif;
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: rgba(34, 34, 34, 0.5);
+padding: 8px 14px;
+}
+.AndroidLightListSeparator {
+background: gainsboro;
+border-bottom-style: solid;
+border-bottom-width: 1px;
+border-bottom-color: rgba(34, 34, 34, 0.15);
+height: 8px;
+}
+.AndroidLightListHeader {
+color: rgba(34, 34, 34, 0.5);
+font: bold 12px sans-serif;
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: rgba(34, 34, 34, 0.5);
+padding: 0px 14px;
+position: relative;
+}
+.AndroidLightListHeaderItem {
+padding: 17px 0px;
+padding-top: 16px;
+padding-right: 40px;
+cursor: default;
+}
+.AndroidLightListHeaderItemResizeOverlay {
+background: rgba(34, 34, 34, 0.25);
+}
+.AndroidLightListGroupNav {
+color: #222222;
+background: rgba(34, 34, 34, 0.25);
+padding: 4px;
+cursor: default;
+border-radius: 4px;
+opacity: .5;
+}
+.AndroidLightListGroupNavFocus {
+opacity: 1;
+}
+.AndroidLightListItemLabelMain {
+font-weight: bold;
+}
+.AndroidLightListItemLabelSub {
+font-size: 14px;
+}
+.AndroidLightListItemLabelContext {
+color: #33b5e5;
+font-size: 14px;
+}
+.AndroidLightListItemSelected .AndroidLightListItemLabelContext {
+color: #222222;
+}
+.AndroidLightListItemLabelDetail {
+color: #eee;
+background: rgba(34, 34, 34, 0.75);
+font-size: 14px;
+padding: 2px 10px;
+border-radius: 2px;
+}
+.AndroidLightListItemContent {
+color: rgba(34, 34, 34, 0.7);
+font-size: 14px;
+}
+.AndroidLightListNavPrev {
+text-align: center;
+background: rgba(238, 238, 238, 0.95);
+font-weight: bold;
+border-bottom-style: solid;
+border-bottom-width: 1px;
+border-bottom-color: rgba(34, 34, 34, 0.15);
+padding: 14px;
+cursor: default;
+position: absolute;
+top: 0px;
+width: 100%;
+z-index: 4;
+box-sizing: border-box;
+-moz-box-sizing: border-box;
+-ms-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+}
+.AndroidLightListNavNext {
+text-align: center;
+background: rgba(238, 238, 238, 0.95);
+font-weight: bold;
+border-top-style: solid;
+border-top-width: 1px;
+border-top-color: rgba(34, 34, 34, 0.15);
+padding: 14px;
+cursor: default;
+position: absolute;
+bottom: 0px;
+width: 100%;
+z-index: 4;
+box-sizing: border-box;
+-moz-box-sizing: border-box;
+-ms-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+}
+.AndroidLightListNavPressed {
+color: #222222;
+background: rgba(51, 181, 229, 0.9);
+}
+/* Scroller */
+.AndroidLightScrollerR {
+color: #222222;
+background: rgba(34, 34, 34, 0.05);
+font-family: sans-serif;
+font-size: 16px;
+cursor: default;
+}
+.AndroidLightScrollerRFocus {
+background: rgba(51, 181, 229, 0.05);
+}
+.AndroidLightScrollerRDial {
+background: rgba(51, 181, 229, 0.8);
+padding: 6px;
+}
+.AndroidLightScrollerRSlider {
+width: 18px;
+}
+.AndroidLightScrollerRSliderHandle {
+background: rgba(34, 34, 34, 0.35);
+width: 18px;
+height: 40px;
+}
+.AndroidLightScrollerRFocus .AndroidLightScrollerRSliderHandle {
+background: rgba(51, 181, 229, 0.8);
+}
+.AndroidLightScrollerRSliderShadow {
+background: rgba(51, 181, 229, 0.2);
+border: rgba(51, 181, 229, 0.2);
+width: 18px;
+height: 40px;
+box-sizing: border-box;
+-moz-box-sizing: border-box;
+-ms-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+}
+.AndroidLightScrollerRSliderMsg {
+white-space: nowrap;
+color: #222222;
+background: rgba(51, 181, 229, 0.8);
+padding: 6px;
+position: absolute;
+right: 26px;
+border-radius: 3px;
+}
+.AndroidLightScrollerRSliderMsgT {
+top: 0px;
+}
+.AndroidLightScrollerRSliderMsgB {
+bottom: 0px;
+}
+.AndroidLightScrollerRSliderMsgT:after {
+border: 5px solid transparent;
+border-left-color: rgba(51, 181, 229, 0.8);
+display: block;
+position: absolute;
+top: 7px;
+right: -10px;
+content: '';
+}
+.AndroidLightScrollerRSliderMsgB:after {
+border: 5px solid transparent;
+border-left-color: rgba(51, 181, 229, 0.8);
+display: block;
+position: absolute;
+right: -10px;
+bottom: 7px;
+content: '';
+}
+/* Spin List */
+.AndroidLightSpinList {
+color: #222222;
+padding: 12px;
+vertical-align: top;
+cursor: default;
+box-sizing: border-box;
+-moz-box-sizing: border-box;
+-ms-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+}
+.AndroidLightSpinList:before {
+border-top-style: solid;
+border-top-width: 2px;
+border-top-color: #33b5e5;
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #33b5e5;
+margin-top: -18px;
+display: block;
+position: absolute;
+top: 50%;
+left: 0px;
+width: 100%;
+height: 32px;
+content: "";
+}
+.AndroidLightSpinList:after {
+background: url("spinListBack.png");
+background-size: 100% 100%;
+display: block;
+position: absolute;
+top: 0px;
+left: 0px;
+width: 100%;
+height: 100%;
+content: "";
+}
+.AndroidLightSpinListItem {
+font-size: 16px;
+padding: 6px;
+}
+.AndroidLightSpinListGroup {
+white-space: nowrap;
+padding: 0px;
+overflow: hidden;
+}
+.AndroidLightSpinListGroup .AndroidLightSpinList {
+margin-left: 4px;
+display: inline-block;
+}
+/* Tree */
+.AndroidLightTreeNode {
+background: #eee;
+font-size: 16px;
+border-bottom-style: solid;
+border-bottom-width: 1px;
+border-bottom-color: rgba(34, 34, 34, 0.15);
+overflow: hidden;
+cursor: default;
+outline: none;
+}
+.AndroidLightTreeNodeSelected {
+color: #222222;
+background: #33b5e5;
+}
+.AndroidLightTreeNodeLabel {
+text-decoration: none;
+color: inherit;
+padding: 14px;
+padding-bottom: 15px;
+display: inline-block;
+cursor: default;
+width: 100%;
+outline: none;
+}
+.AndroidLightTreeNode .AndroidLightIconBtn {
+margin-top: -4px;
+}
+/* Slider */
+.AndroidLightSlider {
+padding: 18px 20px;
+padding-right: 22px;
+margin: 8px 2px;
+}
+.AndroidLightSliderInner {
+background: rgba(34, 34, 34, 0.25);
+height: 2px;
+}
+.AndroidLightSliderHandle {
+background: rgba(51, 181, 229, 0.5);
+border: 1px solid transparent;
+margin-top: -17px;
+margin-left: -17px;
+width: 35px;
+height: 35px;
+border-radius: 18px;
+}
+.AndroidLightSliderHandle:after {
+background: #33b5e5;
+display: block;
+position: absolute;
+top: 12px;
+left: 12px;
+width: 11px;
+height: 11px;
+border-radius: 9px;
+content: '';
+}
+.AndroidLightSliderHandleSelected {
+border: 1px solid #33b5e5;
+}
+.AndroidLightSliderRange {
+background: #33b5e5;
+height: 2px;
+}
+/* Switch */
+.AndroidLightSwitch {
+background: gray;
+padding: 0px;
+cursor: default;
+height: 36px;
+}
+.AndroidLightSwitchOn {
+color: #222222;
+background: #33b5e5;
+}
+.AndroidLightSwitchLeft {
+text-align: right;
+padding: 8px;
+padding-right: 14px;
+box-sizing: border-box;
+-moz-box-sizing: border-box;
+-ms-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+}
+.AndroidLightSwitchRight {
+text-align: left;
+padding: 8px;
+padding-left: 14px;
+box-sizing: border-box;
+-moz-box-sizing: border-box;
+-ms-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+}
+.AndroidLightSwitchButton {
+margin-left: -60%;
+width: 120%;
+height: 38px;
+}
+.AndroidLightSwitchButton:before {
+background: url("switchBack.png") no-repeat right;
+display: block;
+position: absolute;
+top: 0px;
+left: -100%;
+width: 100%;
+height: 38px;
+content: '';
+}
+.AndroidLightSwitchButton:after {
+background: url("switchBack.png") no-repeat left;
+display: block;
+position: absolute;
+top: 0px;
+left: 100%;
+width: 100%;
+height: 38px;
+content: '';
+}
+.AndroidLightSwitchOn .AndroidLightSwitchButton {
+box-shadow: 0px 3px 3px #197027;
+-moz-box-shadow: 0px 3px 3px #197027;
+-webkit-box-shadow: 0px 3px 3px #197027;
+}
+/* Date Picker */
+.AndroidLightDP {
+background: #eee;
+}
+.AndroidLightDPHeaderButton {
+text-decoration: none;
+color: #33b5e5;
+font-size: 16px;
+font-weight: bold;
+padding: 14px;
+display: inline-block;
+cursor: default;
+outline: none;
+}
+.AndroidLightDPDaysOfWeek {
+font-size: 14px;
+font-weight: normal;
+padding: 6px;
+}
+.AndroidLightDPWeeksOfYear {
+color: rgba(34, 34, 34, 0.25);
+font-size: 14px;
+font-weight: normal;
+padding: 6px;
+}
+.AndroidLightDPDate {
+padding: 0px;
+}
+.AndroidLightDPItem {
+text-align: center;
+text-decoration: none;
+color: #222222;
+background: #eee;
+font-size: 16px;
+border-top-style: solid;
+border-top-width: 1px;
+border-top-color: #bbbbbb;
+padding: 14px;
+display: block;
+cursor: default;
+outline: none;
+}
+.AndroidLightDPDateToday .AndroidLightDPItem {
+color: #33b5e5;
+}
+.AndroidLightDPItemSelected {
+color: #222222;
+background: #33b5e5;
+}
+.AndroidLightDPDateToday .AndroidLightDPItemSelected {
+color: #222222;
+}
+.AndroidLightDPItemDisabled {
+color: rgba(34, 34, 34, 0.25);
+}
+.AndroidLightDPItemOutOfRange {
+color: rgba(34, 34, 34, 0.5);
+border-top-style: none;
+}
+.AndroidLightDPPanelItem {
+text-align: center;
+text-decoration: none;
+color: #222222;
+background: #eee;
+font-size: 16px;
+padding: 14px;
+display: block;
+cursor: default;
+outline: none;
+}
+.AndroidLightDPPanelItemSelected {
+color: #222222;
+background: #33b5e5;
+}
+.AndroidLightDPPanelItemDisabled {
+color: rgba(34, 34, 34, 0.25);
+}
+/* TimePicker */
+.AndroidLightTP .AndroidLightEdit {
+text-align: center;
+}
+.AndroidLightTPEditButton {
+text-align: center;
+cursor: default;
+}
+.AndroidLightTPMeridianButton {
+color: #33b5e5;
+font-size: 16px;
+padding: 14px;
+cursor: default;
+}
+/* ControlGroups */
+.AndroidLightControlGroup {
+background: #e9e9e9;
+border: 1px solid #e1e1e1;
+}
+.AndroidLightControlGroupRow {
+padding: 6px;
+}
+.AndroidLightControlGroup .AndroidLightDialogLabel {
+padding: 16px;
+}
+.AndroidLightControlGroup .AndroidLightEdit, .AndroidLightControlGroup .AndroidLightEditBG {
+margin: 0px;
+}
+/* Windows */
+.AndroidLightWin {
+color: #222222;
+background: #fbfbfb;
+font: 16px sans-serif;
+}
+.AndroidLightWinInner {
+overflow: hidden;
+}
+.AndroidLightWinTitle {
+color: #33b5e5;
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #33b5e5;
+}
+.AndroidLightWinTitle, .AndroidLightWinHeader, .AndroidLightWinTBar, .AndroidLightWinBody, .AndroidLightWinBBar, .AndroidLightWinFooter {
+padding: 6px;
+}
+.AndroidLightWinButtons {
+text-align: center;
+font-size: 0px;
+border-top-style: solid;
+border-top-width: 1px;
+border-top-color: rgba(34, 34, 34, 0.15);
+}
+.AndroidLightWinResizer {
+color: #959595;
+}
+.AndroidLightDDWin {
+color: #222222;
+background: #fbfbfb;
+font: 16px sans-serif;
+border: 2px solid #fbfbfb;
+}
+.AndroidLightDDWinInner {
+overflow: hidden;
+}
+.AndroidLightDDWinTitle {
+color: #33b5e5;
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #33b5e5;
+}
+.AndroidLightDDWinTitle, .AndroidLightDDWinHeader, .AndroidLightDDWinTBar, .AndroidLightDDWinBody, .AndroidLightDDWinBBar, .AndroidLightDDWinFooter {
+padding: 6px;
+}
+.AndroidLightDDWinButtons {
+text-align: center;
+font-size: 0px;
+border-top-style: solid;
+border-top-width: 1px;
+border-top-color: rgba(34, 34, 34, 0.15);
+}
+.AndroidLightDDWinResizer {
+color: #aeaeae;
+}
+.AndroidLightWinButtons .AndroidLightButton, .AndroidLightDDWinButtons .AndroidLightButton {
+color: #222222;
+background: transparent;
+border: none;
+border-right-style: solid;
+border-right-width: 1px;
+border-right-color: rgba(34, 34, 34, 0.15);
+margin: 0px;
+}
+.AndroidLightWinButtons .AndroidLightButton:first-child, .AndroidLightDDWinButtons .AndroidLightButton:first-child {
+border-left-style: solid;
+border-left-width: 1px;
+border-left-color: rgba(34, 34, 34, 0.15);
+border-right-style: solid;
+border-right-width: 1px;
+border-right-color: rgba(34, 34, 34, 0.15);
+}
+.AndroidLightWinButtons .AndroidLightButton:before, .AndroidLightDDWinButtons .AndroidLightButton:before {
+display: none;
+}
+.AndroidLightWinButtons .AndroidLightButtonPressed, .AndroidLightDDWinButtons .AndroidLightButtonPressed {
+color: #222222;
+background: #33b5e5;
+}
+.AndroidLightDDWinPointerDown {
+border-top-style: solid;
+border-top-width: 10px;
+border-top-color: #fbfbfb;
+border-left-style: solid;
+border-left-width: 10px;
+border-left-color: transparent;
+border-right-style: solid;
+border-right-width: 10px;
+border-right-color: transparent;
+margin-left: -10px;
+left: 50%;
+bottom: -10px;
+width: 0;
+height: 0;
+}
+.AndroidLightDDWinPointerUp {
+border-left-style: solid;
+border-left-width: 10px;
+border-left-color: transparent;
+border-right-style: solid;
+border-right-width: 10px;
+border-right-color: transparent;
+border-bottom-style: solid;
+border-bottom-width: 10px;
+border-bottom-color: #fbfbfb;
+margin-left: -10px;
+top: -10px;
+left: 50%;
+width: 0;
+height: 0;
+}
+.AndroidLightDDWinPointerLeft {
+border-top-style: solid;
+border-top-width: 10px;
+border-top-color: transparent;
+border-right-style: solid;
+border-right-width: 10px;
+border-right-color: #fbfbfb;
+border-bottom-style: solid;
+border-bottom-width: 10px;
+border-bottom-color: transparent;
+margin-top: -10px;
+top: 50%;
+left: -10px;
+width: 0;
+height: 0;
+}
+.AndroidLightDDWinPointerRight {
+border-top-style: solid;
+border-top-width: 10px;
+border-top-color: transparent;
+border-left-style: solid;
+border-left-width: 10px;
+border-left-color: #fbfbfb;
+border-bottom-style: solid;
+border-bottom-width: 10px;
+border-bottom-color: transparent;
+margin-top: -10px;
+top: 50%;
+right: -10px;
+width: 0;
+height: 0;
+}
+/* Menu */
+.AndroidLightMenu {
+color: #222222;
+background: #fbfbfb;
+font: 16px sans-serif;
+border: 2px solid #fbfbfb;
+}
+.AndroidLightMenuInner {
+overflow: hidden;
+}
+.AndroidLightMenuItem {
+white-space: nowrap;
+font-size: 16px;
+border-bottom-style: solid;
+border-bottom-width: 1px;
+border-bottom-color: rgba(34, 34, 34, 0.15);
+padding: 14px;
+cursor: default;
+}
+.AndroidLightMenuItem:last-child {
+border-bottom-style: none;
+}
+.AndroidLightMenuItemHover, .AndroidLightMenuItemSelected {
+color: #222222;
+background: #33b5e5;
+}
+.AndroidLightMenuItemDisabled {
+color: rgba(34, 34, 34, 0.25);
+}
+.AndroidLightMenuItemCascade {
+padding-right: 30px;
+position: relative;
+}
+.AndroidLightMenuItemCascade:after {
+font: 24px A5_AndroidIcons;
+margin-top: -14px;
+display: block;
+position: absolute;
+top: 50%;
+right: 0px;
+content: "b";
+}
+.AndroidLightMenuTitle {
+color: rgba(34, 34, 34, 0.5);
+font: bold 12px sans-serif;
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: rgba(34, 34, 34, 0.5);
+padding: 8px 14px;
+}
+.AndroidLightMenuSeparator {
+height: 2px;
+}
+.AndroidLightMenuPointerDown {
+border-top-style: solid;
+border-top-width: 10px;
+border-top-color: #fbfbfb;
+border-left-style: solid;
+border-left-width: 10px;
+border-left-color: transparent;
+border-right-style: solid;
+border-right-width: 10px;
+border-right-color: transparent;
+margin-left: -10px;
+left: 50%;
+bottom: -10px;
+width: 0;
+height: 0;
+}
+.AndroidLightMenuPointerUp {
+border-left-style: solid;
+border-left-width: 10px;
+border-left-color: transparent;
+border-right-style: solid;
+border-right-width: 10px;
+border-right-color: transparent;
+border-bottom-style: solid;
+border-bottom-width: 10px;
+border-bottom-color: #fbfbfb;
+margin-left: -10px;
+top: -10px;
+left: 50%;
+width: 0;
+height: 0;
+}
+.AndroidLightMenuPointerLeft {
+border-top-style: solid;
+border-top-width: 10px;
+border-top-color: transparent;
+border-right-style: solid;
+border-right-width: 10px;
+border-right-color: #fbfbfb;
+border-bottom-style: solid;
+border-bottom-width: 10px;
+border-bottom-color: transparent;
+margin-top: -10px;
+top: 50%;
+left: -10px;
+width: 0;
+height: 0;
+}
+.AndroidLightMenuPointerRight {
+border-top-style: solid;
+border-top-width: 10px;
+border-top-color: transparent;
+border-left-style: solid;
+border-left-width: 10px;
+border-left-color: #fbfbfb;
+border-bottom-style: solid;
+border-bottom-width: 10px;
+border-bottom-color: transparent;
+margin-top: -10px;
+top: 50%;
+right: -10px;
+width: 0;
+height: 0;
+}
+/* Control bar */
+.AndroidLightCtrlBarSepH {
+border-left-style: solid;
+border-left-width: 1px;
+border-left-color: #c8c8c8;
+width: 0px;
+}
+.AndroidLightCtrlBarSepV {
+border-top-style: solid;
+border-top-width: 1px;
+border-top-color: #c8c8c8;
+height: 0px;
+}
+.AndroidLightCtrlBarDis {
+background: #e1e1e1;
+font: bold 24px sans-serif;
+border: 1px solid #c8c8c8;
+padding: 8px;
+margin: -1px;
+}
+/* Panels */
+.AndroidLightPanelCard {
+color: #222222;
+background: #eee;
+font: 16px sans-serif;
+}
+.AndroidLightPanelHeader {
+background: #e1e1e1;
+font: bold 24px sans-serif;
+border-bottom-style: solid;
+border-bottom-width: 1px;
+border-bottom-color: #c8c8c8;
+padding: 8px;
+}
+.AndroidLightPanelCard > .AndroidLightPanelBody {
+padding: 4px;
+}
+.AndroidLightPanelFooter {
+background: #e1e1e1;
+font: bold 24px sans-serif;
+border-top-style: solid;
+border-top-width: 1px;
+border-top-color: #c8c8c8;
+padding: 8px;
+}
+.AndroidLightPanelHeader .AndroidLightHeading, .AndroidLightPanelFooter .AndroidLightHeading {
+font: bold 24px sans-serif;
+padding: 2px;
+}
+.AndroidLightPanelHeader .AndroidLightText, .AndroidLightPanelFooter .AndroidLightText {
+font: 16px sans-serif;
+padding: 6px;
+}
+.AndroidLightPanelNavInd {
+font-size: 0px;
+padding: 2px;
+}
+.AndroidLightPanelNavIndButton {
+background: rgba(34, 34, 34, 0.5);
+margin: 2px;
+display: inline-block;
+width: 10px;
+height: 10px;
+}
+.AndroidLightPanelNavIndButtonSelected {
+background: rgba(34, 34, 34, 0.9);
+}
+.AndroidLightPanelCard > .AndroidLightPanelBody {
+position: relative;
+}
+.AndroidLightPanelCard > .AndroidLightPanelBody:after {
+background: rgba(0, 0, 0, 0.05);
+display: block;
+position: absolute;
+top: 0px;
+left: 0px;
+width: 100%;
+height: 3px;
+z-index: 4;
+content: "";
+}
+.AndroidLightPanelCard > .AndroidLightPanelBody:before {
+background: rgba(0, 0, 0, 0.05);
+display: block;
+position: absolute;
+left: 0px;
+bottom: 0px;
+width: 100%;
+height: 3px;
+z-index: 4;
+content: "";
+}
+.AndroidLightPanelLayout > .AndroidLightPanelBody > div > .AndroidLightPanelCard, .AndroidLightPanelLayout > .AndroidLightPanelBody > div > .AndroidLightPanelNav {
+border-right-style: solid;
+border-right-width: 1px;
+border-right-color: #c8c8c8;
+}
+.AndroidLightPanelLayout > .AndroidLightPanelBody > div > .AndroidLightPanelCard:before, .AndroidLightPanelLayout > .AndroidLightPanelBody > div > .AndroidLightPanelNav:before {
+background: rgba(0, 0, 0, 0.025);
+display: block;
+position: absolute;
+top: 0px;
+right: 0px;
+width: 4px;
+height: 100%;
+z-index: 4;
+content: "";
+}
+.AndroidLightAppBar {
+text-align: center;
+padding: 0px;
+}
+.AndroidLightAppBar .AndroidLightButton {
+background: transparent;
+border: none;
+border-left-style: solid;
+border-left-width: 1px;
+border-left-color: #c8c8c8;
+padding: 16px;
+margin: 0px;
+}
+.AndroidLightAppBar .AndroidLightButton:first-child {
+border-left-style: none;
+}
+.AndroidLightAppBar .AndroidLightButtonPressed {
+border-bottom-style: solid;
+border-bottom-width: 4px;
+border-bottom-color: #33b5e5;
+padding-bottom: 12px;
+}
+.AndroidLightAppBar .AndroidLightButtonPressed:before {
+display: none;
+}
+/* Tabs */
+/* top and bottom */
+.AndroidLightTabTBand, .AndroidLightTabBBand {
+text-align: center;
+font-size: 0px;
+}
+.AndroidLightTabTButton, .AndroidLightTabTButtonSelected, .AndroidLightTabTButtonDisabled, .AndroidLightTabBButton, .AndroidLightTabBButtonSelected, .AndroidLightTabBButtonDisabled {
+text-decoration: none;
+color: #222222;
+background: #bbbbbb;
+font-size: 16px;
+border: none;
+border-left-style: solid;
+border-left-width: 1px;
+border-left-color: #a2a2a2;
+padding: 5px 9px;
+padding-bottom: 8px;
+display: inline-block;
+outline: none;
+}
+.AndroidLightTabTButton:first-child, .AndroidLightTabTButtonSelected:first-child, .AndroidLightTabTButtonDisabled:first-child, .AndroidLightTabBButton:first-child, .AndroidLightTabBButtonSelected:first-child, .AndroidLightTabBButtonDisabled:first-child {
+border-left-style: none;
+}
+.AndroidLightTabBButton, .AndroidLightTabBButtonSelected, .AndroidLightTabBButtonDisabled {
+padding-top: 8px;
+padding-bottom: 5px;
+}
+.AndroidLightTabTButtonSelected {
+border-bottom-style: solid;
+border-bottom-width: 3px;
+border-bottom-color: #33b5e5;
+padding-bottom: 5px;
+}
+.AndroidLightTabBButtonSelected {
+border-top-style: solid;
+border-top-width: 3px;
+border-top-color: #33b5e5;
+padding-top: 5px;
+}
+.AndroidLightTabTButtonDisabled, .AndroidLightTabBButtonDisabled {
+color: rgba(34, 34, 34, 0.25);
+}
+.AndroidLightTabTPane {
+margin-top: 6px;
+}
+.AndroidLightTabBPane {
+margin-bottom: 6px;
+}
+/* left and right */
+.AndroidLightTabLBand, .AndroidLightTabRBand {
+font-size: 0px;
+}
+.AndroidLightTabLButton, .AndroidLightTabLButtonSelected, .AndroidLightTabLButtonDisabled, .AndroidLightTabRButton, .AndroidLightTabRButtonSelected, .AndroidLightTabRButtonDisabled {
+text-decoration: none;
+color: #222222;
+background: #bbbbbb;
+font-size: 16px;
+border: none;
+border-top-style: solid;
+border-top-width: 1px;
+border-top-color: #a2a2a2;
+padding: 5px 9px;
+padding-right: 12px;
+display: block;
+outline: none;
+}
+.AndroidLightTabRButton, .AndroidLightTabRButtonSelected, .AndroidLightTabRButtonDisabled {
+padding-left: 12px;
+padding-right: 9px;
+}
+.AndroidLightTabLButton:first-child, .AndroidLightTabLButtonSelected:first-child, .AndroidLightTabLButtonDisabled:first-child, .AndroidLightTabRButton:first-child, .AndroidLightTabRButtonSelected:first-child, .AndroidLightTabRButtonDisabled:first-child {
+border-top-style: none;
+}
+.AndroidLightTabLButtonSelected {
+border-right-style: solid;
+border-right-width: 3px;
+border-right-color: #33b5e5;
+padding-right: 9px;
+}
+.AndroidLightTabRButtonSelected {
+border-left-style: solid;
+border-left-width: 3px;
+border-left-color: #33b5e5;
+padding-left: 9px;
+}
+.AndroidLightTabLButtonDisabled, .AndroidLightTabRButtonDisabled {
+color: rgba(34, 34, 34, 0.25);
+}
+.AndroidLightTabLPane {
+margin-left: 6px;
+}
+.AndroidLightTabRPane {
+margin-right: 6px;
+}
+/* Accordion */
+.AndroidLightAccordion {
+border: 1px solid #bbbbbb;
+border-bottom-style: none;
+}
+.AndroidLightAccordionButton, .AndroidLightAccordionButtonSelected, .AndroidLightAccordionButtonDisabled {
+text-decoration: none;
+color: #222222;
+background: #d4d4d4;
+font: bold 12px sans-serif;
+border-bottom-style: solid;
+border-bottom-width: 1px;
+border-bottom-color: #bbbbbb;
+padding: 14px;
+display: block;
+outline: none;
+}
+.AndroidLightAccordionButton:after {
+font: 16px A5_AndroidIcons;
+margin-top: -2px;
+margin-right: 6px;
+display: block;
+float: left;
+content: 'b';
+}
+.AndroidLightAccordionButtonSelected:after {
+font: 16px A5_AndroidIcons;
+margin-top: -2px;
+margin-right: 6px;
+display: block;
+float: left;
+content: 'c';
+}
+.AndroidLightAccordionButtonDisabled {
+color: rgba(34, 34, 34, 0.25);
+}
+.AndroidLightAccordionPane {
+border-bottom-style: solid;
+border-bottom-width: 1px;
+border-bottom-color: #bbbbbb;
+padding: 6px;
+}
+/* Tabband */
+.AndroidLightTabband, .AndroidLightTabbandIcon {
+color: #222222;
+background: #e1e1e1;
+font-size: 16px;
+}
+.AndroidLightTabbandButton, .AndroidLightTabbandButtonSelected, .AndroidLightTabbandButtonDisabled {
+text-decoration: none;
+white-space: nowrap;
+color: #222222;
+background: transparent;
+border-left-style: solid;
+border-left-width: 1px;
+border-left-color: #c8c8c8;
+border-bottom-style: solid;
+border-bottom-width: 1px;
+border-bottom-color: #33b5e5;
+padding: 14px;
+display: block;
+position: relative;
+outline: none;
+}
+.AndroidLightTabbandButtonSelected {
+border-bottom-style: solid;
+border-bottom-width: 5px;
+border-bottom-color: #33b5e5;
+padding-bottom: 10px;
+}
+.AndroidLightTabbandButtonDisabled {
+color: rgba(34, 34, 34, 0.25);
+}
+.AndroidLightTabbandClose {
+color: #fd4246;
+}
+.AndroidLightTabbandIcon .AndroidLightTabbandButton, .AndroidLightTabbandIcon .AndroidLightTabbandButtonSelected, .AndroidLightTabbandIcon .AndroidLightTabbandButtonDisabled {
+font-size: 10px;
+border: none;
+padding: 6px;
+}
+.AndroidLightTabbandIcon .AndroidLightTabbandButtonSelected {
+color: #33b5e5;
+padding: 6px;
+}
+/* Ink */
+.AndroidLightInk {
+border: 1px solid #ccc;
+border-radius: 3px;
+}
+.AndroidLightInkArea {
+background: #f2f2f2;
+}
+.AndroidLightInkPage {
+background: #fff;
+border: 1px solid #ccc;
+box-shadow: 0px 3px 3px #e6e6e6;
+-moz-box-shadow: 0px 3px 3px #e6e6e6;
+-webkit-box-shadow: 0px 3px 3px #e6e6e6;
+}
+.AndroidLightInkZoomBox {
+border: 1px dotted #33b5e5;
+}
+.AndroidLightInkZoomBoxScale:after {
+border: 5px solid transparent;
+border-right-color: rgba(51, 181, 229, 0.5);
+border-bottom-color: rgba(51, 181, 229, 0.5);
+display: block;
+position: absolute;
+right: 2px;
+bottom: 2px;
+content: "";
+}
+.AndroidLightInkSplitBar {
+background: #e6e6e6;
+}
+.AndroidLightInkEraser {
+background: rgba(255, 100, 150, 0.1);
+border: 1px solid rgba(255, 100, 150, 0.5);
+border-radius: 3px;
+}
+.AndroidLightInkButton {
+text-align: center;
+color: #888888;
+background: rgba(255, 255, 255, 0.9);
+border: 1px solid #ccc;
+padding: 2px;
+display: inline-block;
+vertical-align: top;
+width: 40px;
+height: 40px;
+line-height: 31px;
+border-radius: 22px;
+stroke: #888888;
+fill: #888888;
+}
+.AndroidLightInkButton .AndroidLightIcon {
+vertical-align: bottom;
+}
+.AndroidLightInkButtonSelected {
+color: #3c3c3c;
+border-color: #999;
+stroke: #3c3c3c;
+fill: #3c3c3c;
+}
+.AndroidLightInkBarTop {
+background: rgba(255, 255, 255, 0.9);
+border-bottom-style: solid;
+border-bottom-width: 1px;
+border-bottom-color: #ccc;
+}
+.AndroidLightInkBarLeft {
+background: rgba(255, 255, 255, 0.9);
+border-right-style: solid;
+border-right-width: 1px;
+border-right-color: #ccc;
+}
+.AndroidLightInkBarRight {
+background: rgba(255, 255, 255, 0.9);
+border-left-style: solid;
+border-left-width: 1px;
+border-left-color: #ccc;
+}
+.AndroidLightInkBarBottom {
+background: rgba(255, 255, 255, 0.9);
+border-top-style: solid;
+border-top-width: 1px;
+border-top-color: #ccc;
+}
+.AndroidLightInkGroupTop, .AndroidLightInkGroupBottom, .AndroidLightInkGroupLeft, .AndroidLightInkGroupRight {
+background: rgba(255, 255, 255, 0.9);
+border: 1px solid #ccc;
+}
+.AndroidLightInkGroupTop {
+border-top-style: none;
+border-radius: 0px 0px 4px 4px;
+}
+.AndroidLightInkGroupBottom {
+border-bottom-style: none;
+border-radius: 4px 4px 0px 0px;
+}
+.AndroidLightInkGroupLeft {
+border-left-style: none;
+border-radius: 0px 4px 4px 0px;
+}
+.AndroidLightInkGroupRight {
+border-right-style: none;
+border-radius: 4px 0px 0px 4px;
+}
+.AndroidLightInkBarTop .AndroidLightInkButton, .AndroidLightInkBarBottom .AndroidLightInkButton, .AndroidLightInkBarLeft .AndroidLightInkButton, .AndroidLightInkBarRight .AndroidLightInkButton, .AndroidLightInkGroupTop .AndroidLightInkButton, .AndroidLightInkGroupBottom .AndroidLightInkButton, .AndroidLightInkGroupLeft .AndroidLightInkButton, .AndroidLightInkGroupRight .AndroidLightInkButton {
+background: transparent;
+border: 1px solid transparent;
+border-radius: 0px;
+}
+.AndroidLightInkBarTop .AndroidLightInkButtonSelected, .AndroidLightInkBarBottom .AndroidLightInkButtonSelected, .AndroidLightInkBarLeft .AndroidLightInkButtonSelected, .AndroidLightInkBarRight .AndroidLightInkButtonSelected, .AndroidLightInkGroupTop .AndroidLightInkButtonSelected, .AndroidLightInkGroupBottom .AndroidLightInkButtonSelected, .AndroidLightInkGroupLeft .AndroidLightInkButtonSelected, .AndroidLightInkGroupRight .AndroidLightInkButtonSelected {
+background: #e6e6e6;
+}
+.AndroidLightInkStatus {
+color: #fff;
+background: rgba(0, 0, 0, 0.25);
+padding: 4px;
+border-radius: 4px;
+}
+.AndroidLightInkPopup {
+color: #000;
+background: #fff;
+font: 16px sans-serif;
+border: 1px solid #ccc;
+border-radius: 6px;
+}
+.AndroidLightInkPopupLock {
+background: rgba(0, 0, 0, 0.1);
+}
+.AndroidLightInkPopupGroup {
+border-bottom-style: solid;
+border-bottom-width: 1px;
+border-bottom-color: #e6e6e6;
+padding: 4px;
+padding-bottom: 0px;
+}
+.AndroidLightInkPopupSwatch {
+text-align: center;
+border: 1px solid #ccc;
+padding: 2px;
+margin-bottom: 4px;
+display: inline-block;
+vertical-align: top;
+position: relative;
+width: 40px;
+height: 40px;
+border-radius: 22px;
+}
+.AndroidLightInkPopupSwatchSelected {
+border: 2px solid #33b5e5;
+margin: -1px;
+margin-bottom: 3px;
+border-radius: 23px;
+}
+.AndroidLightInkPopupSwatchSelected:before {
+border: 2px solid #fff;
+display: block;
+position: absolute;
+top: 0px;
+left: 0px;
+right: 0px;
+bottom: 0px;
+border-radius: 20px;
+content: "";
+}
+.AndroidLightInkPopupButton {
+text-align: center;
+color: #000;
+font-size: 16px;
+padding: 14px;
+}
+/* Scroll Indicator */
+.AndroidLightScrollIndH, .AndroidLightScrollIndV {
+padding: 0px;
+width: 4px;
+height: 4px;
+}
+.AndroidLightScrollIndHBar, .AndroidLightScrollIndVBar {
+background: rgba(34, 34, 34, 0.5);
+opacity: .5;
+}
+/* Icons */
+.AndroidLightIcon, .AndroidLightIconSm, .AndroidLightIconBtn {
+font: normal 22px A5_AndroidIcons;
+display: inline-block;
+cursor: default;
+position: relative;
+width: 24px;
+height: 24px;
+text-transform: none;
+}
+.AndroidLightIconSm {
+font: 16px A5_AndroidIcons;
+width: 18px;
+height: 18px;
+}
+.AndroidLightIconBtn {
+padding: 10px;
+}
+.AndroidLightIconDisabled {
+opacity: .5;
+}
+.AndroidLightIconLeft:after {
+display: block;
+position: absolute;
+content: "a";
+}
+.AndroidLightIconRight:after {
+display: block;
+position: absolute;
+content: "b";
+}
+.AndroidLightIconUp:after {
+display: block;
+position: absolute;
+content: "d";
+}
+.AndroidLightIconDown:after {
+display: block;
+position: absolute;
+content: "c";
+}
+.AndroidLightIconClose:after {
+display: block;
+position: absolute;
+content: "e";
+}
+.AndroidLightIconResizeThumb:after {
+display: block;
+position: absolute;
+content: "f";
+}
+.AndroidLightIconRadio:after {
+display: block;
+position: absolute;
+content: "g";
+}
+.AndroidLightIconCheck:after {
+display: block;
+position: absolute;
+content: "h";
+}
+.AndroidLightIconAdd:after {
+display: block;
+position: absolute;
+content: "i";
+}
+.AndroidLightIconRemove:after {
+display: block;
+position: absolute;
+content: "j";
+}
+.AndroidLightIconUndo:after {
+display: block;
+position: absolute;
+content: "k";
+}
+.AndroidLightIconRedo:after {
+display: block;
+position: absolute;
+content: "l";
+}
+.AndroidLightIconEdit:after {
+display: block;
+position: absolute;
+content: "m";
+}
+.AndroidLightIconCancel:after {
+display: block;
+position: absolute;
+content: "n";
+}
+.AndroidLightIconDelete:after {
+display: block;
+position: absolute;
+content: "o";
+}
+.AndroidLightIconCancelEdit:after {
+display: block;
+position: absolute;
+content: "p";
+}
+.AndroidLightIconNew:after {
+display: block;
+position: absolute;
+content: "q";
+}
+.AndroidLightIconCancelNew:after {
+display: block;
+position: absolute;
+content: "r";
+}
+.AndroidLightIconSave:after {
+display: block;
+position: absolute;
+content: "s";
+}
+.AndroidLightIconLoad:after {
+display: block;
+position: absolute;
+content: "t";
+}
+.AndroidLightIconSaveAndEnter:after {
+display: block;
+position: absolute;
+content: "u";
+}
+.AndroidLightIconRefresh:after {
+display: block;
+position: absolute;
+content: "v";
+}
+.AndroidLightIconSearch:after {
+display: block;
+position: absolute;
+content: "w";
+}
+.AndroidLightIconFilter:after {
+display: block;
+position: absolute;
+content: "x";
+}
+.AndroidLightIconFirst:after {
+display: block;
+position: absolute;
+content: "y";
+}
+.AndroidLightIconLast:after {
+display: block;
+position: absolute;
+content: "z";
+}
+.AndroidLightIconInfo:after {
+display: block;
+position: absolute;
+content: "A";
+}
+.AndroidLightIconHelp:after {
+display: block;
+position: absolute;
+content: "B";
+}
+.AndroidLightIconError:after {
+display: block;
+position: absolute;
+content: "C";
+}
+.AndroidLightIconWarning:after {
+display: block;
+position: absolute;
+content: "D";
+}
+.AndroidLightIconMenu:after {
+display: block;
+position: absolute;
+content: "E";
+}
+/* container padding */
+.AndroidLightPanelHeader .A5Container, .AndroidLightPanelFooter .A5Container, .AndroidLightPanelTopHeader .A5Container, .AndroidLightPanelTopFooter .A5Container, .AndroidLightPanelHeader .A5CWLayout, .AndroidLightPanelFooter .A5CWLayout, .AndroidLightPanelTopHeader .A5CWLayout, .AndroidLightPanelTopFooter .A5CWLayout {
+padding: 0px;
+}

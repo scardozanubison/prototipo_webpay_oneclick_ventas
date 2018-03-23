@@ -1,0 +1,1181 @@
+<PubHist<[1]<type="calendaricons">
+<name="calendaricons">
+<target_folder="c:\a5webroot">
+<timestamp=CTODT('15-03-2018 09:39:39 13 am')>
+>
+<[2]<type="folder">
+<name="ExeReportStyles">
+<target_folder="c:\a5webroot">
+<timestamp=CTODT('15-03-2018 02:32:15 41 pm')>
+>
+<[3]<type="folder">
+<name="AppDataReportStyles">
+<target_folder="c:\a5webroot">
+<timestamp=CTODT('15-03-2018 02:32:15 41 pm')>
+>
+<[4]<type="folder">
+<name="ExeChartStyles">
+<target_folder="c:\a5webroot">
+<timestamp=CTODT('15-03-2018 02:32:15 42 pm')>
+>
+<[5]<type="folder">
+<name="AppDataChartStyles">
+<target_folder="c:\a5webroot">
+<timestamp=CTODT('15-03-2018 02:32:15 42 pm')>
+>
+<[6]<type="A5WPage">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\index.a5w}">
+<target_folder="c:\a5webroot">
+<timestamp=CTODT('15-03-2018 09:39:40 94 am')>
+>
+<[7]<type="WebComponent">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\main.a5wcmp}">
+<target_folder="c:\a5webroot">
+<timestamp=CTODT('15-03-2018 02:32:16 31 pm')>
+>
+<[8]<type="css">
+<name="a5system">
+<target_folder="c:\a5webroot">
+<timestamp=CTODT('15-03-2018 09:39:41 36 am')>
+>
+<[9]<type="css">
+<name="androidlight">
+<target_folder="c:\a5webroot">
+<timestamp=CTODT('15-03-2018 09:39:42 89 am')>
+>
+<[10]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\project.securitysettings}">
+<target_folder="c:\a5webroot">
+<timestamp=CTODT('15-03-2018 10:13:53 39 am')>
+>
+<[11]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\projectproperties.projectproperties}">
+<target_folder="c:\a5webroot">
+<timestamp=CTODT('15-03-2018 11:16:35 01 am')>
+>
+<[12]<type="WebComponent">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\login.a5wcmp}">
+<target_folder="c:\a5webroot">
+<timestamp=CTODT('15-03-2018 10:08:13 48 am')>
+>
+<[13]<type="css">
+<name="ios">
+<target_folder="c:\a5webroot">
+<timestamp=CTODT('15-03-2018 10:08:15 78 am')>
+>
+<[14]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\pages.securitysettings}">
+<target_folder="c:\a5webroot">
+<timestamp=CTODT('15-03-2018 10:15:45 01 am')>
+>
+<[15]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\websecurity_expired.dbf}">
+<target_folder="c:\a5webroot">
+<timestamp=CTODT('15-03-2018 11:15:48 39 am')>
+>
+<[16]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\websecurity_expired.dbp}">
+<target_folder="c:\a5webroot">
+<timestamp=CTODT('15-03-2018 11:15:48 43 am')>
+>
+<[17]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\websecurity_expired.ddd}">
+<target_folder="c:\a5webroot">
+<timestamp=CTODT('15-03-2018 10:13:53 41 am')>
+>
+<[18]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\websecurity_expired.ddm}">
+<target_folder="c:\a5webroot">
+<timestamp=CTODT('15-03-2018 10:13:53 43 am')>
+>
+<[19]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\websecurity_expired.ddx}">
+<target_folder="c:\a5webroot">
+<timestamp=CTODT('15-03-2018 10:13:53 44 am')>
+>
+<[20]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\websecurity_groups.cdx}">
+<target_folder="c:\a5webroot">
+<timestamp=CTODT('15-03-2018 11:15:48 58 am')>
+>
+<[21]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\websecurity_groups.dbf}">
+<target_folder="c:\a5webroot">
+<timestamp=CTODT('15-03-2018 11:15:48 60 am')>
+>
+<[22]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\websecurity_groups.dbp}">
+<target_folder="c:\a5webroot">
+<timestamp=CTODT('15-03-2018 11:15:48 63 am')>
+>
+<[23]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\websecurity_groups.ddd}">
+<target_folder="c:\a5webroot">
+<timestamp=CTODT('15-03-2018 10:13:53 46 am')>
+>
+<[24]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\websecurity_groups.ddm}">
+<target_folder="c:\a5webroot">
+<timestamp=CTODT('15-03-2018 10:13:53 47 am')>
+>
+<[25]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\websecurity_groups.ddx}">
+<target_folder="c:\a5webroot">
+<timestamp=CTODT('15-03-2018 10:13:53 51 am')>
+>
+<[26]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\websecurity_members.dbf}">
+<target_folder="c:\a5webroot">
+<timestamp=CTODT('15-03-2018 11:15:48 64 am')>
+>
+<[27]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\websecurity_members.dbp}">
+<target_folder="c:\a5webroot">
+<timestamp=CTODT('15-03-2018 11:15:48 69 am')>
+>
+<[28]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\websecurity_members.ddd}">
+<target_folder="c:\a5webroot">
+<timestamp=CTODT('15-03-2018 10:13:53 53 am')>
+>
+<[29]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\websecurity_members.ddm}">
+<target_folder="c:\a5webroot">
+<timestamp=CTODT('15-03-2018 10:13:53 54 am')>
+>
+<[30]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\websecurity_members.ddx}">
+<target_folder="c:\a5webroot">
+<timestamp=CTODT('15-03-2018 10:13:53 55 am')>
+>
+<[31]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\websecurity_users.dbf}">
+<target_folder="c:\a5webroot">
+<timestamp=CTODT('15-03-2018 11:15:48 88 am')>
+>
+<[32]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\websecurity_users.dbp}">
+<target_folder="c:\a5webroot">
+<timestamp=CTODT('15-03-2018 11:15:48 96 am')>
+>
+<[33]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\websecurity_users.ddd}">
+<target_folder="c:\a5webroot">
+<timestamp=CTODT('15-03-2018 10:13:53 57 am')>
+>
+<[34]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\websecurity_users.ddm}">
+<target_folder="c:\a5webroot">
+<timestamp=CTODT('15-03-2018 10:13:53 57 am')>
+>
+<[35]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\websecurity_users.ddx}">
+<target_folder="c:\a5webroot">
+<timestamp=CTODT('15-03-2018 10:13:53 58 am')>
+>
+<[36]<type="cssIcon">
+<name="font-awesome">
+<target_folder="c:\a5webroot">
+<timestamp=CTODT('15-03-2018 10:45:41 03 am')>
+>
+<[37]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\css\cssicons\font-awesome\css\font-awesome.css}">
+<target_folder="c:\a5webroot">
+<timestamp=CTODT('15-03-2018 11:15:46 02 am')>
+>
+<[38]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\css\cssicons\font-awesome\css\font-awesome.min.css}">
+<target_folder="c:\a5webroot">
+<timestamp=CTODT('15-03-2018 11:15:46 41 am')>
+>
+<[39]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\css\framework7-icons.css}">
+<target_folder="c:\a5webroot">
+<timestamp=CTODT('15-03-2018 11:15:46 90 am')>
+>
+<[40]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\css\framework7.md.min.css}">
+<target_folder="c:\a5webroot">
+<timestamp=CTODT('15-03-2018 11:15:47 06 am')>
+>
+<[41]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\css\framework7.min.css}">
+<target_folder="c:\a5webroot">
+<timestamp=CTODT('15-03-2018 11:15:47 17 am')>
+>
+<[42]<type="css">
+<name="cssicons">
+<target_folder="c:\a5webroot">
+<timestamp=CTODT('15-03-2018 11:15:47 21 am')>
+>
+<[43]<type="css">
+<name="framework7-icons.css}">
+<target_folder="c:\a5webroot">
+<timestamp=CTODT('15-03-2018 11:15:47 21 am')>
+>
+<[44]<type="css">
+<name="framework7.md.min.css}">
+<target_folder="c:\a5webroot">
+<timestamp=CTODT('15-03-2018 11:15:47 21 am')>
+>
+<[45]<type="css">
+<name="framework7.min.css}">
+<target_folder="c:\a5webroot">
+<timestamp=CTODT('15-03-2018 11:15:47 21 am')>
+>
+<[46]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\css\cssicons\font-awesome\fonts\fontawesome-webfont.eot}">
+<target_folder="c:\a5webroot">
+<timestamp=CTODT('15-03-2018 11:15:47 34 am')>
+>
+<[47]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\css\cssicons\font-awesome\fonts\fontawesome-webfont.svg}">
+<target_folder="c:\a5webroot">
+<timestamp=CTODT('15-03-2018 11:15:47 41 am')>
+>
+<[48]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\css\cssicons\font-awesome\fonts\fontawesome-webfont.ttf}">
+<target_folder="c:\a5webroot">
+<timestamp=CTODT('15-03-2018 11:15:47 47 am')>
+>
+<[49]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\css\cssicons\font-awesome\fonts\fontawesome-webfont.woff2}">
+<target_folder="c:\a5webroot">
+<timestamp=CTODT('15-03-2018 11:15:47 54 am')>
+>
+<[50]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\css\cssicons\font-awesome\fonts\fontawesome-webfont.woff}">
+<target_folder="c:\a5webroot">
+<timestamp=CTODT('15-03-2018 11:15:47 71 am')>
+>
+<[51]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\css\cssicons\font-awesome\fonts\fontawesome.otf}">
+<target_folder="c:\a5webroot">
+<timestamp=CTODT('15-03-2018 11:15:47 82 am')>
+>
+<[52]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\css\fonts\framework7icons-regular.eot}">
+<target_folder="c:\a5webroot">
+<timestamp=CTODT('15-03-2018 11:15:47 94 am')>
+>
+<[53]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\css\fonts\framework7icons-regular.ttf}">
+<target_folder="c:\a5webroot">
+<timestamp=CTODT('15-03-2018 11:15:48 04 am')>
+>
+<[54]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\css\fonts\framework7icons-regular.woff2}">
+<target_folder="c:\a5webroot">
+<timestamp=CTODT('15-03-2018 11:15:48 15 am')>
+>
+<[55]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\css\fonts\framework7icons-regular.woff}">
+<target_folder="c:\a5webroot">
+<timestamp=CTODT('15-03-2018 11:15:48 17 am')>
+>
+<[56]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\js\framework7.min.js}">
+<target_folder="c:\a5webroot">
+<timestamp=CTODT('15-03-2018 11:15:48 37 am')>
+>
+<[57]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\carritocompras.aex}">
+<target_folder="c:\a5webroot">
+<timestamp=CTODT('15-03-2018 11:16:35 00 am')>
+>
+<[58]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\img\e-commerce-logo.png}">
+<target_folder="c:\a5webroot">
+<timestamp=CTODT('15-03-2018 12:49:12 81 pm')>
+>
+<[59]<type="folder">
+<name="ExeReportStyles">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 04:50:34 70 pm')>
+>
+<[60]<type="folder">
+<name="AppDataReportStyles">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 04:50:34 71 pm')>
+>
+<[61]<type="folder">
+<name="ExeChartStyles">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 04:50:34 73 pm')>
+>
+<[62]<type="folder">
+<name="AppDataChartStyles">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 04:50:34 73 pm')>
+>
+<[63]<type="A5WPage">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\index.a5w}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('21-03-2018 10:20:19 84 am')>
+>
+<[64]<type="WebComponent">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\login.a5wcmp}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('21-03-2018 10:09:39 56 am')>
+>
+<[65]<type="WebComponent">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\main.a5wcmp}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('22-03-2018 04:49:04 95 pm')>
+>
+<[66]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\css\cssicons\font-awesome\css\font-awesome.css}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('16-03-2018 02:24:34 03 pm')>
+>
+<[67]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\css\cssicons\font-awesome\css\font-awesome.min.css}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('16-03-2018 02:24:34 07 pm')>
+>
+<[68]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\css\framework7-icons.css}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('16-03-2018 02:24:34 12 pm')>
+>
+<[69]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\css\framework7.md.min.css}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('16-03-2018 02:24:34 19 pm')>
+>
+<[70]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\css\framework7.min.css}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('16-03-2018 02:24:34 25 pm')>
+>
+<[71]<type="css">
+<name="a5system">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('16-03-2018 02:24:34 64 pm')>
+>
+<[72]<type="css">
+<name="androidlight">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('16-03-2018 02:24:36 14 pm')>
+>
+<[73]<type="css">
+<name="ios">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('16-03-2018 02:24:36 75 pm')>
+>
+<[74]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\pages.securitysettings}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('19-03-2018 03:28:43 00 pm')>
+>
+<[75]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\project.securitysettings}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('19-03-2018 03:28:43 04 pm')>
+>
+<[76]<type="css">
+<name="cssicons">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 12:52:19 48 pm')>
+>
+<[77]<type="css">
+<name="framework7-icons.css}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 12:52:19 48 pm')>
+>
+<[78]<type="css">
+<name="framework7.md.min.css}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 12:52:19 48 pm')>
+>
+<[79]<type="css">
+<name="framework7.min.css}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 12:52:19 48 pm')>
+>
+<[80]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\carritocompras.aex}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('21-03-2018 03:55:56 39 pm')>
+>
+<[81]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\css\cssicons\font-awesome\fonts\fontawesome-webfont.eot}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('16-03-2018 02:24:37 40 pm')>
+>
+<[82]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\css\cssicons\font-awesome\fonts\fontawesome-webfont.svg}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('16-03-2018 02:24:37 45 pm')>
+>
+<[83]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\css\cssicons\font-awesome\fonts\fontawesome-webfont.ttf}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('16-03-2018 02:24:37 50 pm')>
+>
+<[84]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\css\cssicons\font-awesome\fonts\fontawesome-webfont.woff2}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('16-03-2018 02:24:37 53 pm')>
+>
+<[85]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\css\cssicons\font-awesome\fonts\fontawesome-webfont.woff}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('16-03-2018 02:24:37 56 pm')>
+>
+<[86]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\css\cssicons\font-awesome\fonts\fontawesome.otf}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('16-03-2018 02:24:37 60 pm')>
+>
+<[87]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\css\fonts\framework7icons-regular.eot}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('16-03-2018 02:24:37 64 pm')>
+>
+<[88]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\css\fonts\framework7icons-regular.ttf}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('16-03-2018 02:24:37 71 pm')>
+>
+<[89]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\css\fonts\framework7icons-regular.woff2}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('16-03-2018 02:24:37 74 pm')>
+>
+<[90]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\css\fonts\framework7icons-regular.woff}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('16-03-2018 02:24:37 77 pm')>
+>
+<[91]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\img\e-commerce-logo.png}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('16-03-2018 02:24:37 80 pm')>
+>
+<[92]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\img\imagenes_productos\celulares\4b2ba132afc042b5f360bbfa0618de9f-product.jpg}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('16-03-2018 02:24:37 89 pm')>
+>
+<[93]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\img\imagenes_productos\celulares\4ef2e79822e7d6922b21a28961bbfc6d-product.jpg}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('16-03-2018 02:24:37 97 pm')>
+>
+<[94]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\img\imagenes_productos\celulares\5ef4a34c6848c2240c3c7a2b5d2c8866-product.jpg}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('16-03-2018 02:24:38 03 pm')>
+>
+<[95]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\img\imagenes_productos\celulares\63915c96f0c3161e1d58f084615b7116-product.jpg}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('16-03-2018 02:24:38 11 pm')>
+>
+<[96]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\img\imagenes_productos\celulares\63aa354ecad1c4d79f3382babdd01c83-product.jpg}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('16-03-2018 02:24:38 16 pm')>
+>
+<[97]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\img\imagenes_productos\celulares\a65117efcbff9ccd91ae53d0de830fdc-product.jpg}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('16-03-2018 02:24:38 21 pm')>
+>
+<[98]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\img\imagenes_productos\celulares\cd7ee932c6dfb4bb3facbf3b0c5559ef-product.jpg}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('16-03-2018 02:24:38 27 pm')>
+>
+<[99]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\img\imagenes_productos\celulares\f91cccb8f8c0c278ff48e11c76c60b2d-product.jpg}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('16-03-2018 02:24:38 38 pm')>
+>
+<[100]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\img\imagenes_productos\celulares\ffd131c8d251a630e2f53db918588b2f-product.jpg}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('16-03-2018 02:24:38 44 pm')>
+>
+<[101]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\img\imagenes_productos\electrodomesticos\19ef9e766141946fc2292e1ccfaea81d-product.jpg}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('16-03-2018 02:24:38 50 pm')>
+>
+<[102]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\img\imagenes_productos\electrodomesticos\3c683eb5921cea6a3e51666aa728a55a-product.jpg}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('16-03-2018 02:24:38 56 pm')>
+>
+<[103]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\img\imagenes_productos\electrodomesticos\6126e974bbc2f9f5825575982f7c5091-product.jpg}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('16-03-2018 02:24:38 75 pm')>
+>
+<[104]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\img\imagenes_productos\electrodomesticos\6335e4c3159aadc58d33618560ae35dc-product.jpg}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('16-03-2018 02:24:38 80 pm')>
+>
+<[105]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\img\imagenes_productos\electrodomesticos\719130ababc31b6ab3bc2f3672c86116-product.jpg}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('16-03-2018 02:24:38 89 pm')>
+>
+<[106]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\img\imagenes_productos\electrodomesticos\a8b19f0ad8eb55c422e86b51b7df6855-product.jpg}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('16-03-2018 02:24:38 93 pm')>
+>
+<[107]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\img\imagenes_productos\electrodomesticos\bc71518e4a2fc2dca44c19b14a2da678-product.jpg}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('16-03-2018 02:24:39 00 pm')>
+>
+<[108]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\img\imagenes_productos\electrodomesticos\eb12ba002814ac63b34176f2e1934e6d-product.jpg}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('16-03-2018 02:24:39 07 pm')>
+>
+<[109]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\img\imagenes_productos\electrodomesticos\fa63a32a1dac17abb2d3d5151e6d3f52-product.jpg}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('16-03-2018 02:24:39 17 pm')>
+>
+<[110]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\img\imagenes_productos\moda\2b8d52a5f19793fb01991e968937178c-product.jpg}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('16-03-2018 02:24:39 26 pm')>
+>
+<[111]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\img\imagenes_productos\moda\33977880ab6ae5308e6e2d7b3d660558-product.jpg}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('16-03-2018 02:24:39 31 pm')>
+>
+<[112]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\img\imagenes_productos\moda\47c77c3bb208fa4cc1306efe65d35601-product.jpg}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('16-03-2018 02:24:39 36 pm')>
+>
+<[113]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\img\imagenes_productos\moda\6faaf8419afba3d99c075bd174201f36-product.jpg}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('16-03-2018 02:24:39 41 pm')>
+>
+<[114]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\img\imagenes_productos\moda\7ec1031a774fdd103c9437df6e888061-product.jpg}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('16-03-2018 02:24:39 48 pm')>
+>
+<[115]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\img\imagenes_productos\moda\9d33fe3daf4e0aeeba73ba197c6a872a-product.jpg}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('16-03-2018 02:24:39 54 pm')>
+>
+<[116]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\img\imagenes_productos\moda\b953f426d8ae365f3691e002e07b5b8c-product.jpg}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('16-03-2018 02:24:39 58 pm')>
+>
+<[117]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\img\imagenes_productos\moda\bd0083e2bcc169db93d5a519ee219c34-product.jpg}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('16-03-2018 02:24:39 66 pm')>
+>
+<[118]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\img\imagenes_productos\moda\ecda8fcc06562c9576e8bbcb3f839b8a-product.jpg}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('16-03-2018 02:24:39 72 pm')>
+>
+<[119]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\img\imagenes_productos\moda\f5d103e72aff59e3565109e8b147d9fb-product.jpg}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('16-03-2018 02:24:39 77 pm')>
+>
+<[120]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\img\imagenes_productos\moda\f790ae634be859fc0d87ead3c7dc9f39-product.jpg}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('16-03-2018 02:24:39 82 pm')>
+>
+<[121]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\js\framework7.min.js}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('16-03-2018 02:24:39 94 pm')>
+>
+<[122]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\projectproperties.projectproperties}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('22-03-2018 03:53:44 29 pm')>
+>
+<[123]<type="cssIcon">
+<name="font-awesome">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('16-03-2018 02:27:28 89 pm')>
+>
+<[124]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\websecurity_expired.dbf}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('19-03-2018 03:28:43 10 pm')>
+>
+<[125]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\websecurity_expired.dbp}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('19-03-2018 03:28:43 11 pm')>
+>
+<[126]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\websecurity_expired.ddd}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('19-03-2018 03:28:43 18 pm')>
+>
+<[127]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\websecurity_expired.ddm}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('19-03-2018 03:28:43 20 pm')>
+>
+<[128]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\websecurity_expired.ddx}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('19-03-2018 03:28:43 25 pm')>
+>
+<[129]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\websecurity_groups.cdx}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('19-03-2018 03:28:43 26 pm')>
+>
+<[130]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\websecurity_groups.dbf}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('19-03-2018 03:28:43 27 pm')>
+>
+<[131]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\websecurity_groups.dbp}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('19-03-2018 03:28:43 28 pm')>
+>
+<[132]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\websecurity_groups.ddd}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('19-03-2018 03:28:43 29 pm')>
+>
+<[133]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\websecurity_groups.ddm}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('19-03-2018 03:28:43 34 pm')>
+>
+<[134]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\websecurity_groups.ddx}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('19-03-2018 03:28:43 35 pm')>
+>
+<[135]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\websecurity_members.dbf}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('19-03-2018 03:28:43 35 pm')>
+>
+<[136]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\websecurity_members.dbp}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('19-03-2018 03:28:43 36 pm')>
+>
+<[137]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\websecurity_members.ddd}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('19-03-2018 03:28:43 40 pm')>
+>
+<[138]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\websecurity_members.ddm}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('19-03-2018 03:28:43 44 pm')>
+>
+<[139]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\websecurity_members.ddx}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('19-03-2018 03:28:43 55 pm')>
+>
+<[140]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\websecurity_users.dbf}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('19-03-2018 03:28:43 60 pm')>
+>
+<[141]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\websecurity_users.dbp}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('19-03-2018 03:28:43 63 pm')>
+>
+<[142]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\websecurity_users.ddd}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('19-03-2018 03:28:43 68 pm')>
+>
+<[143]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\websecurity_users.ddm}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('19-03-2018 03:28:43 69 pm')>
+>
+<[144]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\websecurity_users.ddx}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('19-03-2018 03:28:43 70 pm')>
+>
+<[145]<type="WebComponent">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\mainbackup.a5wcmp}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('19-03-2018 04:23:56 44 pm')>
+>
+<[146]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\img\loader.gif}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('21-03-2018 11:44:58 20 am')>
+>
+<[147]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\images\facebook@2x.png}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('22-03-2018 02:44:51 12 pm')>
+>
+<[148]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\images\googleplus@2x.png}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('22-03-2018 02:44:51 14 pm')>
+>
+<[149]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\images\okok.gif}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('22-03-2018 02:44:51 19 pm')>
+>
+<[150]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay\carritocompras.webprojects\default.webproject\images\twitter@2x.png}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('22-03-2018 02:44:51 24 pm')>
+>
+<[151]<type="A5WPage">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay_onclick\carritocompras.webprojects\default.webproject\index.a5w}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 12:52:17 18 pm')>
+>
+<[152]<type="WebComponent">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay_onclick\carritocompras.webprojects\default.webproject\login.a5wcmp}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 12:52:17 39 pm')>
+>
+<[153]<type="WebComponent">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay_onclick\carritocompras.webprojects\default.webproject\main.a5wcmp}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 04:50:36 46 pm')>
+>
+<[154]<type="WebComponent">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay_onclick\carritocompras.webprojects\default.webproject\mainbackup.a5wcmp}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 12:52:18 77 pm')>
+>
+<[155]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay_onclick\carritocompras.webprojects\default.webproject\css\cssicons\font-awesome\css\font-awesome.css}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 12:52:18 86 pm')>
+>
+<[156]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay_onclick\carritocompras.webprojects\default.webproject\css\cssicons\font-awesome\css\font-awesome.min.css}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 12:52:18 87 pm')>
+>
+<[157]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay_onclick\carritocompras.webprojects\default.webproject\css\framework7-icons.css}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 12:52:19 01 pm')>
+>
+<[158]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay_onclick\carritocompras.webprojects\default.webproject\css\framework7.md.min.css}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 12:52:19 09 pm')>
+>
+<[159]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay_onclick\carritocompras.webprojects\default.webproject\css\framework7.min.css}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 12:52:19 29 pm')>
+>
+<[160]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay_onclick\carritocompras.webprojects\default.webproject\pages.securitysettings}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 12:52:19 40 pm')>
+>
+<[161]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay_onclick\carritocompras.webprojects\default.webproject\project.securitysettings}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 12:52:19 43 pm')>
+>
+<[162]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay_onclick\carritocompras.webprojects\default.webproject\carritocompras.aex}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 03:02:28 85 pm')>
+>
+<[163]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay_onclick\carritocompras.webprojects\default.webproject\css\cssicons\font-awesome\fonts\fontawesome-webfont.eot}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 12:52:19 80 pm')>
+>
+<[164]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay_onclick\carritocompras.webprojects\default.webproject\css\cssicons\font-awesome\fonts\fontawesome-webfont.svg}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 12:52:19 97 pm')>
+>
+<[165]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay_onclick\carritocompras.webprojects\default.webproject\css\cssicons\font-awesome\fonts\fontawesome-webfont.ttf}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 12:52:20 03 pm')>
+>
+<[166]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay_onclick\carritocompras.webprojects\default.webproject\css\cssicons\font-awesome\fonts\fontawesome-webfont.woff2}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 12:52:20 06 pm')>
+>
+<[167]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay_onclick\carritocompras.webprojects\default.webproject\css\cssicons\font-awesome\fonts\fontawesome-webfont.woff}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 12:52:20 10 pm')>
+>
+<[168]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay_onclick\carritocompras.webprojects\default.webproject\css\cssicons\font-awesome\fonts\fontawesome.otf}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 12:52:20 18 pm')>
+>
+<[169]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay_onclick\carritocompras.webprojects\default.webproject\css\fonts\framework7icons-regular.eot}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 12:52:20 23 pm')>
+>
+<[170]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay_onclick\carritocompras.webprojects\default.webproject\css\fonts\framework7icons-regular.ttf}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 12:52:20 27 pm')>
+>
+<[171]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay_onclick\carritocompras.webprojects\default.webproject\css\fonts\framework7icons-regular.woff2}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 12:52:20 30 pm')>
+>
+<[172]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay_onclick\carritocompras.webprojects\default.webproject\css\fonts\framework7icons-regular.woff}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 12:52:20 33 pm')>
+>
+<[173]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay_onclick\carritocompras.webprojects\default.webproject\images\facebook@2x.png}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 12:52:20 42 pm')>
+>
+<[174]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay_onclick\carritocompras.webprojects\default.webproject\images\googleplus@2x.png}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 12:52:20 45 pm')>
+>
+<[175]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay_onclick\carritocompras.webprojects\default.webproject\images\okok.gif}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 12:52:20 49 pm')>
+>
+<[176]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay_onclick\carritocompras.webprojects\default.webproject\images\twitter@2x.png}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 12:52:20 51 pm')>
+>
+<[177]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay_onclick\carritocompras.webprojects\default.webproject\img\e-commerce-logo.png}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 12:52:20 57 pm')>
+>
+<[178]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay_onclick\carritocompras.webprojects\default.webproject\img\imagenes_productos\celulares\4b2ba132afc042b5f360bbfa0618de9f-product.jpg}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 12:52:20 75 pm')>
+>
+<[179]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay_onclick\carritocompras.webprojects\default.webproject\img\imagenes_productos\celulares\4ef2e79822e7d6922b21a28961bbfc6d-product.jpg}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 12:52:20 83 pm')>
+>
+<[180]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay_onclick\carritocompras.webprojects\default.webproject\img\imagenes_productos\celulares\5ef4a34c6848c2240c3c7a2b5d2c8866-product.jpg}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 12:52:20 88 pm')>
+>
+<[181]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay_onclick\carritocompras.webprojects\default.webproject\img\imagenes_productos\celulares\63915c96f0c3161e1d58f084615b7116-product.jpg}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 12:52:20 94 pm')>
+>
+<[182]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay_onclick\carritocompras.webprojects\default.webproject\img\imagenes_productos\celulares\63aa354ecad1c4d79f3382babdd01c83-product.jpg}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 12:52:20 96 pm')>
+>
+<[183]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay_onclick\carritocompras.webprojects\default.webproject\img\imagenes_productos\celulares\a65117efcbff9ccd91ae53d0de830fdc-product.jpg}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 12:52:21 08 pm')>
+>
+<[184]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay_onclick\carritocompras.webprojects\default.webproject\img\imagenes_productos\celulares\cd7ee932c6dfb4bb3facbf3b0c5559ef-product.jpg}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 12:52:21 14 pm')>
+>
+<[185]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay_onclick\carritocompras.webprojects\default.webproject\img\imagenes_productos\celulares\f91cccb8f8c0c278ff48e11c76c60b2d-product.jpg}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 12:52:21 17 pm')>
+>
+<[186]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay_onclick\carritocompras.webprojects\default.webproject\img\imagenes_productos\celulares\ffd131c8d251a630e2f53db918588b2f-product.jpg}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 12:52:21 20 pm')>
+>
+<[187]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay_onclick\carritocompras.webprojects\default.webproject\img\imagenes_productos\electrodomesticos\19ef9e766141946fc2292e1ccfaea81d-product.jpg}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 12:52:21 37 pm')>
+>
+<[188]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay_onclick\carritocompras.webprojects\default.webproject\img\imagenes_productos\electrodomesticos\3c683eb5921cea6a3e51666aa728a55a-product.jpg}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 12:52:21 42 pm')>
+>
+<[189]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay_onclick\carritocompras.webprojects\default.webproject\img\imagenes_productos\electrodomesticos\6126e974bbc2f9f5825575982f7c5091-product.jpg}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 12:52:21 45 pm')>
+>
+<[190]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay_onclick\carritocompras.webprojects\default.webproject\img\imagenes_productos\electrodomesticos\6335e4c3159aadc58d33618560ae35dc-product.jpg}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 12:52:21 48 pm')>
+>
+<[191]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay_onclick\carritocompras.webprojects\default.webproject\img\imagenes_productos\electrodomesticos\719130ababc31b6ab3bc2f3672c86116-product.jpg}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 12:52:21 62 pm')>
+>
+<[192]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay_onclick\carritocompras.webprojects\default.webproject\img\imagenes_productos\electrodomesticos\a8b19f0ad8eb55c422e86b51b7df6855-product.jpg}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 12:52:21 65 pm')>
+>
+<[193]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay_onclick\carritocompras.webprojects\default.webproject\img\imagenes_productos\electrodomesticos\bc71518e4a2fc2dca44c19b14a2da678-product.jpg}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 12:52:21 68 pm')>
+>
+<[194]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay_onclick\carritocompras.webprojects\default.webproject\img\imagenes_productos\electrodomesticos\eb12ba002814ac63b34176f2e1934e6d-product.jpg}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 12:52:21 72 pm')>
+>
+<[195]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay_onclick\carritocompras.webprojects\default.webproject\img\imagenes_productos\electrodomesticos\fa63a32a1dac17abb2d3d5151e6d3f52-product.jpg}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 12:52:21 87 pm')>
+>
+<[196]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay_onclick\carritocompras.webprojects\default.webproject\img\imagenes_productos\moda\2b8d52a5f19793fb01991e968937178c-product.jpg}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 12:52:22 00 pm')>
+>
+<[197]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay_onclick\carritocompras.webprojects\default.webproject\img\imagenes_productos\moda\33977880ab6ae5308e6e2d7b3d660558-product.jpg}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 12:52:22 10 pm')>
+>
+<[198]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay_onclick\carritocompras.webprojects\default.webproject\img\imagenes_productos\moda\47c77c3bb208fa4cc1306efe65d35601-product.jpg}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 12:52:22 14 pm')>
+>
+<[199]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay_onclick\carritocompras.webprojects\default.webproject\img\imagenes_productos\moda\6faaf8419afba3d99c075bd174201f36-product.jpg}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 12:52:22 17 pm')>
+>
+<[200]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay_onclick\carritocompras.webprojects\default.webproject\img\imagenes_productos\moda\7ec1031a774fdd103c9437df6e888061-product.jpg}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 12:52:22 20 pm')>
+>
+<[201]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay_onclick\carritocompras.webprojects\default.webproject\img\imagenes_productos\moda\9d33fe3daf4e0aeeba73ba197c6a872a-product.jpg}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 12:52:22 23 pm')>
+>
+<[202]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay_onclick\carritocompras.webprojects\default.webproject\img\imagenes_productos\moda\b953f426d8ae365f3691e002e07b5b8c-product.jpg}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 12:52:22 28 pm')>
+>
+<[203]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay_onclick\carritocompras.webprojects\default.webproject\img\imagenes_productos\moda\bd0083e2bcc169db93d5a519ee219c34-product.jpg}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 12:52:22 31 pm')>
+>
+<[204]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay_onclick\carritocompras.webprojects\default.webproject\img\imagenes_productos\moda\ecda8fcc06562c9576e8bbcb3f839b8a-product.jpg}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 12:52:22 74 pm')>
+>
+<[205]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay_onclick\carritocompras.webprojects\default.webproject\img\imagenes_productos\moda\f5d103e72aff59e3565109e8b147d9fb-product.jpg}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 12:52:22 81 pm')>
+>
+<[206]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay_onclick\carritocompras.webprojects\default.webproject\img\imagenes_productos\moda\f790ae634be859fc0d87ead3c7dc9f39-product.jpg}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 12:52:22 85 pm')>
+>
+<[207]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay_onclick\carritocompras.webprojects\default.webproject\img\loader.gif}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 12:52:22 99 pm')>
+>
+<[208]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay_onclick\carritocompras.webprojects\default.webproject\js\framework7.min.js}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 12:52:23 55 pm')>
+>
+<[209]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay_onclick\carritocompras.webprojects\default.webproject\projectproperties.projectproperties}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 03:02:28 90 pm')>
+>
+<[210]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay_onclick\carritocompras.webprojects\default.webproject\templates\email-webpay.txt}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 12:52:23 72 pm')>
+>
+<[211]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay_onclick\carritocompras.webprojects\default.webproject\websecurity_expired.dbf}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 12:52:23 77 pm')>
+>
+<[212]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay_onclick\carritocompras.webprojects\default.webproject\websecurity_expired.dbp}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 12:52:23 93 pm')>
+>
+<[213]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay_onclick\carritocompras.webprojects\default.webproject\websecurity_expired.ddd}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 12:52:23 98 pm')>
+>
+<[214]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay_onclick\carritocompras.webprojects\default.webproject\websecurity_expired.ddm}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 12:52:23 99 pm')>
+>
+<[215]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay_onclick\carritocompras.webprojects\default.webproject\websecurity_expired.ddx}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 12:52:24 06 pm')>
+>
+<[216]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay_onclick\carritocompras.webprojects\default.webproject\websecurity_groups.cdx}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 12:52:24 08 pm')>
+>
+<[217]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay_onclick\carritocompras.webprojects\default.webproject\websecurity_groups.dbf}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 12:52:24 09 pm')>
+>
+<[218]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay_onclick\carritocompras.webprojects\default.webproject\websecurity_groups.dbp}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 12:52:24 13 pm')>
+>
+<[219]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay_onclick\carritocompras.webprojects\default.webproject\websecurity_groups.ddd}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 12:52:24 14 pm')>
+>
+<[220]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay_onclick\carritocompras.webprojects\default.webproject\websecurity_groups.ddm}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 12:52:24 16 pm')>
+>
+<[221]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay_onclick\carritocompras.webprojects\default.webproject\websecurity_groups.ddx}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 12:52:24 17 pm')>
+>
+<[222]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay_onclick\carritocompras.webprojects\default.webproject\websecurity_members.dbf}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 12:52:24 21 pm')>
+>
+<[223]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay_onclick\carritocompras.webprojects\default.webproject\websecurity_members.dbp}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 12:52:24 23 pm')>
+>
+<[224]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay_onclick\carritocompras.webprojects\default.webproject\websecurity_members.ddd}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 12:52:24 24 pm')>
+>
+<[225]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay_onclick\carritocompras.webprojects\default.webproject\websecurity_members.ddm}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 12:52:24 25 pm')>
+>
+<[226]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay_onclick\carritocompras.webprojects\default.webproject\websecurity_members.ddx}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 12:52:24 26 pm')>
+>
+<[227]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay_onclick\carritocompras.webprojects\default.webproject\websecurity_users.dbf}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 12:52:24 27 pm')>
+>
+<[228]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay_onclick\carritocompras.webprojects\default.webproject\websecurity_users.dbp}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 12:52:24 29 pm')>
+>
+<[229]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay_onclick\carritocompras.webprojects\default.webproject\websecurity_users.ddd}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 12:52:24 33 pm')>
+>
+<[230]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay_onclick\carritocompras.webprojects\default.webproject\websecurity_users.ddm}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 12:52:24 34 pm')>
+>
+<[231]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay_onclick\carritocompras.webprojects\default.webproject\websecurity_users.ddx}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 12:52:24 35 pm')>
+>
+<[232]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay_onclick\carritocompras.webprojects\default.webproject\img\visa_logo.png}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 03:33:10 28 pm')>
+>
+<[233]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay_onclick\carritocompras.webprojects\default.webproject\img\mastercard_logo.png}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 03:39:28 39 pm')>
+>
+<[234]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay_onclick\carritocompras.webprojects\default.webproject\img\americanexpress_logo.png}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 03:51:03 68 pm')>
+>
+<[235]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay_onclick\carritocompras.webprojects\default.webproject\img\dinersclub_logo.png}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 03:51:03 74 pm')>
+>
+<[236]<type="file">
+<name="{c:\users\sebastian cardoza\documents\proyectos\carritocompras_webpay_onclick\carritocompras.webprojects\default.webproject\img\magna_logo.png}">
+<target_folder="c:\a5webroot\carritowebpay">
+<timestamp=CTODT('23-03-2018 03:51:03 78 pm')>
+>
+>

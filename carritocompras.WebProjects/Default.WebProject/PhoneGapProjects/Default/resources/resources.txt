@@ -1,0 +1,40 @@
+{
+	"_id": "3056836",
+	"_icon": "",
+	"_ssL": "",
+	"_ssP": "",
+	"_ssA9": "",
+	"_initialUxComponent": "main",
+	"_componentLastUpdated": "19-03-2018 04:29:31 77 pm",
+	"_ajaxUrl": "http://nubisonlab.cl:1580/webpay/",
+	"_additionalFiles": "",
+	"_userName": "uCOJP+7OF6TlMu3EjGP8zLzhFa0zYY06",
+	"_pw": "YA044UYlRvrWtitIXLI0ww==",
+	"_token": "",
+	"timeout": {
+		"phoneGapBuild": "<default>",
+		"phoneGapBuildLogin": "<default>",
+		"getAppIcon": "<default>"
+	},
+	"apperian": {
+		"enableOptions": false,
+		"loginName": "osLnGM4pUcQ=",
+		"password": "c5JMXi9Y+Ko=",
+		"serverURL": ""
+	},
+	"backupConfigFile": true,
+	"_phonegapBuilderVersion": "1",
+	"useImageMagick": true,
+	"indexHTMLMetaTags": "",
+	"genAppZipFile": false,
+	"zipFileLocation": "",
+	"buildTarget": "Phonegap Build",
+	"cliProjectFolder": "",
+	"_androidBuildFlag": true,
+	"_iOSBuildFlag": false,
+	"_windowsBuildFlag": false,
+	"_baseLineGuid": "9433a898cc19453e8c4d369af2c42d4b",
+	"enableInstantUpdate": false,
+	"instantUpdateSettingsJSON": "",
+	"launchAppManager": true
+}
