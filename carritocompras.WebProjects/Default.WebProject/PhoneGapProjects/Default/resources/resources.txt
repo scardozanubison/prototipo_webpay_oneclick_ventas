@@ -1,12 +1,12 @@
 {
 	"_id": "3056836",
-	"_icon": "",
+	"_icon": "C:\\Users\\Francisco Castillo\\Desktop\\carritocompras_webpay_onclick\\carritocompras.WebProjects\\Default.WebProject\\img\\logo.png",
 	"_ssL": "",
 	"_ssP": "",
 	"_ssA9": "",
 	"_initialUxComponent": "main",
-	"_componentLastUpdated": "19-03-2018 04:29:31 77 pm",
-	"_ajaxUrl": "http://nubisonlab.cl:1580/webpay/",
+	"_componentLastUpdated": "27/03/2018 11:15:11 78 am",
+	"_ajaxUrl": "",
 	"_additionalFiles": "",
 	"_userName": "uCOJP+7OF6TlMu3EjGP8zLzhFa0zYY06",
 	"_pw": "YA044UYlRvrWtitIXLI0ww==",
@@ -20,7 +20,7 @@
 		"enableOptions": false,
 		"loginName": "osLnGM4pUcQ=",
 		"password": "c5JMXi9Y+Ko=",
-		"serverURL": ""
+		"serverURL": "https://easesvc.apperian.com/ease.interface.php"
 	},
 	"backupConfigFile": true,
 	"_phonegapBuilderVersion": "1",
@@ -33,8 +33,9 @@
 	"_androidBuildFlag": true,
 	"_iOSBuildFlag": false,
 	"_windowsBuildFlag": false,
-	"_baseLineGuid": "9433a898cc19453e8c4d369af2c42d4b",
+	"_baseLineGuid": "0dad7467a2194ba9843dbf41be0d0300",
 	"enableInstantUpdate": false,
 	"instantUpdateSettingsJSON": "",
-	"launchAppManager": true
+	"launchAppManager": true,
+	"_sqlitedbdefined": false
 }

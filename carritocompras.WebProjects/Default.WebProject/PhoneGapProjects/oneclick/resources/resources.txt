@@ -1,0 +1,40 @@
+{
+	"_id": "3071580",
+	"_icon": "",
+	"_ssL": "",
+	"_ssP": "",
+	"_ssA9": "",
+	"_initialUxComponent": "main",
+	"_componentLastUpdated": "27/03/2018 11:15:11 78 am",
+	"_ajaxUrl": "",
+	"_additionalFiles": "",
+	"_userName": "uCOJP+7OF6TlMu3EjGP8zLzhFa0zYY06",
+	"_pw": "YA044UYlRvrWtitIXLI0ww==",
+	"_token": "",
+	"timeout": {
+		"phoneGapBuild": "<default>",
+		"phoneGapBuildLogin": "<default>",
+		"getAppIcon": "<default>"
+	},
+	"apperian": {
+		"enableOptions": false,
+		"loginName": "osLnGM4pUcQ=",
+		"password": "c5JMXi9Y+Ko=",
+		"serverURL": ""
+	},
+	"backupConfigFile": true,
+	"_phonegapBuilderVersion": "2",
+	"useImageMagick": true,
+	"indexHTMLMetaTags": "",
+	"genAppZipFile": false,
+	"zipFileLocation": "",
+	"buildTarget": "Phonegap Build",
+	"cliProjectFolder": "",
+	"_androidBuildFlag": true,
+	"_iOSBuildFlag": false,
+	"_windowsBuildFlag": false,
+	"_baseLineGuid": "333e66b719d44a188a6a81d9f59d5a50",
+	"enableInstantUpdate": false,
+	"instantUpdateSettingsJSON": "",
+	"launchAppManager": true
+}

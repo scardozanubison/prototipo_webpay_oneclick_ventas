@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 
@@ -78,8 +78,8 @@ iframe {-webkit-user-select: text;}
 
 </style>
 
-<link rel="stylesheet" type="text/css" href="css/AndroidLight/style.css?269">
-<link rel="stylesheet" type="text/css" href="css/_sharedStyles/style.css?269">
+<link rel="stylesheet" type="text/css" href="css/AndroidLight/style.css?561">
+<link rel="stylesheet" type="text/css" href="css/_sharedStyles/style.css?561">
 
 <link rel="stylesheet" type="text/css" href="css/CSSIcons/font-awesome/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="css/CSSIcons/font-awesome/fonts/fontawesome-webfont.eot">
@@ -244,8 +244,11 @@ iframe {-webkit-user-select: text;}
 <input type="hidden" value="" id="DLG1.PARAMETERBUCKET"/>
 <input type="file" style="position:absolute; top:-1000px;visibility:hidden;" accept="image/*" id="DLG1._GETPHOTO"/><input type="file" style="position:absolute; top:-1000px;visibility:hidden;" name="files[]" multiple = "" id="DLG1._GETFILEMULTI"/><input type="file" style="position:absolute; top:-1000px;visibility:hidden;" name="files[]" id="DLG1._GETFILE"/><input type="hidden" id="DLG1.V.R1.LIST_ALL_PRODUCTS" name="V.R1.LIST_ALL_PRODUCTS" />
 <input type="hidden" id="DLG1.V.R1.LIST_CARRITO" name="V.R1.LIST_CARRITO" />
+<input type="hidden" id="DLG1.V.R1.LIST_DETALLE_COMPRAS" name="V.R1.LIST_DETALLE_COMPRAS" />
+<input type="hidden" id="DLG1.V.R1.LIST_TARJETAS_USUARIO" name="V.R1.LIST_TARJETAS_USUARIO" />
+<input type="hidden" id="DLG1.V.R1.LIST_SELECT_CARD" name="V.R1.LIST_SELECT_CARD" />
 <div 	id="DLG1.V.R1.WINDOW_1"   
-			class=""  style="; display: none;"  >
+			class=""  style="background-color: #fafafa; ; display: none;"  >
 <div class="">
 	<div id="DLG1.V.R1.FREEFORM_1" class="" style=""   ><div style="padding: 25px 15px 0px 15px;">
         <img src="img/e-commerce-logo.png" style="width: 110px;" align="center" onclick="DLG1_DlgObj.panelSetActive('PANELCARD_1');">
@@ -264,11 +267,21 @@ iframe {-webkit-user-select: text;}
             </a>
         </li>
         <li>
-            <a href="#" class="item-link item-content">
+            <a href="#" class="item-link item-content" onclick="DLG1_DlgObj.panelSetActive('PANELCARD_7');">
                 <!--<div class="item-media"><img src="img/presentation-5.png" width="44"/></div>-->
                 <div class="item-inner">
                 <div class="item-title-row">
-                    <div class="item-title">Mis pedidos</div>
+                    <div class="item-title">Mis compras</div>
+                </div>
+                </div>
+            </a>
+        </li>
+		<li>
+            <a href="#" class="item-link item-content" onclick="DLG1_DlgObj.panelSetActive('PANELCARD_8');refreshListTarjetas();">
+                <!--<div class="item-media"><img src="img/presentation-5.png" width="44"/></div>-->
+                <div class="item-inner">
+                <div class="item-title-row">
+                    <div class="item-title">Mis tarjetas</div>
                 </div>
                 </div>
             </a>
@@ -368,12 +381,40 @@ iframe {-webkit-user-select: text;}
 	</div>
 
 
+<div 	id="DLG1.V.R1.WINDOW_2"   
+			class=""  style="; display: none;"  >
+<div class="">
+	<div id="DLG1.V.R1.FREEFORM_13" class="" style="width: 100%; height: 100%; "   ><div class="display-flex justify-content-center align-content-center no-margin no-padding">
+  <div class="block" style="width:100%;">
+	<div class="row">
+		<div class="col-100 tablet-100 desktop-70">
+			<h2>Seleccione una tarjeta para realizar el pago</h2>
+      </div>
+	</div>
+    <div class="row">
+      <div class="col-100 tablet-100 desktop-70" style="max-width:100%;max-height:750px;">
+			<span><input type="hidden" id="DLG1.V.R1.LIST_SELECT_CARD" name="V.R1.LIST_SELECT_CARD" />
+<div  class="row"   style="padding:0px; "  >
+	<div id="DLG1.V.R1.LIST_SELECT_CARD.CONTROL"  class="DLG1_LIST_SELECT_CARD row" style="overflow: auto; width: 100%; height: 100%; "></div>
+</div>
+</span>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div><br  style="clear:both; " />
+<div style="font: 0pt arial;clear:both;"></div>
+	</div>
+
+
 
 <script type="text/javascript" language="javascript">
 
 
+if(!A5.controlBar) { 	
 /*
-Copyright (c) 2001, 2017 Alpha Software Corporation
+Copyright (c) 2001, 2018 Alpha Software Corporation
 All Rights Reserved.
 This JavaScript library is licensed exclusively for use with Alpha Anywhere, Alpha Five,
 Alpha Five Application Server, Alpha Anywhere Application Server,
@@ -477,9 +518,9 @@ temp.push('{*endif}');}
 tLines.push(temp.join(''));}
 if(edge=='left'){tLines.unshift('<div class="A5ControlBarVert">');tLines.push('</div>');}else if(edge=='bottom'){tLines.reverse();tLines.unshift('<div class="A5ControlBarHorz">');tLines.push('</div>');}else if(edge=='right'){tLines.reverse();tLines.unshift('<div class="A5ControlBarVert">');tLines.push('</div>');}else{tLines.unshift('<div class="A5ControlBarHorz">');tLines.push('</div>');}
 tLines=tLines.join('');if(edge=='left'||edge=='right'){tLines=tLines.replace(/A5CONTROLBARITEMSIZE/gi,'height');tLines=tLines.replace(/A5CONTROLBARSEPCLASSNAME/gi,this.separator.verticalClassName);}else{tLines=tLines.replace(/A5CONTROLBARITEMSIZE/gi,'width');tLines=tLines.replace(/A5CONTROLBARSEPCLASSNAME/gi,this.separator.horizontalClassName);}
-cl._t[edge]=A5.u.template.parse(tLines);}}});
+cl._t[edge]=A5.u.template.parse(tLines);}}});};
 A5._windowDefaults={title:{tools:{defaults:{'close':{action:'close',name:'close',image:'a5images/windowbuttonclose.png'}}}}}
-A5.serverSideDateFormat = 'dd-MM-yyyy';
+A5.serverSideDateFormat = 'dd/MM/yyyy';
 A5.u.drag.useDragScrolling = 'auto';
 if(typeof DLG1_DlgObj == 'object') { 
 	DLG1_DlgObj._destroy();
@@ -498,13 +539,61 @@ if(typeof DLG1_DlgObj == 'object') {
 }
 ;window['DLG1_PanelObj'] = new A5.PanelNavigator([
 {
+	name: 'PANEL_LOGIN',
+	src: new A5.PanelCard({
+	theme: 'AndroidLight',
+	body: {
+		content: {
+			type: 'html',
+			src: '<div style="display:none;"><span><input\ttype="text" id="DLG1.V.R1.TXT_TOKEN_USER" title=""     class="[class.dialogInput]" style=""    name="V.R1.TXT_TOKEN_USER"    value=""    />\n</span>\n</div><div class="">\n\t<div id="DLG1.V.R1.FREEFORM_2" class="" style=""   ><div class="display-flex justify-content-center align-content-center">\n        <div class="block panel-login" >\n            <div class="row margin-login" align="center" >\n                <div class="col-100 align-self-center">\t\t\n                        <img src="img/e-commerce-logo.png" width="120px" height="120px"> \n                </div>\n            </div>\n            <div class="row margin-login">\n                <div class="col-100">    \n                    <div class="list no-hairlines-md">\n                        <ul>\n                            <li class="item-content item-input">\n                                <div class="item-inner">\t                        \t\n                                    <div class="item-input-wrap">\n                                        <span><input\ttype="text" id="DLG1.V.R1.USERNAME" title=""  autocapitalize="off"  autocorrect="off"     class="AndroidLightEdit" style="width: 100%; "    name="V.R1.USERNAME"    value=""    />\n</span>\n                                    </div>                        \t\n                                </div>\n                            </li>\n\t\t\t\t\t\t\t<li class="item-content item-input">\n                                <div class="item-inner">\t                        \t\n                                    <div class="item-input-wrap">\n                                        <span><input\ttype="password" id="DLG1.V.R1.PASSWORD" title=""  autocapitalize="off"  autocorrect="off"     class="AndroidLightEdit" style="width: 100%; "    name="V.R1.PASSWORD"    value=""    />\n</span>\n                                    </div>                        \t\n                                </div>\n                            </li>\n                        </ul>\n                    </div>\n                </div>\n\t\t\t\t<div class="col-100">          \n                    \n\t<button type="button" id="DLG1.V.R1.LOGIN_BUTTON"    ></button>\n\n                </div>\n\t\t\t\t<div class="col-100" align="right">          \n                    \n                </div>     \n            </div>\n        </div>\n    </div></div>\n</div><br  style="clear:both; " /><div class="A5CWLayout" style="width: 100%"  id="DLG1.V.R1.LOGIN_ERRORS" style="width: 100%; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;">\n</div><br  style="clear:both; " />\n<div style="clear: both; font: 0px arial; height: 0px; width: 0px;"></div>'
+		},
+		scroll: {
+			axis: 'both',
+			stopPropogation: false,
+			pull: {
+				y: 'auto',
+				x: 'auto'
+			},
+			indicator: {
+				show: true,
+				h: {
+					show: true,
+					location: 'right',
+					offset: '0px',
+					left: '0px',
+					right: '0px'
+				},
+				v: {
+					show: true,
+					location: 'right',
+					offset: '0px',
+					top: '0px',
+					bottom: '0px'
+				}
+			}
+		}
+	},
+	header: {
+		html: '<div style="display:none;"></div>'
+	},
+	footer: {
+	},
+	overlay: {
+	},
+	onSize: function() {if(typeof DLG1_DlgObj != 'undefined' && typeof DLG1_DlgObj._panelCardResize != 'undefined') { DLG1_DlgObj._panelCardResize('PANEL_LOGIN'); };}
+})
+},
+{
+	name: 'PANELNAVIGATOR_2',
+	src: new A5.PanelNavigator([
+{
 	name: 'PANELCARD_1',
 	src: new A5.PanelCard({
 	theme: 'AndroidLight',
 	body: {
 		content: {
 			type: 'html',
-			src: '<div style="display:none;"></div><div class="">\n\t<div id="DLG1.V.R1.FREEFORM_OPCIONES_HEAD" class="" style="width: 100%; height: 100%; "   ><div class="display-flex justify-content-center align-content-center">\n    <div class="block" style="width:100%;margin-top: 5px;margin-bottom: 5px;">\n        <div class="row">\n            <div class="col-100 tablet-70 desktop-60" style="background-color:#ff6f00 ;height: 140px; width: 100%">\n                <p style="color:white;font-size:24px;text-align:center;">Productos de la semana</p>\n            </div>\n        </div>\n    </div>\n</div>\n    \n<div class="display-flex justify-content-center align-content-center">\n    <div class="block no-margin-top" style="width:100%;margin-bottom: 5px;">\n        <div class="row no-gap">\n            <div class="col-50" style="background-color: #00acc1; height: 130px;">\n                <p style="color:white;text-align:center;">Destacados del d&iacute;a!</p>\n            </div>\n            <div class="col-50" style="background-color: #00838f; height: 130px;">\n    \t\t\t<p style="color:white;text-align:center;">Computaci&oacute;n</p>\n            </div>\n        </div>    \n    </div>\n</div>\n    \n<div class="display-flex justify-content-center align-content-center" onclick="goToAllProducts()">\n    <div class="block no-margin-top" style="width:100%;margin-bottom: 5px">\n        <div class="row">\n            <div class="col-100" style="background-color: #fbc02d; height: 120px; width: 100%">\n    \t\t\t<p style="color:white;text-align:center;text-align:center;">Ve todos nuestros productos</p>\n            </div>\n        </div>\n    </div>\n</div></div>\n</div><br  style="clear:both; " /><div class="">\n\t<div id="DLG1.V.R1.FREEFORM_MEJORES_PRODUCTOS" class="no-margin" style="width: 100%; height: 100%; "   ><div class="display-flex justify-content-center align-content-center no-margin no-padding">\n    <div class="block" style="width:100%;margin-top: 5px;margin-bottom: 5px;">\n        <div class="row">\n            <div class="col-100 tablet-50 desktop-50">\n                <h2 style="color:#37474f; font-size: 24;text-align:left">Mejores Productos</h2>\n            </div>\n        </div>\n    </div>\n</div>\n<div class="display-flex justify-content-center align-content-center no-margin no-padding">\n\t<div class="block" style="width:100%;margin-top: 5px;margin-bottom: 5px;">\n        <div class="row">\n            <div class="col-100 tablet-100 desktop-100">\n \t\t\t\t<div data-pagination=\'\' data-space-between="7" data-slides-per-view="2" class="swiper-container swiper-init demo-swiper">\n\t\t\t\t  <div class="swiper-pagination"></div>\n\t\t\t\t  <div class="swiper-wrapper">\n\t\t\t\t    <div class="swiper-slide">Slide 1</div>\n\t\t\t\t    <div class="swiper-slide">Slide 2</div>\n\t\t\t\t    <div class="swiper-slide">Slide 3</div>\n\t\t\t\t    <div class="swiper-slide">Slide 4</div>\n\t\t\t\t    <div class="swiper-slide">Slide 5</div>\n\t\t\t\t    <div class="swiper-slide">Slide 6</div>\n\t\t\t\t    <div class="swiper-slide">Slide 7</div>\n\t\t\t\t    <div class="swiper-slide">Slide 8</div>\n\t\t\t\t    <div class="swiper-slide">Slide 9</div>\n\t\t\t\t    <div class="swiper-slide">Slide 10</div>\n\t\t\t\t  </div>\n\t\t\t\t</div>\n            </div>\n        </div>\n    </div>\n</div>\n</div>\n</div><br  style="clear:both; " /><div style="clear: both; font: 0px arial; height: 0px; width: 0px;"></div>'
+			src: '<div class="">\n\t<div id="DLG1.V.R1.FREEFORM_OPCIONES_HEAD" class="" style="width: 100%; height: 100%; "   ><div class="display-flex justify-content-center align-content-center">\n    <div class="block" style="width:100%;margin-top: 5px;margin-bottom: 5px;">\n        <div class="row">\n            <div class="col-100 tablet-70 desktop-60" style="background-color:#ff6f00 ;height: 140px; width: 100%">\n                <p style="color:white;font-size:24px;text-align:center;">Productos de la semana</p>\n            </div>\n        </div>\n    </div>\n</div>\n    \n<div class="display-flex justify-content-center align-content-center">\n    <div class="block no-margin-top" style="width:100%;margin-bottom: 5px;">\n        <div class="row no-gap">\n            <div class="col-50" style="background-color: #00acc1; height: 130px;">\n                <p style="color:white;text-align:center;">Destacados del d&iacute;a!</p>\n            </div>\n            <div class="col-50" style="background-color: #00838f; height: 130px;">\n    \t\t\t<p style="color:white;text-align:center;">Computaci&oacute;n</p>\n            </div>\n        </div>    \n    </div>\n</div>\n    \n<div class="display-flex justify-content-center align-content-center" onclick="goToAllProducts()">\n    <div class="block no-margin-top" style="width:100%;margin-bottom: 5px">\n        <div class="row">\n            <div class="col-100" style="background-color: #fbc02d; height: 120px; width: 100%">\n    \t\t\t<p style="color:white;text-align:center;text-align:center;">Ve todos nuestros productos</p>\n            </div>\n        </div>\n    </div>\n</div></div>\n</div><br  style="clear:both; " /><div class="">\n\t<div id="DLG1.V.R1.FREEFORM_MEJORES_PRODUCTOS" class="no-margin" style="width: 100%; height: 100%; "   ><div class="display-flex justify-content-center align-content-center no-margin no-padding">\n    <div class="block" style="width:100%;margin-top: 5px;margin-bottom: 5px;">\n        <div class="row">\n            <div class="col-100 tablet-50 desktop-50">\n                <h2 style="color:#37474f; font-size: 24;text-align:left">Mejores Productos</h2>\n            </div>\n        </div>\n    </div>\n</div>\n<div class="display-flex justify-content-center align-content-center no-margin no-padding">\n\t<div class="block" style="width:100%;margin-top: 5px;margin-bottom: 5px;">\n        <div class="row">\n            <div class="col-100 tablet-100 desktop-100">\n \t\t\t\t<div data-pagination=\'\' data-space-between="7" data-slides-per-view="2" class="swiper-container swiper-init demo-swiper">\n\t\t\t\t  <div class="swiper-pagination"></div>\n\t\t\t\t  <div class="swiper-wrapper">\n\t\t\t\t    <div class="swiper-slide">Slide 1</div>\n\t\t\t\t    <div class="swiper-slide">Slide 2</div>\n\t\t\t\t    <div class="swiper-slide">Slide 3</div>\n\t\t\t\t    <div class="swiper-slide">Slide 4</div>\n\t\t\t\t    <div class="swiper-slide">Slide 5</div>\n\t\t\t\t    <div class="swiper-slide">Slide 6</div>\n\t\t\t\t    <div class="swiper-slide">Slide 7</div>\n\t\t\t\t    <div class="swiper-slide">Slide 8</div>\n\t\t\t\t    <div class="swiper-slide">Slide 9</div>\n\t\t\t\t    <div class="swiper-slide">Slide 10</div>\n\t\t\t\t  </div>\n\t\t\t\t</div>\n            </div>\n        </div>\n    </div>\n</div>\n</div>\n</div><br  style="clear:both; " /><div style="clear: both; font: 0px arial; height: 0px; width: 0px;"></div>'
 		},
 		scroll: {
 			axis: 'y',
@@ -549,7 +638,7 @@ if(typeof DLG1_DlgObj == 'object') {
 	body: {
 		content: {
 			type: 'html',
-			src: '<div class="">\n\t<div id="DLG1.V.R1.FREEFORM_4" class="" style="width: 100%; height: 100%; "   ><div class="display-flex justify-content-center align-content-center no-margin no-padding">\n  <div class="block" style="width:100%;">\n    <div class="row">\n      <div class="col-100 tablet-100 desktop-70" style="max-width:100%;max-height:750px;">\n\t\t\t<span>\n<div  class="row"   style="padding:0px; "  >\n\t<div id="DLG1.V.R1.LIST_ALL_PRODUCTS.CONTROL"  class="DLG1_LIST_ALL_PRODUCTS" style="overflow: auto; width: 100%; height: 100%; "></div>\n</div>\n</span>\n      </div>\n    </div>\n  </div>\n</div>\n</div>\n</div><br  style="clear:both; " /><div style="clear: both; font: 0px arial; height: 0px; width: 0px;"></div>'
+			src: '<div class="">\n\t<div id="DLG1.V.R1.FREEFORM_4" class="" style="width: 100%; height: 100%; "   ><div class="display-flex justify-content-center align-content-center no-margin no-padding">\n  <div class="block" style="width:100%;">\n    <div class="row">\n      <div class="col-100 tablet-100 desktop-70" style="max-width:100%;">\n\t\t\t<span>\n<div  class="row"   style="padding:0px; "  >\n\t<div id="DLG1.V.R1.LIST_ALL_PRODUCTS.CONTROL"  class="DLG1_LIST_ALL_PRODUCTS row" style="overflow: auto; width: 100%; height: 100%; "></div>\n</div>\n</span>\n      </div>\n    </div>\n  </div>\n</div>\n</div>\n</div><br  style="clear:both; " /><div style="clear: both; font: 0px arial; height: 0px; width: 0px;"></div>'
 		},
 		scroll: {
 			axis: 'y',
@@ -596,7 +685,7 @@ if(typeof DLG1_DlgObj != 'undefined' && typeof DLG1_DlgObj._panelCardResize != '
 	body: {
 		content: {
 			type: 'html',
-			src: '<div class="">\n\t<div id="DLG1.V.R1.FREEFORM_5" class="" style="width: 100%; height: 100%; align: center; "   ><div class="display-flex justify-content-center align-content-center no-margin no-padding">\n    <div class="block" style="width:100%;">\n      <div class="row">\n        <div class="col-100 tablet-50 desktop-50"> \n\t\t\t<span><img src="" id="DLG1.V.R1.URL_IMAGEN" class="" title="" style="width: 100%; height: 100%; "  onerror="if(typeof DLG1_DlgObj != \'undefined\') DLG1_DlgObj._executeEvent(\'onImageError\',{element: this});"  /><input type="hidden" id="DLG1.V.R1.URL_IMAGEN_HIDDENA5FN" name="V.R1.URL_IMAGEN_HIDDENA5FN" ></span>\n        </div>\n        <div class="col-100 tablet-50 desktop-50"> \n\t\t\t<h2 style="font-size:18px;color:;#212121"><span><span\tid="DLG1.V.R1.NOMBRE_PRODUCTO" class="AndroidLightGridData" style="; display:inline-block" title=""    ></span>\n</span></h2>\n\t\t\t<h4 style="font-size:14px;color:;#c62828">$<span><span\tid="DLG1.V.R1.PRECIO" class="AndroidLightGridData" style="; display:inline-block" title=""    ></span>\n</span></h4>\n\t\t\t\n\t<button type="button" id="DLG1.V.R1.BUTTON_1"    ></button>\n\n\n        </div>\n      </div>\n    </div>\n  </div>\n\n\n<div class="display-flex justify-content-center align-content-center no-margin no-padding">\n  <div class="block">\n    <div class="row">\n      <div class="col-100 tablet-70 desktop-70"> \n\t\t\n      </div>\n    </div>\n  </div>\n</div></div>\n</div><br  style="clear:both; " /><div class="A5CWLayout" style="width: "  id="DLG1.V.R1.LIST_ALL_PRODUCTS_GLOBALERRORS" style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;">\n</div><br  style="clear:both; " />\n<div style="display:none;"><span><input\ttype="text" id="DLG1.V.R1.ID_PRODUCTO" title=""     class="AndroidLightEdit" style=""    name="V.R1.ID_PRODUCTO"    value=""    />\n</span>\n<span><span\tid="DLG1.V.R1.NOMBRE_CATEGORIA" class="AndroidLightGridData" style="; display:inline-block" title=""    ></span>\n</span>\n</div><div style="clear: both; font: 0px arial; height: 0px; width: 0px;"></div>'
+			src: '<div class="">\n\t<div id="DLG1.V.R1.FREEFORM_5" class="" style="width: 100%; height: 100%; align: center; "   ><div class="display-flex justify-content-center align-content-center no-margin no-padding">\n    <div class="block" style="width:100%;">\n      <div class="row">\n        <div class="col-100 tablet-50 desktop-50"> \n\t\t\t<span><img src="" id="DLG1.V.R1.URL_IMAGEN" class="" title="" style="width: 100%; height: 100%; "  onerror="if(typeof DLG1_DlgObj != \'undefined\') DLG1_DlgObj._executeEvent(\'onImageError\',{element: this});"  /><input type="hidden" id="DLG1.V.R1.URL_IMAGEN_HIDDENA5FN" name="V.R1.URL_IMAGEN_HIDDENA5FN" ></span>\n        </div>\n        <div class="col-100 tablet-50 desktop-50"> \n\t\t\t<h2 style="font-size:18px;color:;#212121"><span><span\tid="DLG1.V.R1.NOMBRE_PRODUCTO" class="AndroidLightGridData" style="; display:inline-block" title=""    ></span>\n</span></h2>\n\t\t\t<h4 style="font-size:14px;color:;#c62828">$<span><span\tid="DLG1.V.R1.PRECIO" class="AndroidLightGridData" style="; display:inline-block" title=""    ></span>\n</span></h4>\n\t\t\t\n\t<button type="button" id="DLG1.V.R1.BUTTON_1"    ></button>\n\n\n        </div>\n      </div>\n    </div>\n  </div>\n\n\n<div class="display-flex justify-content-center align-content-center no-margin no-padding">\n  <div class="block">\n    <div class="row">\n      <div class="col-100 tablet-70 desktop-70"> \n\t\t\n      </div>\n    </div>\n  </div>\n</div></div>\n</div><br  style="clear:both; " /><div style="display:none;"><span><input\ttype="text" id="DLG1.V.R1.ID_PRODUCTO" title=""     class="AndroidLightEdit" style=""    name="V.R1.ID_PRODUCTO"    value=""    />\n</span>\n<span><span\tid="DLG1.V.R1.NOMBRE_CATEGORIA" class="AndroidLightGridData" style="; display:inline-block" title=""    ></span>\n</span>\n</div><div style="clear: both; font: 0px arial; height: 0px; width: 0px;"></div>'
 		},
 		scroll: {
 			axis: 'both',
@@ -643,7 +732,7 @@ if(typeof DLG1_DlgObj != 'undefined' && typeof DLG1_DlgObj._panelCardResize != '
 	body: {
 		content: {
 			type: 'html',
-			src: '<div class="">\n\t<div id="DLG1.V.R1.FREEFORM_6" class="" style="width: 100%; height: 100%; "   ><div class="display-flex justify-content-center align-content-center no-margin no-padding">\n  <div class="block" align="center">\n    <div class="row">\n      <div class="col-100 tablet-100 desktop-60" style="max-width:100%;max-height:750px;"> \n\t\t<span>\n<div  class="row"   style="padding:0px; "  >\n\t<div id="DLG1.V.R1.LIST_CARRITO.CONTROL"  class="DLG1_LIST_CARRITO" style="overflow: auto; width: 100%; height: 100%; "></div>\n</div>\n</span>\n      </div>\n\t\t<div class="col-100 tablet-100 desktop-40" align="center" style="margin-top:10px;"> \n\t\t\t<div class="row" style="width:100%;">\n                <div class="col-80" style="width:100%;">\n                    <h3 style="color:#212121;">SubTotal&nbsp; (<span><span id="DLG1.V.R1.STATICTEXT_COUNTPRODUCTS" class="" style=""   ></span></span>): <span><span id="DLG1.V.R1.STATICTEXT_SUBTOTAL" class="" style=""   ></span></span></h3>\n                    <h3 style="color:#212121;">Total:&nbsp; <span><span id="DLG1.V.R1.STATICTEXT_TOTAL" class="" style=""   ></span></span></h3>\n                    <div class="">\n\t<button type="button" id="DLG1.V.R1.BUTTON_2"    ></button>\n</div><br  style="clear:both; " />\n                </div>\n            </div>\n      \t</div>\n    </div>\n  </div>\n</div>\n\n\n\n</div>\n</div><br  style="clear:both; " /><div style="clear: both; font: 0px arial; height: 0px; width: 0px;"></div>'
+			src: '<div class="">\n\t<div id="DLG1.V.R1.FREEFORM_6" class="" style="width: 100%; height: 100%; "   ><div class="display-flex justify-content-center align-content-center no-margin no-padding">\n  <div class="block" align="center" style="width:100%;">\n    <div class="row">\n      <div class="col-100 tablet-100 desktop-60" style="max-width:100%;height:100%;"> \n\t\t<span>\n<div  class="row"   style="padding:0px; "  >\n\t<div id="DLG1.V.R1.LIST_CARRITO.CONTROL"  class="DLG1_LIST_CARRITO row" style="overflow: auto; width: 100%; height: 100%; "></div>\n</div>\n</span>\n      </div>\n    </div>\n  </div>\n</div>\n\n\n\n</div>\n</div><br  style="clear:both; " /><div class="">\n\t<div id="DLG1.V.R1.FREEFORM_8" class="" style="width: 100%; height: 100%; "   ><div class="display-flex justify-content-center align-content-center no-margin no-padding">\n  <div class="block" align="center">\n    <div class="row">\n\t\t<div class="col-100 tablet-100 desktop-40" align="center" style="margin-top:10px;width:100%;"> \n\t\t\t<div class="row" style="width:100%;">\n                <div class="col-80" style="width:100%;">\n                    <h3 style="color:#212121;">SubTotal&nbsp; (<span><span id="DLG1.V.R1.STATICTEXT_COUNTPRODUCTS" class="" style=""   ></span></span>): <span><span id="DLG1.V.R1.STATICTEXT_SUBTOTAL" class="" style=""   ></span></span></h3>\n\t\t\t\t\t<div style="display: inline-block">\n\t\t\t\t\t\t<h3 style="color:#212121;display: inline-block">Total:&nbsp; <span><input\ttype="text" id="DLG1.V.R1.TXT_TOTAL" title=""     class="AndroidLightEdit" style="color: #212121; font-size: 1.17em; font-weight: bold; display: inline-block; width: 120px; "    name="V.R1.TXT_TOTAL"    value=""   disabled="disabled"   />\n</span></h3> \n\t\t\t\t\t</div>\n                    \n                    <div class="">\n\t<button type="button" id="DLG1.V.R1.BUTTON_2"    ></button>\n</div><br  style="clear:both; " />\n                </div>\t\t\t\t\n            </div>\n      \t</div>\n    </div>\n  </div>\n</div>\n\n</div>\n</div><br  style="clear:both; " /><div style="display:none;"><span><input\ttype="text" id="DLG1.V.R1.TXT_CART" title=""     class="AndroidLightEdit" style=""    name="V.R1.TXT_CART"    value=""    />\n</span>\n</div><div style="clear: both; font: 0px arial; height: 0px; width: 0px;"></div>'
 		},
 		scroll: {
 			axis: 'both',
@@ -672,7 +761,7 @@ if(typeof DLG1_DlgObj != 'undefined' && typeof DLG1_DlgObj._panelCardResize != '
 		}
 	},
 	header: {
-		html: '<div class="" style="width: " > \t<div id="DLG1.V.R1.STATICTEXT_4" title=""  class="" style="margin-top: 8px; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;"   ><h5 class="text-color-white text-align-center no-margin"> CARRITO DE COMPRAS </h5></div> </div> <div style="display:none;"></div>',
+		html: '<div class="" style="width: " > \t<div id="DLG1.V.R1.STATICTEXT_4" title=""  class="" style="margin-top: 8px; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;"   ><h5 class="text-color-white text-align-center no-margin"> <a href="#" class="float-left text-color-white" onclick="DLG1_DlgObj.panelSetActive(\'PANELCARD_2\')"><i class="fa fa-arrow-left fa-lg"></i></a> CARRITO DE COMPRAS </h5></div> </div> <div style="display:none;"></div>',
 		show: true,
 		style: 'background-color:#bdbdbd; height:36px;'
 	},
@@ -692,7 +781,53 @@ if(typeof DLG1_DlgObj != 'undefined' && typeof DLG1_DlgObj._panelCardResize != '
 	body: {
 		content: {
 			type: 'html',
-			src: '<div class="">\n\t<div id="DLG1.V.R1.FREEFORM_3" class="" style="width: 100%; height: 100%; "   >\n<div class="display-flex justify-content-flex-end align-content-center">\n    <div class="block" style="width:100%;height:100%;">\n        <div class="row">\n            <div class="col-100">\n\t\t\t\t<span><iframe id="DLG1.V.R1.IFRAME_1" src="" class=""  scrollable="yes" style="display: block;   width: 100vw;   height: 120vh;   max-width: 100%;   margin: 0;   padding: 0;   border: 0 none;   box-sizing: border-box; margin-top:25px;"    ></iframe><span>\n            </div>\n        </div>\n    </div>\n</div></div>\n</div><br  style="clear:both; " /><div style="clear: both; font: 0px arial; height: 0px; width: 0px;"></div>'
+			src: '<div class="">\n\t<div id="DLG1.V.R1.FREEFORM_3" class="" style="width: 100%; height: 100%; "   >\n<div class="display-flex justify-content-flex-end align-content-center">\n    <div class="block" style="width:100%;height:100%;">\n        <div class="row">\n            <div class="col-100">\n\t\t\t\t<div style="background:url(img/loader.gif) center center no-repeat">\n\t\t\t\t\t<span><iframe id="DLG1.V.R1.IFRAME_1" src="" class=""  scrollable="yes" style="display: block;   width: 100vw;   height: 120vh;   max-width: 100%;   margin: 0;   padding: 0;   border: 0 none;   box-sizing: border-box; margin-top:25px;"    ></iframe><span>\n\t\t\t\t</div>\t\t\n            </div>\n        </div>\n    </div>\n</div>\n\n<div style="display:none;">\n<span><input\ttype="text" id="DLG1.V.R1.TXT_MONTO_EMAIL" title=""     class="AndroidLightEdit" style=""    name="V.R1.TXT_MONTO_EMAIL"    value=""    />\n</span>\n<span><input\ttype="text" id="DLG1.V.R1.TXT_COD_AUT_EMAIL" title=""     class="AndroidLightEdit" style=""    name="V.R1.TXT_COD_AUT_EMAIL"    value=""    />\n</span>\n<span><input\ttype="text" id="DLG1.V.R1.TXT_COD_COMPRA_EMAIL" title=""     class="AndroidLightEdit" style=""    name="V.R1.TXT_COD_COMPRA_EMAIL"    value=""    />\n</span>\n<span><input\ttype="text" id="DLG1.V.R1.TXT_TARJETA_EMAIL" title=""     class="AndroidLightEdit" style=""    name="V.R1.TXT_TARJETA_EMAIL"    value=""    />\n</span>\n<span><input\ttype="text" id="DLG1.V.R1.TXT_FECHA_EMAIL" title=""     class="AndroidLightEdit" style=""    name="V.R1.TXT_FECHA_EMAIL"    value=""    />\n</span>\n<span><input\ttype="text" id="DLG1.V.R1.TXT_TIPOPAGO_EMAIL" title=""     class="AndroidLightEdit" style=""    name="V.R1.TXT_TIPOPAGO_EMAIL"    value=""    />\n</span>\n<span><input\ttype="text" id="DLG1.V.R1.TXT_NUMCUOTAS_EMAIL" title=""     class="AndroidLightEdit" style=""    name="V.R1.TXT_NUMCUOTAS_EMAIL"    value=""    />\n</span>\n</div></div>\n</div><br  style="clear:both; " /><div style="display:none;"><span><input\ttype="text" id="DLG1.V.R1.TXTTRANSACTION_ID" title=""     class="AndroidLightEdit" style=""    name="V.R1.TXTTRANSACTION_ID"    value=""    />\n</span>\n</div><div style="clear: both; font: 0px arial; height: 0px; width: 0px;"></div>'
+		},
+		scroll: {
+			axis: 'both',
+			stopPropogation: false,
+			pull: {
+				y: 'auto',
+				x: 'auto'
+			},
+			indicator: {
+				show: true,
+				h: {
+					show: true,
+					location: 'top',
+					offset: '0px',
+					left: '0px',
+					right: '0px'
+				},
+				v: {
+					show: true,
+					location: 'right',
+					offset: '0px',
+					top: '0px',
+					bottom: '0px'
+				}
+			}
+		},
+		className: 'width:100%;height:100%'
+	},
+	header: {
+		html: '<div style="display:none;"></div>'
+	},
+	footer: {
+	},
+	overlay: {
+	},
+	onSize: function() {if(typeof DLG1_DlgObj != 'undefined' && typeof DLG1_DlgObj._panelCardResize != 'undefined') { DLG1_DlgObj._panelCardResize('PANELCARD_5'); };}
+})
+},
+{
+	name: 'PANELCARD_7',
+	src: new A5.PanelCard({
+	theme: 'AndroidLight',
+	body: {
+		content: {
+			type: 'html',
+			src: '<div class="">\n\t<div id="DLG1.V.R1.FREEFORM_10" class="" style="width: 100%; height: 100%; "   ><div class="display-flex justify-content-center align-content-center no-margin no-padding">\n  <div class="block" style="width:100%;">\n    <div class="row">\n      <div class="col-100 tablet-100 desktop-70" style="max-width:100%;max-height:100%px;">\n\t\t\t<span>\n<div  class="AndroidLightList"   style="padding:0px; "  >\n\t<div id="DLG1.V.R1.LIST_DETALLE_COMPRAS.CONTROL"  class="DLG1_LIST_DETALLE_COMPRAS <Default>" style="overflow: auto; width: 100%; height: 100%; "></div>\n</div>\n</span>\n      </div>\n    </div>\n  </div>\n</div>\n</div>\n</div><br  style="clear:both; " /><div style="clear: both; font: 0px arial; height: 0px; width: 0px;"></div>'
 		},
 		scroll: {
 			axis: 'both',
@@ -727,7 +862,146 @@ if(typeof DLG1_DlgObj != 'undefined' && typeof DLG1_DlgObj._panelCardResize != '
 	},
 	overlay: {
 	},
-	onSize: function() {if(typeof DLG1_DlgObj != 'undefined' && typeof DLG1_DlgObj._panelCardResize != 'undefined') { DLG1_DlgObj._panelCardResize('PANELCARD_5'); };}
+	onSize: function() {;
+if(typeof DLG1_DlgObj != 'undefined') {var mObj = DLG1_DlgObj.getControl('LIST_DETALLE_COMPRAS'); if(mObj) mObj.refresh();}
+if(typeof DLG1_DlgObj != 'undefined' && typeof DLG1_DlgObj._panelCardResize != 'undefined') { DLG1_DlgObj._panelCardResize('PANELCARD_7'); };}
+})
+},
+{
+	name: 'PANELCARD_8',
+	src: new A5.PanelCard({
+	theme: 'AndroidLight',
+	body: {
+		content: {
+			type: 'html',
+			src: '<div class="">\n\t<div id="DLG1.V.R1.FREEFORM_11" class="" style="width: 100%; height: 100%; "   ><div class="display-flex justify-content-center align-content-center no-margin no-padding" style="width:100%;">\n    <div class="block" style="width:100%;">\n      <div class="row">\n        <div class="col-60 tablet-60 desktop-60">\n            <h2 style="color:#37474f;"> Mis tarjetas </h2>  \n        </div>\n        <div class="col-40 tablet-40 desktop-40" align="right">\n            \n\t<button type="button" id="DLG1.V.R1.BUTTON_6"    ></button>\n\n        </div>\n      </div>\n      <div class="row"  align="center" >\n        <div class="col-100 tablet-100 desktop-70" style="width:100%;">\n           <span>\n<div  class="AndroidLightList"   style="padding:0px; "  >\n\t<div id="DLG1.V.R1.LIST_TARJETAS_USUARIO.CONTROL"  class="DLG1_LIST_TARJETAS_USUARIO" style="overflow: auto; width: 100%; height: 100%; "></div>\n</div>\n</span>  \n        </div>\n      </div>\n    </div>\n  </div></div>\n</div><br  style="clear:both; " /><div style="display:none;"><span><input\ttype="text" id="DLG1.V.R1.TXT_TOKENDELETE" title=""     class="AndroidLightEdit" style=""    name="V.R1.TXT_TOKENDELETE"    value=""    />\n</span>\n</div><div style="clear: both; font: 0px arial; height: 0px; width: 0px;"></div>'
+		},
+		scroll: {
+			axis: 'both',
+			stopPropogation: false,
+			pull: {
+				y: 'auto',
+				x: 'auto'
+			},
+			indicator: {
+				show: true,
+				h: {
+					show: true,
+					location: 'top',
+					offset: '0px',
+					left: '0px',
+					right: '0px'
+				},
+				v: {
+					show: true,
+					location: 'right',
+					offset: '0px',
+					top: '0px',
+					bottom: '0px'
+				}
+			}
+		}
+	},
+	header: {
+		html: '<div style="display:none;"></div>'
+	},
+	footer: {
+	},
+	overlay: {
+	},
+	onSize: function() {;
+if(typeof DLG1_DlgObj != 'undefined') {var mObj = DLG1_DlgObj.getControl('LIST_TARJETAS_USUARIO'); if(mObj) mObj.refresh();}
+if(typeof DLG1_DlgObj != 'undefined' && typeof DLG1_DlgObj._panelCardResize != 'undefined') { DLG1_DlgObj._panelCardResize('PANELCARD_8'); };}
+})
+},
+{
+	name: 'PANELCARD_9',
+	src: new A5.PanelCard({
+	theme: 'AndroidLight',
+	body: {
+		content: {
+			type: 'html',
+			src: '<div class="">\n\t<div id="DLG1.V.R1.FREEFORM_7" class="" style="width: 100%; height: 100%; "   >\n<div class="display-flex justify-content-flex-end align-content-center">\n    <div class="block" style="width:100%;height:100%;">\n        <div class="row">\n            <div class="col-100">\n\t\t\t\t<div style="background:url(img/loader.gif) center center no-repeat">\n\t\t\t\t\t<span><iframe id="DLG1.V.R1.IFRAME_2" src="" class=""  scrollable="yes" style="display: block;   width: 100vw;   height: 120vh;   max-width: 100%;   margin: 0;   padding: 0;   border: 0 none;   box-sizing: border-box; margin-top:25px;"    ></iframe><span>\n\t\t\t\t</div>\t\t\n            </div>\n        </div>\n    </div>\n</div>\n</div>\n</div><br  style="clear:both; " /><div style="clear: both; font: 0px arial; height: 0px; width: 0px;"></div>'
+		},
+		scroll: {
+			axis: 'both',
+			stopPropogation: false,
+			pull: {
+				y: 'auto',
+				x: 'auto'
+			},
+			indicator: {
+				show: true,
+				h: {
+					show: true,
+					location: 'top',
+					offset: '0px',
+					left: '0px',
+					right: '0px'
+				},
+				v: {
+					show: true,
+					location: 'right',
+					offset: '0px',
+					top: '0px',
+					bottom: '0px'
+				}
+			}
+		}
+	},
+	header: {
+		html: '<div style="display:none;"></div>'
+	},
+	footer: {
+	},
+	overlay: {
+	},
+	onSize: function() {if(typeof DLG1_DlgObj != 'undefined' && typeof DLG1_DlgObj._panelCardResize != 'undefined') { DLG1_DlgObj._panelCardResize('PANELCARD_9'); };}
+})
+},
+{
+	name: 'PANELCARD_10',
+	src: new A5.PanelCard({
+	theme: 'AndroidLight',
+	body: {
+		content: {
+			type: 'html',
+			src: '<div class="">\n\t<div id="DLG1.V.R1.FREEFORM_9" class="" style="width: 100%; height: 100%; "   >\n<div class="display-flex justify-content-flex-end align-content-center">\n    <div class="block" style="width:100%;height:100%;">\n        <div class="row">\n            <div class="col-100">\n\t\t\t\t<div style="background:url(img/loader.gif) center center no-repeat">\n\t\t\t\t\t<span><iframe id="DLG1.V.R1.IFRAME_3" src="" class=""  scrollable="yes" style="display: block;   width: 100vw;   height: 120vh;   max-width: 100%;   margin: 0;   padding: 0;   border: 0 none;   box-sizing: border-box; margin-top:25px;"    ></iframe><span>\n\t\t\t\t</div>\t\t\n            </div>\n        </div>\n    </div>\n</div>\n</div>\n</div><br  style="clear:both; " /><div style="clear: both; font: 0px arial; height: 0px; width: 0px;"></div>'
+		},
+		scroll: {
+			axis: 'both',
+			stopPropogation: false,
+			pull: {
+				y: 'auto',
+				x: 'auto'
+			},
+			indicator: {
+				show: true,
+				h: {
+					show: true,
+					location: 'top',
+					offset: '0px',
+					left: '0px',
+					right: '0px'
+				},
+				v: {
+					show: true,
+					location: 'right',
+					offset: '0px',
+					top: '0px',
+					bottom: '0px'
+				}
+			}
+		}
+	},
+	header: {
+		html: '<div style="display:none;"></div>'
+	},
+	footer: {
+	},
+	overlay: {
+	},
+	onSize: function() {if(typeof DLG1_DlgObj != 'undefined' && typeof DLG1_DlgObj._panelCardResize != 'undefined') { DLG1_DlgObj._panelCardResize('PANELCARD_10'); };}
 })
 }
 ],{
@@ -735,15 +1009,11 @@ if(typeof DLG1_DlgObj != 'undefined' && typeof DLG1_DlgObj._panelCardResize != '
 	flow: 'ltr',
 	loopNavigate: false,
 	onPanelActivate: function() {DLG1_DlgObj.refreshClientSideComputations();},
-	onSize: function() {;if(typeof DLG1_DlgObj != 'undefined') {
-	if(typeof DLG1_DlgObj._findActiveLayoutRule != 'undefined') { 
-		DLG1_DlgObj._findActiveLayoutRule();
-	}
-}},
+	onSize: function() {;},
 	theme: 'AndroidLight',
 	header: {
 		show: true,
-		html: '<div class="A5CWLayout" style="padding: 0px; width: 25%"><div class="" style="width: " > \t<i  id="DLG1.V.R1.IMAGE_2" class="fa fa-navicon fa-2x " style="color: black; padding: 10px; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;" title="" onclick="DLG1_DlgObj.showContainerWindow(this,\'WINDOW_1\');" onerror="if(typeof DLG1_DlgObj != \'undefined\') DLG1_DlgObj._executeEvent(\'onImageError\',{element: this});" ></i> </div><br  style="clear:both; " /> </div> <div class="A5CWLayout" style="padding: 0px; width: 25%"><div style="display:table; margin:auto;"> <div class="" style="width: " > \t<img id="DLG1.V.R1.IMAGE_1"  src="img/logo-bci.png" class="" style="height: 56px; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;" title=""     onerror="if(typeof DLG1_DlgObj != \'undefined\') DLG1_DlgObj._executeEvent(\'onImageError\',{element: this});"  /> </div><br  style="clear:both; " /> </div></div> <div class="A5CWLayout" style="padding: 0px; width: 25%"><div style="display:table; margin:auto;"> <div class="A5container"> \t<label id="DLG1.LBL.R1.IMAGE_3" for="DLG1.V.R1.IMAGE_3" title="" class="AndroidLightDialogLabel" style="float: left; width: 1in; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;">&nbsp;</label> <div style="margin-left: 1in ;"><i  id="DLG1.V.R1.IMAGE_3" class="fa fa-user fa-2x " style="color: black; padding: 10px; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;" title="" onerror="if(typeof DLG1_DlgObj != \'undefined\') DLG1_DlgObj._executeEvent(\'onImageError\',{element: this});" ></i>  </div> </div> </div></div> <div class="A5CWLayout" style="padding: 0px; width: 25%"><div style="float:right;"> <div class="A5container"> \t<label id="DLG1.LBL.R1.IMAGE_4" for="DLG1.V.R1.IMAGE_4" title="" class="AndroidLightDialogLabel" style="text-align: Right; float: right; width: 1in; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;">&nbsp;</label> <div style="margin-right: 1in ;"><i  id="DLG1.V.R1.IMAGE_4" class="fa fa-shopping-cart fa-2x " style="color: black; padding: 10px; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;" title="" onerror="if(typeof DLG1_DlgObj != \'undefined\') DLG1_DlgObj._executeEvent(\'onImageError\',{element: this});" ></i>  </div> </div> </div></div> <br style="clear: both;" />',
+		html: '<div class="A5CWLayout" style="padding: 0px; width: 33.3333333333333%"><div class="" style="width: " > \t<i  id="DLG1.V.R1.IMAGE_2" class="fa fa-navicon fa-2x " style="color: black; padding: 10px; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;" title="" onclick="DLG1_DlgObj.showContainerWindow(this,\'WINDOW_1\');" onerror="if(typeof DLG1_DlgObj != \'undefined\') DLG1_DlgObj._executeEvent(\'onImageError\',{element: this});" ></i> </div><br  style="clear:both; " /> </div> <div class="A5CWLayout" style="padding: 0px; width: 33.3333333333333%"><div style="display:table; margin:auto;"> <div class="" style="width: " > \t<i  id="DLG1.V.R1.IMAGE_3" class="fa fa-user fa-2x " style="color: black; padding: 10px; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;" title="" onerror="if(typeof DLG1_DlgObj != \'undefined\') DLG1_DlgObj._executeEvent(\'onImageError\',{element: this});" ></i> </div> </div></div> <div class="A5CWLayout" style="padding: 0px; width: 33.3333333333333%"><div style="float:right;"> <div class="" style="width: " > \t<div id="DLG1.V.R1.IMAGE_4" style="z-index:10000; color: black; padding: 10px; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box; ; padding:0;margin:0;"    ><i  class="fa fa-shopping-cart fa-2x " style="color: black; padding: 10px; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;" title="" onerror="if(typeof DLG1_DlgObj != \'undefined\') DLG1_DlgObj._executeEvent(\'onImageError\',{element: this});" ></i></div> </div> </div></div> <br style="clear: both;" />',
 		style: 'width: 100%;height: 56px;',
 		className: 'navbar color-theme-white'
 	},
@@ -771,6 +1041,46 @@ if(typeof DLG1_DlgObj != 'undefined' && typeof DLG1_DlgObj._panelCardResize != '
 		duration: 400
 	}
 })
+}
+],{
+	type: 'programmatic',
+	flow: 'ltr',
+	loopNavigate: false,
+	onPanelActivate: function() {DLG1_DlgObj.refreshClientSideComputations();},
+	onSize: function() {;if(typeof DLG1_DlgObj != 'undefined') {
+	if(typeof DLG1_DlgObj._findActiveLayoutRule != 'undefined') { 
+		DLG1_DlgObj._findActiveLayoutRule();
+	}
+}},
+	theme: 'AndroidLight',
+	header: {
+		show: false
+	},
+	footer: {
+	},
+	overlay: {
+	},
+	controls: {
+		prev: {
+			has: false
+		},
+		next: {
+			has: false
+		},
+		back: {
+			has: false
+		},
+		forward: {
+			has: false
+		}
+	},
+	body: {
+		style: 'background-color:#eeeeee;'
+	},
+	animation: {
+		duration: 400
+	}
+})
 var ele = window['DLG1_PanelObj'].create('DLG1.R1');
 		var panelRootId = '{UXPRERENDEROUTPUTDIV}';
 		var flagSizeToParent = true;
@@ -789,23 +1099,31 @@ var ele = window['DLG1_PanelObj'].create('DLG1.R1');
 			if(window[wf_alias + '_PanelObj']) window[wf_alias + '_PanelObj'].bindSize('window');
 		}
 DLG1_PanelObj._panelPath = {
-	PANELCARD_1: 'PANELCARD_1',
-	PANELCARD_2: 'PANELCARD_2',
-	PANELCARD_3: 'PANELCARD_3',
-	PANELCARD_4: 'PANELCARD_4',
-	PANELCARD_5: 'PANELCARD_5'
+	PANEL_LOGIN: 'PANEL_LOGIN',
+	PANELNAVIGATOR_2: 'PANELNAVIGATOR_2',
+	PANELCARD_1: 'PANELNAVIGATOR_2:PANELCARD_1',
+	PANELCARD_2: 'PANELNAVIGATOR_2:PANELCARD_2',
+	PANELCARD_3: 'PANELNAVIGATOR_2:PANELCARD_3',
+	PANELCARD_4: 'PANELNAVIGATOR_2:PANELCARD_4',
+	PANELCARD_5: 'PANELNAVIGATOR_2:PANELCARD_5',
+	PANELCARD_7: 'PANELNAVIGATOR_2:PANELCARD_7',
+	PANELCARD_8: 'PANELNAVIGATOR_2:PANELCARD_8',
+	PANELCARD_9: 'PANELNAVIGATOR_2:PANELCARD_9',
+	PANELCARD_10: 'PANELNAVIGATOR_2:PANELCARD_10'
 }
 DLG1_PanelObj._displayNames = {
-PANELCARD_1 : 'PANELCARD_1',PANELCARD_2 : 'PANELCARD_2',PANELCARD_3 : 'PANELCARD_3',PANELCARD_4 : 'PANELCARD_4',PANELCARD_5 : 'PANELCARD_5',PANELNAVIGATOR_1 : 'PANELNAVIGATOR_1'
+PANEL_LOGIN : 'PANEL_LOGIN',PANELCARD_1 : 'PANELCARD_1',PANELCARD_2 : 'PANELCARD_2',PANELCARD_3 : 'PANELCARD_3',PANELCARD_4 : 'PANELCARD_4',PANELCARD_5 : 'PANELCARD_5',PANELCARD_7 : 'PANELCARD_7',PANELCARD_8 : 'PANELCARD_8',PANELCARD_9 : 'PANELCARD_9',PANELCARD_10 : 'PANELCARD_10',PANELNAVIGATOR_1 : 'PANELNAVIGATOR_1',PANELNAVIGATOR_2 : 'PANELNAVIGATOR_2'
 };
 if(typeof DLG1_DlgObj == 'object') DLG1_DlgObj._destroy();
 var DLG1_DlgObj = new A5.DialogComponentHelper('DLG1',{
-	ajaxURL: 'http://nubisonlab.cl:1580/webpay/MAIN.a5wcmp?__virtualPage=__a5RunDialog.a5w&__dialogFilename=MAIN&__alias=DLG1&__unsaved=no',
+	ajaxURL: 'MAIN.a5wcmp?__virtualPage=__a5RunDialog.a5w&__dialogFilename=MAIN&__alias=DLG1&__unsaved=no',
 	_embeddedMode: false,
 	_livePreviewInBuilder: false,
 	componentGUID: '8a12d810-5f7c-4293-a42e-381214ae7f52',
-	columnInfo: {'LIST_ALL_PRODUCTS': {info: {controlType: 'List'}, hiddenVal: false, type: 'control', isCalc: false, hlp: '', isArray: false, dataType: 'C'  },'ID_PRODUCTO': {info: {controlType: 'Textbox'}, hiddenVal: false, type: 'input,label', isCalc: false, hlp: '', isArray: false, dataType: 'N'  },'NOMBRE_PRODUCTO': {info: {controlType: 'Label'}, hiddenVal: false, type: 'label,label', isCalc: false, hlp: '', isArray: false, dataType: 'C'  },'PRECIO': {info: {controlType: 'Label'}, hiddenVal: false, type: 'label,label', isCalc: false, hlp: '', isArray: false, dataType: 'N'  },'NOMBRE_CATEGORIA': {info: {controlType: 'Label'}, hiddenVal: false, type: 'label,label', isCalc: false, hlp: '', isArray: false, dataType: 'C'  },'URL_IMAGEN': {info: {controlType: 'Image'}, hiddenVal: false, type: 'img,img', isCalc: false, hlp: '', isArray: false, dataType: 'C'  },'LIST_CARRITO': {info: {controlType: 'List'}, hiddenVal: false, type: 'control', isCalc: false, hlp: '', isArray: false, dataType: 'C'  }},
+	columnInfo: {'USERNAME': {info: {controlType: 'Textbox'}, hiddenVal: false, type: 'input,label', isCalc: false, hlp: '', isArray: false, dataType: 'C'  },'PASSWORD': {info: {controlType: 'Textbox'}, hiddenVal: false, type: 'input,label', isCalc: false, hlp: '', isArray: false, dataType: 'C'  },'LIST_ALL_PRODUCTS': {info: {controlType: 'List'}, hiddenVal: false, type: 'control', isCalc: false, hlp: '', isArray: false, dataType: 'C'  },'ID_PRODUCTO': {info: {controlType: 'Textbox'}, hiddenVal: false, type: 'input,label', isCalc: false, hlp: '', isArray: false, dataType: 'N'  },'NOMBRE_PRODUCTO': {info: {controlType: 'Label'}, hiddenVal: false, type: 'label,label', isCalc: false, hlp: '', isArray: false, dataType: 'C'  },'PRECIO': {info: {controlType: 'Label'}, hiddenVal: false, type: 'label,label', isCalc: false, hlp: '', isArray: false, dataType: 'N'  },'NOMBRE_CATEGORIA': {info: {controlType: 'Label'}, hiddenVal: false, type: 'label,label', isCalc: false, hlp: '', isArray: false, dataType: 'C'  },'URL_IMAGEN': {info: {controlType: 'Image'}, hiddenVal: false, type: 'img,img', isCalc: false, hlp: '', isArray: false, dataType: 'C'  },'LIST_CARRITO': {info: {controlType: 'List'}, hiddenVal: false, type: 'control', isCalc: false, hlp: '', isArray: false, dataType: 'C'  },'TXT_TOTAL': {info: {controlType: 'Textbox'}, hiddenVal: false, type: 'input,label', isCalc: false, hlp: '', isArray: false, dataType: 'C'  },'TXT_CART': {info: {controlType: 'Textbox'}, hiddenVal: false, type: 'input,label', isCalc: false, hlp: '', isArray: false, dataType: 'C'  },'TXTTRANSACTION_ID': {info: {controlType: 'Textbox'}, hiddenVal: false, type: 'input,label', isCalc: false, hlp: '', isArray: false, dataType: 'C'  },'TXT_MONTO_EMAIL': {info: {controlType: 'Textbox'}, hiddenVal: false, type: 'input,label', isCalc: false, hlp: '', isArray: false, dataType: 'C'  },'TXT_COD_AUT_EMAIL': {info: {controlType: 'Textbox'}, hiddenVal: false, type: 'input,label', isCalc: false, hlp: '', isArray: false, dataType: 'C'  },'TXT_COD_COMPRA_EMAIL': {info: {controlType: 'Textbox'}, hiddenVal: false, type: 'input,label', isCalc: false, hlp: '', isArray: false, dataType: 'C'  },'TXT_TARJETA_EMAIL': {info: {controlType: 'Textbox'}, hiddenVal: false, type: 'input,label', isCalc: false, hlp: '', isArray: false, dataType: 'C'  },'TXT_FECHA_EMAIL': {info: {controlType: 'Textbox'}, hiddenVal: false, type: 'input,label', isCalc: false, hlp: '', isArray: false, dataType: 'C'  },'TXT_TIPOPAGO_EMAIL': {info: {controlType: 'Textbox'}, hiddenVal: false, type: 'input,label', isCalc: false, hlp: '', isArray: false, dataType: 'C'  },'TXT_NUMCUOTAS_EMAIL': {info: {controlType: 'Textbox'}, hiddenVal: false, type: 'input,label', isCalc: false, hlp: '', isArray: false, dataType: 'C'  },'LIST_DETALLE_COMPRAS': {info: {controlType: 'List'}, hiddenVal: false, type: 'control', isCalc: false, hlp: '', isArray: false, dataType: 'C'  },'LIST_TARJETAS_USUARIO': {info: {controlType: 'List'}, hiddenVal: false, type: 'control', isCalc: false, hlp: '', isArray: false, dataType: 'C'  },'TXT_TOKENDELETE': {info: {controlType: 'Textbox'}, hiddenVal: false, type: 'input,label', isCalc: false, hlp: '', isArray: false, dataType: 'C'  },'TXT_TOKEN_USER': {info: {controlType: 'Textbox'}, hiddenVal: false, type: 'input,label', isCalc: false, hlp: '', isArray: false, dataType: 'C'  },'LIST_SELECT_CARD': {info: {controlType: 'List'}, hiddenVal: false, type: 'control', isCalc: false, hlp: '', isArray: false, dataType: 'C'  }},
 	originalValues: [{
+	'USERNAME': 'scardoza@nubison.cl',
+	'PASSWORD': '123456',
 	'LIST_ALL_PRODUCTS': '',
 	'ID_PRODUCTO': '',
 	'NOMBRE_PRODUCTO': '',
@@ -813,9 +1131,26 @@ var DLG1_DlgObj = new A5.DialogComponentHelper('DLG1',{
 	'NOMBRE_CATEGORIA': '',
 	'URL_IMAGEN': 'a5images/null1x1.png',
 	'URL_IMAGEN_HIDDENA5FN': '',
-	'LIST_CARRITO': ''
+	'LIST_CARRITO': '',
+	'TXT_TOTAL': '',
+	'TXT_CART': '',
+	'TXTTRANSACTION_ID': '',
+	'TXT_MONTO_EMAIL': '',
+	'TXT_COD_AUT_EMAIL': '',
+	'TXT_COD_COMPRA_EMAIL': '',
+	'TXT_TARJETA_EMAIL': '',
+	'TXT_FECHA_EMAIL': '',
+	'TXT_TIPOPAGO_EMAIL': '',
+	'TXT_NUMCUOTAS_EMAIL': '',
+	'LIST_DETALLE_COMPRAS': '',
+	'LIST_TARJETAS_USUARIO': '',
+	'TXT_TOKENDELETE': '',
+	'TXT_TOKEN_USER': '',
+	'LIST_SELECT_CARD': ''
 }],
 	defaultValues: {
+	USERNAME: 'scardoza@nubison.cl',
+	PASSWORD: '123456',
 	LIST_ALL_PRODUCTS: '',
 	ID_PRODUCTO: '',
 	NOMBRE_PRODUCTO: '',
@@ -823,7 +1158,22 @@ var DLG1_DlgObj = new A5.DialogComponentHelper('DLG1',{
 	NOMBRE_CATEGORIA: '',
 	URL_IMAGEN: 'a5images/null1x1.png',
 	URL_IMAGEN_HIDDENA5FN: '',
-	LIST_CARRITO: ''
+	LIST_CARRITO: '',
+	TXT_TOTAL: '',
+	TXT_CART: '',
+	TXTTRANSACTION_ID: '',
+	TXT_MONTO_EMAIL: '',
+	TXT_COD_AUT_EMAIL: '',
+	TXT_COD_COMPRA_EMAIL: '',
+	TXT_TARJETA_EMAIL: '',
+	TXT_FECHA_EMAIL: '',
+	TXT_TIPOPAGO_EMAIL: '',
+	TXT_NUMCUOTAS_EMAIL: '',
+	LIST_DETALLE_COMPRAS: '',
+	LIST_TARJETAS_USUARIO: '',
+	TXT_TOKENDELETE: '',
+	TXT_TOKEN_USER: '',
+	LIST_SELECT_CARD: ''
 },
 	datePickerMonthNames: ['January','February','March','April','May','June','July','August','September','October','November','December'],
 	datePickerDayNames: ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'],
@@ -838,7 +1188,7 @@ var DLG1_DlgObj = new A5.DialogComponentHelper('DLG1',{
 	dirtyFormIcon: 'cssIcon=AndroidLightIcon AndroidLightIconInfo',
 	deleteRecordDialogTitle: 'Delete Record',
 	deleteRecordDialogMessage: 'Are you sure you want to delete this record?',	
-	ssDateFormat: 'dd-MM-yyyy',
+	ssDateFormat: 'dd/MM/yyyy',
 	styleName: 'AndroidLight',
 	_fieldHelpers_DIALOG2: [],
 	parentComponentAlias: '',
@@ -864,6 +1214,12 @@ var DLG1_DlgObj = new A5.DialogComponentHelper('DLG1',{
 	},
 		onInitializeComplete: function(e) {
 app.init();
+		},
+		afterLogin: function(e) {
+DLG1_DlgObj.panelSetActive('PANELCARD_1');
+		},
+		afterLogout: function(e) {
+DLG1_DlgObj.panelSetActive('PANEL_LOGIN');
 		}
 	});
 DLG1_DlgObj._onOrientationChange =  function(e) { ;
@@ -872,9 +1228,37 @@ DLG1_DlgObj._findActiveLayoutRule();
 A5.__componentObj = DLG1_DlgObj;
 DLG1_DlgObj.loadCSSFile('css/CSSIcons/font-awesome/css/font-awesome.min.css');
 DLG1_DlgObj._tabObjects = [];
-A5.loadJavascript('var app = new Framework7();\nvar swiper = app.swiper.create(\'.swiper-container\', {\n    speed: 400,\n    spaceBetween: 100\n});\n\n\nfunction goToAllProducts(){\n\tDLG1_DlgObj.panelSetActive(\'PANELCARD_2\');\n\tapp.createProducts();\n}\n\nfunction goToWeekProducts(){\n\n}\n\nfunction goToITProducts(){\n\n}\n\nfunction goToFeaturedProducts(){\n\t\n}\n\n\n\n\nvar productos = \'\'; \n\n\n\nvar app = {}; \napp.init = function(){\n    var total = 0;\n    var items = 0;\n    var cart = (JSON.parse(localStorage.getItem("cart")) != null) ? JSON.parse(localStorage.getItem("cart")) : {items : []} ;\n    if(cart.items != undefined && cart.items != null && cart.items != \'\' && cart.items.length > 0){\n        \n    }\n \n};\n\napp.createProducts = function(){\n    productos = DLG1_DlgObj.getListData("LIST_ALL_PRODUCTS");  \n};\n\napp.addToCart = function(idProduct){\n\tif(idProduct == undefined && idProduct == null && idProduct ==""){\n\t\treturn;\n\t}\n    \n    var producto = \'\';\n    jQuery.each(productos, function (idx, obj) {\n        if (obj.id_producto === idProduct) {\n            producto =  productos[idx]\n        }\n    });\n    \n    \n    var cart = (JSON.parse(localStorage.getItem("cart")) != null) ? JSON.parse(localStorage.getItem("cart")) : {items : []} ;\n    app.searchProduct(cart, producto);\n\n};\n\napp.searchProduct = function(cart, producto){\n\n\tvar productExists = false;\n\tjQuery.each(cart.items, function (idx, obj) {\n        if (obj.id_producto === producto.id_producto) {\n            productExists = true;\n        }\n    });\n    \n    if(productExists){\n    \tconsole.log(producto);\t\n    \tconsole.log(producto.cant);\t\n        \n        \n    }else{\n    \tproducto.cant = 1;\n        cart.items.push(producto);\n    }\n    localStorage.setItem("cart",JSON.stringify(cart));\n\tapp.init();\n};\n\nfunction countTotalProductsInCart(){\n\tvar count = 0;\n\tvar cart = (JSON.parse(localStorage.getItem("cart")) != null) ? JSON.parse(localStorage.getItem("cart")) : {items : []} ;\n\tjQuery.each(cart.items, function (idx, obj) {\n        count += obj.cant;\n    });\n    return count;\n}\n\nfunction sumTotalProductsInCart(){\n\tvar sum = 0;\n\tvar cart = (JSON.parse(localStorage.getItem("cart")) != null) ? JSON.parse(localStorage.getItem("cart")) : {items : []} ;\n\tjQuery.each(cart.items, function (idx, obj) {\n        sum += (obj.cant* parseInt(obj.precio));\n    });\n    return sum;\n}\n\n\n\n\n\n\n\n\n\n\n;\n\n\n\n;',true);
+A5.loadJavascript('var app = new Framework7();\nvar swiper = app.swiper.create(\'.swiper-container\', {\n    speed: 400,\n    spaceBetween: 100\n});\n\n\nfunction goToAllProducts(){\n\tDLG1_DlgObj.panelSetActive(\'PANELCARD_2\');\n\tapp.createProducts();\n}\n\nfunction goToWeekProducts(){\n\n}\n\nfunction goToITProducts(){\n\n}\n\nfunction goToFeaturedProducts(){\n\t\n}\n\n\n\n\nvar productos = \'\'; \n\n\n\nvar app = {}; \napp.init = function(){\n    var total = 0;\n    var items = 0;\n    var cart = (JSON.parse(localStorage.getItem("cart")) != null) ? JSON.parse(localStorage.getItem("cart")) : {items : []} ;\n    if(cart.items != undefined && cart.items != null && cart.items != \'\' && cart.items.length > 0){\n        \n    }\n \n};\n\napp.createProducts = function(){\n    productos = DLG1_DlgObj.getListData("LIST_ALL_PRODUCTS");  \n};\napp.addClient = function(){\n\tvar cart = (JSON.parse(localStorage.getItem("cart")) != null) ? JSON.parse(localStorage.getItem("cart")) : {items : []} ;\n    if(cart.items != undefined && cart.items != null && cart.items != \'\' && cart.items.length > 0){\n    \tconsole.log(cart);\n    \tvar username = DLG1_DlgObj.getValue(\'UserName\')\n        cart["client"] = username;\n        localStorage.setItem("cart",JSON.stringify(cart));\n    }\n}\napp.addToCart = function(idProduct){\n\n\t\n\n\tif(idProduct == undefined && idProduct == null && idProduct ==""){\n\t\treturn;\n\t}\n    \n    var producto = \'\';\n    jQuery.each(productos, function (idx, obj) {\n        if (obj.id_producto === idProduct) {\n            producto =  productos[idx]\n        }\n    });\n    \n    \n    var cart = (JSON.parse(localStorage.getItem("cart")) != null) ? JSON.parse(localStorage.getItem("cart")) : {items : []} ;\n    \n    \n    var productoCart = producto;\n    app.searchProduct(cart, productoCart);\n    app.addClient();\n\n};\n\napp.searchProduct = function(cart, producto){\n\n\tvar productExists = false;\n\tvar productIndex = 0;\n\tjQuery.each(cart.items, function (idx, obj) {\n        if (obj.id_producto === producto.id_producto) {\n            productExists = true;\n            productIndex = idx;\n        }\n    });\n    \n    if(productExists){\n    \t\n    }else{\n    \tproducto.cant = 1;\n        cart.items.push(producto);\n    }\n    localStorage.setItem("cart",JSON.stringify(cart));\n\tapp.init();\n};\n\napp.deleteProd = function(idProduct){\n\tif(idProduct > 0 || idProduct !== undefined || idProduct !==\'\'){\n\t\tvar conf = confirm("Desea eliminar este producto?");\n\t\tif(conf){\n\t\t\tapp.delete(idProduct);\n\t\t}\n\t}\n};\n\napp.delete = function(idProduct){\n\tvar cart = (JSON.parse(localStorage.getItem("cart")) != null) ? JSON.parse(localStorage.getItem("cart")) : {items : []} ;\n\tvar index = 0;\n\tjQuery.each(cart.items, function (idx, obj) {\n        if (parseInt(obj.id_producto) === idProduct) {\n            \n            index = idx;\n        }\n    });\n    cart.items.splice(index, 1);\t\n    \n    localStorage.setItem("cart",JSON.stringify(cart));\n    app.init();\n    populateShoppingCartPanel();\n}\n\n\n\nfunction countTotalProductsInCart(){\n\tvar count = 0;\n\tvar cart = (JSON.parse(localStorage.getItem("cart")) != null) ? JSON.parse(localStorage.getItem("cart")) : {items : []} ;\n\tjQuery.each(cart.items, function (idx, obj) {\n        count += obj.cant;\n    });\n    return count;\n}\n\nfunction sumTotalProductsInCart(){\n\tvar sum = 0;\n\tvar cart = (JSON.parse(localStorage.getItem("cart")) != null) ? JSON.parse(localStorage.getItem("cart")) : {items : []} ;\n\tjQuery.each(cart.items, function (idx, obj) {\n        sum += (obj.cant* parseInt(obj.precio));\n    });\n    return sum;\n}\n\nfunction populateShoppingCartPanel(){\n\tvar cart = (JSON.parse(localStorage.getItem("cart")) != null) ? JSON.parse(localStorage.getItem("cart")) : \'\' ;\n\tif(cart === undefined || cart ==="" || cart==="{}" || cart.items.length === 0){\n\t\talert(\'Debes agregar productos a tu carrito\');\n\t\tDLG1_DlgObj.panelSetActive(\'PANELCARD_2\');\n\t}else{\n\t\t\n\t\tvar objCarrito = DLG1_DlgObj.getControl(\'LIST_CARRITO\');\n\t\tobjCarrito.populate(cart.items);\n\t\t\n\t\tvar countTotalProducts = countTotalProductsInCart();\n\t\tvar sumTotalProducts = sumTotalProductsInCart();\n\t\t\n\t\tdocument.getElementById(\'MAIN.V.R1.STATICTEXT_COUNTPRODUCTS\').innerHTML = countTotalProducts;\n\t\tdocument.getElementById(\'MAIN.V.R1.STATICTEXT_SUBTOTAL\').innerHTML = sumTotalProducts;\n\t\tDLG1_DlgObj.setValue(\'TXT_TOTAL\',sumTotalProducts );\n\t\tDLG1_DlgObj.panelSetActive(\'PANELCARD_4\');\n\t}\n}\n\nfunction getDataCart(){\n\tvar cart = JSON.parse(localStorage.getItem("cart"))\n\tif(cart.items.length > 0){\n\t\tjQuery.each(cart.items, function (idx, obj) {\n        \tdelete obj["nombre_categoria"];\n        \tdelete obj["nombre_producto"];\n        \tdelete obj["url_imagen"];\n\t    });\n    \t\n    \n\t\tvar data = A5.ajax.buildURLParam(\'__additionalData\',JSON.stringify(cart));\n    \treturn data;\n\t\t\n\t}else{\n\t\talert("Debes tener productos en el carrito para continuar");\n\t}\n\t\n}\n\n\nwindow.addEventListener("message", function(event) {\n    console.log(event.data);\n    var data = event.data;\n    var idTransaction = data.replace(\'transactionId:\',\'\');\n    DLG1_DlgObj.setValue(\'TXTTRANSACTION_ID\', idTransaction);   \n    DLG1_DlgObj.ajaxCallback(\'\',\'\',\'savecartsale\',\'\',getDataCart());\n    \n    \n    \n\talert("Compra realizada exitosamente!");\n\tlocalStorage.removeItem("cart");\n\tDLG1_DlgObj.refreshListData(\'LIST_DETALLE_COMPRAS\');\n\tDLG1_DlgObj.panelSetActive(\'PANELCARD_1\');\n});\n\n\nfunction deleteCard(id_card_token){\n\tconsole.log("TOKEN A DESHABILITAR: "+id_card_token);\n\tDLG1_DlgObj.setValue(\'TXT_TOKENDELETE\',id_card_token);\n\tvar conf = confirm("Esta seguro de desvincular esta tarjeta?");\n\tif(conf){\n\t\tDLG1_DlgObj.ajaxCallback(\'\',\'\',\'deletecardoneclick\',\'\',\'\',{deviceOfflineFunction: function() {   }});\n\t\trefreshListTarjetas();\n\t\talert("Tarjeta desvinculada exitosamente");\n\t}\n}\nfunction refreshListTarjetas(){\n\tDLG1_DlgObj.refreshListData(\'LIST_TARJETAS_USUARIO\');\n\tDLG1_DlgObj.refreshListData(\'LIST_SELECT_CARD\');\n}\n\t\n\n\n\n\n\n\n\n;\n\n\n\n;',true);
+if(!DLG1_DlgObj.fieldHelpers['USERNAME'])DLG1_DlgObj.fieldHelpers['USERNAME'] = new A5.Edit({
+	watermark: {
+		text: 'Username'
+	}
+});
+if(!DLG1_DlgObj.fieldHelpers['PASSWORD'])DLG1_DlgObj.fieldHelpers['PASSWORD'] = new A5.Edit({
+	watermark: {
+		text: 'Password'
+	}
+});
 DLG1_DlgObj.lookups = {
 };
+DLG1_DlgObj.dialogWatches['SHOWHIDE_LOGOUT_BUTTON'] = {
+		watch: [],
+		variables: [],
+		onChange: function(data) {
+	var dialog = {};
+	var summary = {};
+	DLG1_DlgObj._getDialogVariables(dialog,summary,data);
+	var showHide = '';
+	if( (dialog.isLoggedIn == true) == true ) showHide = '';
+	else showHide = 'none';	
+	if(showHide == 'none') {	
+		DLG1_DlgObj.setControlDisplay(''+'LOGOUT_BUTTON'+'',false,'display');
+	} else {
+		DLG1_DlgObj.setControlDisplay(''+'LOGOUT_BUTTON'+'',true,'display');
+	}
+	;
+	DLG1_DlgObj._executeEvent('onWatchEvent',{type: 'show/hide', control: 'LOGOUT_BUTTON', flag: $if(showHide == '',true,false)});}
+}
 DLG1_DlgObj.setStateInfo({
 	"__dialogGuid": "8a12d810-5f7c-4293-a42e-381214ae7f52",
 	"argumentsBoundToCotrols": "",
@@ -890,20 +1274,64 @@ A5.msgBox.buttonWidth = '1in';
 DLG1_DlgObj._defaultWindowTitleDirection = 'ltr';
 DLG1_DlgObj._controlContainers = {}
 DLG1_DlgObj._panelCardControls = {
+USERNAME:'PANEL_LOGIN',
+PASSWORD:'PANEL_LOGIN',
 LIST_ALL_PRODUCTS:'PANELCARD_2',
 ID_PRODUCTO:'PANELCARD_3',
 NOMBRE_PRODUCTO:'PANELCARD_3',
 PRECIO:'PANELCARD_3',
 NOMBRE_CATEGORIA:'PANELCARD_3',
 URL_IMAGEN:'PANELCARD_3',
-LIST_CARRITO:'PANELCARD_4'
+LIST_CARRITO:'PANELCARD_4',
+TXT_TOTAL:'PANELCARD_4',
+TXT_CART:'PANELCARD_4',
+TXTTRANSACTION_ID:'PANELCARD_5',
+TXT_MONTO_EMAIL:'PANELCARD_5',
+TXT_COD_AUT_EMAIL:'PANELCARD_5',
+TXT_COD_COMPRA_EMAIL:'PANELCARD_5',
+TXT_TARJETA_EMAIL:'PANELCARD_5',
+TXT_FECHA_EMAIL:'PANELCARD_5',
+TXT_TIPOPAGO_EMAIL:'PANELCARD_5',
+TXT_NUMCUOTAS_EMAIL:'PANELCARD_5',
+LIST_DETALLE_COMPRAS:'PANELCARD_7',
+LIST_TARJETAS_USUARIO:'PANELCARD_8',
+TXT_TOKENDELETE:'PANELCARD_8'
 }
 DLG1_DlgObj._controlsOnPanel = {
+	'PANEL_LOGIN' : {controls: ['USERNAME','PASSWORD']},
 	'PANELCARD_2' : {controls: ['LIST_ALL_PRODUCTS']},
 	'PANELCARD_3' : {controls: ['ID_PRODUCTO','NOMBRE_PRODUCTO','PRECIO','NOMBRE_CATEGORIA','URL_IMAGEN']},
-	'PANELCARD_4' : {controls: ['LIST_CARRITO']}
+	'PANELCARD_4' : {controls: ['LIST_CARRITO','TXT_TOTAL','TXT_CART']},
+	'PANELCARD_5' : {controls: ['TXTTRANSACTION_ID','TXT_MONTO_EMAIL','TXT_COD_AUT_EMAIL','TXT_COD_COMPRA_EMAIL','TXT_TARJETA_EMAIL','TXT_FECHA_EMAIL','TXT_TIPOPAGO_EMAIL','TXT_NUMCUOTAS_EMAIL']},
+	'PANELCARD_7' : {controls: ['LIST_DETALLE_COMPRAS']},
+	'PANELCARD_8' : {controls: ['LIST_TARJETAS_USUARIO','TXT_TOKENDELETE']}
 }
 DLG1_DlgObj._buttons = {};
+DLG1_DlgObj._buttons['LOGIN_BUTTON'] = new A5.Button({
+	layout: 'text',
+	style: 'width: 100%; ',
+	className: 'button button-fill button-round color-orange',
+	html: 'Login',
+	onClick: function() { 
+},
+	theme: 'AndroidLight'
+});
+DLG1_DlgObj._buttons['LOGOUT_BUTTON'] = new A5.Button({
+	layout: 'text',
+	style: 'width: 100%; ',
+	html: 'Logout',
+	onClick: function() { 
+},
+	theme: 'AndroidLight'
+});
+DLG1_DlgObj._buttons['LOGOUT_TEST'] = new A5.Button({
+	layout: 'text',
+	style: 'width: 100%; ',
+	html: 'Logout',
+	onClick: function() { 
+},
+	theme: 'AndroidLight'
+});
 DLG1_DlgObj._buttons['BUTTON_1'] = new A5.Button({
 	layout: 'text',
 	style: 'width: 100%; height: 100%; ',
@@ -922,34 +1350,48 @@ DLG1_DlgObj._buttons['BUTTON_2'] = new A5.Button({
 },
 	theme: 'AndroidLight'
 });
+DLG1_DlgObj._buttons['BUTTON_6'] = new A5.Button({
+	layout: 'text icon',
+	style: 'width: 100%; height: 100%; ',
+	className: 'col button button-fill color-orange',
+	html: 'Agregar',
+	icon: 'cssIcon=fa fa-plus-square',
+	disabledIcon: 'cssIcon=fa fa-plus-square',
+	onClick: function() { 
+},
+	theme: 'AndroidLight'
+});
+DLG1_DlgObj._buttons['LOGIN_BUTTON'].bind('DLG1.V.R1.LOGIN_BUTTON');
+DLG1_DlgObj._buttons['LOGOUT_BUTTON'].bind('DLG1.V.R1.LOGOUT_BUTTON');
+DLG1_DlgObj._buttons['LOGOUT_TEST'].bind('DLG1.V.R1.LOGOUT_TEST');
 DLG1_DlgObj._buttons['BUTTON_1'].bind('DLG1.V.R1.BUTTON_1');
 DLG1_DlgObj._buttons['BUTTON_2'].bind('DLG1.V.R1.BUTTON_2');
+DLG1_DlgObj._buttons['BUTTON_6'].bind('DLG1.V.R1.BUTTON_6');
 DLG1_DlgObj._listViewSettings['LIST_ALL_PRODUCTS'] = {
 	_hasDependentLists: false,
 	_dataSourceType: 'SQL',
 	_listFields: [
-	{
-		name: 'id_producto',
-		defaultValue: 'return this._controlDefaultValueForListField(\'id_producto\');'
-	},
-	{
-		name: 'nombre_producto',
-		defaultValue: 'return this._controlDefaultValueForListField(\'nombre_producto\');'
-	},
-	{
-		name: 'precio',
-		defaultValue: 'return this._controlDefaultValueForListField(\'precio\');'
-	},
-	{
-		name: 'nombre_categoria',
-		defaultValue: 'return this._controlDefaultValueForListField(\'nombre_categoria\');'
-	},
-	{
-		name: 'url_imagen',
-		defaultValue: 'return this._controlDefaultValueForListField(\'url_imagen\');',
-		flagBase64: false
-	}
-],
+{
+	name: 'id_producto',
+	defaultValue: 'return this._controlDefaultValueForListField(\'id_producto\');'
+},
+{
+	name: 'nombre_producto',
+	defaultValue: 'return this._controlDefaultValueForListField(\'nombre_producto\');'
+},
+{
+	name: 'precio',
+	defaultValue: 'return this._controlDefaultValueForListField(\'precio\');'
+},
+{
+	name: 'nombre_categoria',
+	defaultValue: 'return this._controlDefaultValueForListField(\'nombre_categoria\');'
+},
+{
+	name: 'url_imagen',
+	defaultValue: 'return this._controlDefaultValueForListField(\'url_imagen\');',
+	flagBase64: false
+}],
 	_delayRenderTillRefresh: false,
 	_searchPartHas: false,
 	_mediaFields: ['url_imagen'],
@@ -1027,27 +1469,26 @@ url_imagen:"Image"
 	_detailView: {
 		method: 'fieldMap',
 		fieldMap: [
-	{
-		field: 'id_producto',
-		control: 'id_producto'
-	},
-	{
-		field: 'nombre_producto',
-		control: 'nombre_producto'
-	},
-	{
-		field: 'precio',
-		control: 'precio'
-	},
-	{
-		field: 'nombre_categoria',
-		control: 'nombre_categoria'
-	},
-	{
-		field: 'url_imagen',
-		control: 'url_imagen'
-	}
-]
+{
+	field: 'id_producto',
+	control: 'id_producto'
+},
+{
+	field: 'nombre_producto',
+	control: 'nombre_producto'
+},
+{
+	field: 'precio',
+	control: 'precio'
+},
+{
+	field: 'nombre_categoria',
+	control: 'nombre_categoria'
+},
+{
+	field: 'url_imagen',
+	control: 'url_imagen'
+}]
 	},
 	_detailViewGlobalErrorStyle: 'font-family: Arial; font-size: 10pt; color: red; border: solid 1px red; width: 100%;',
 	_autoCommitDetailView: true,
@@ -1281,20 +1722,19 @@ DLG1_DlgObj._listSystemOnClick('LIST_ALL_PRODUCTS',this.selection[0]);},
 				className: 'col-100 tablet-80 desktop-75'
 			},
 			template: [
-				'<div class="block" style="margin-top:5px;margin-bottom:5px;">',
-				'    <div class="row">',
-				'      <div class="col-50 tablet-50 desktop-40">',
-				'        <span id="DLG1.LIST_ALL_PRODUCTS.URL_IMAGEN.I.{*dataRow}"><img id="DLG1.LIST_ALL_PRODUCTS.URL_IMAGEN.IMG.{*dataRow}"  style="width:100%;" src="{url_imagen}" /></span>',
-				'      </div>',
-				'      <div class="col-50 tablet-50 desktop-60 no-margin-top" style="margin-left:10px">',
-				'        <div>',
-				'            <p style="font-size: 18px;color:#37474f;"> <span id="DLG1.LIST_ALL_PRODUCTS.NOMBRE_PRODUCTO.I.{*dataRow}">{nombre_producto}</span> </p>',
-				'            <p style="font-size: 20px;color:#b71c1c;"> {precio:number(\'$#.##;$ (#,##);------\')}</p>',
-				'        </div>',
-				'      </div>',
-				'    </div>',
-				'</div>'			
-]
+			'<div class="block" style="margin-top:5px;margin-bottom:5px;">',
+			'    <div class="row">',
+			'      <div class="col-50 tablet-50 desktop-40">',
+			'        <span id="DLG1.LIST_ALL_PRODUCTS.URL_IMAGEN.I.{*dataRow}"><img id="DLG1.LIST_ALL_PRODUCTS.URL_IMAGEN.IMG.{*dataRow}"  style="width:100%;" src="{url_imagen}" /></span>',
+			'      </div>',
+			'      <div class="col-50 tablet-50 desktop-60 no-margin-top" style="margin-left:10px">',
+			'        <div>',
+			'            <p style="font-size: 18px;color:#37474f;"> <span id="DLG1.LIST_ALL_PRODUCTS.NOMBRE_PRODUCTO.I.{*dataRow}">{nombre_producto}</span> </p>',
+			'            <p style="font-size: 20px;color:#b71c1c;"> {precio:number(\'$#.##;$ (#,##);------\')}</p>',
+			'        </div>',
+			'      </div>',
+			'    </div>',
+			'</div>']
 		}
 	},
 	captureFocus: false,
@@ -1776,7 +2216,7 @@ if(!this._searchPartHas) return true;
 	refreshChildLists: function() {DLG1_DlgObj._listRefreshCascadingLists('LIST_ALL_PRODUCTS'); },
 	rowExpander: function(rowNumber) { 
 	var mode = typeof arguments[2] != 'undefined' ? arguments[2] : 'toggle';
-	if(typeof rowNumber == 'undefined' || rowNumber == '' ) {
+	if(typeof rowNumber === 'undefined' || rowNumber === '' ) {
 		rowNumber = this.selection[0];
 		if(typeof rowNumber == 'undefined') return false;
 	}
@@ -2021,32 +2461,31 @@ DLG1_DlgObj._listViewSettings['LIST_CARRITO'] = {
 	_hasDependentLists: false,
 	_dataSourceType: 'Static',
 	_listFields: [
-	{
-		name: 'cant',
-		defaultValue: 'return this._controlDefaultValueForListField(\'cant\');'
-	},
-	{
-		name: 'id_producto',
-		defaultValue: 'return this._controlDefaultValueForListField(\'id_producto\');'
-	},
-	{
-		name: 'nombre_categoria',
-		defaultValue: 'return this._controlDefaultValueForListField(\'nombre_categoria\');'
-	},
-	{
-		name: 'nombre_producto',
-		defaultValue: 'return this._controlDefaultValueForListField(\'nombre_producto\');'
-	},
-	{
-		name: 'precio',
-		defaultValue: 'return this._controlDefaultValueForListField(\'precio\');'
-	},
-	{
-		name: 'url_imagen',
-		defaultValue: 'return this._controlDefaultValueForListField(\'url_imagen\');',
-		flagBase64: false
-	}
-],
+{
+	name: 'cant',
+	defaultValue: 'return this._controlDefaultValueForListField(\'cant\');'
+},
+{
+	name: 'id_producto',
+	defaultValue: 'return this._controlDefaultValueForListField(\'id_producto\');'
+},
+{
+	name: 'nombre_categoria',
+	defaultValue: 'return this._controlDefaultValueForListField(\'nombre_categoria\');'
+},
+{
+	name: 'nombre_producto',
+	defaultValue: 'return this._controlDefaultValueForListField(\'nombre_producto\');'
+},
+{
+	name: 'precio',
+	defaultValue: 'return this._controlDefaultValueForListField(\'precio\');'
+},
+{
+	name: 'url_imagen',
+	defaultValue: 'return this._controlDefaultValueForListField(\'url_imagen\');',
+	flagBase64: false
+}],
 	_delayRenderTillRefresh: false,
 	_searchPartHas: false,
 	_mediaFields: ['url_imagen'],
@@ -2177,31 +2616,31 @@ DLG1_DlgObj._listSystemOnClick('LIST_CARRITO',this.selection[0]);},
 				className: 'col-100 tablet-80 desktop-75'
 			},
 			template: [
-				'<div class="display-flex justify-content-center align-content-center no-margin no-padding">',
-				'    <div class="block" style="width:100%;">',
-				'      <div class="row">',
-				'        <div class="col-40 tablet-50 desktop-50"> ',
-				'\t\t\t<span id="DLG1.LIST_CARRITO.URL_IMAGEN.I.{*dataRow}"><img id="DLG1.LIST_CARRITO.URL_IMAGEN.IMG.{*dataRow}"  style="height:78px;width:78px;" src="{url_imagen}" /></span>',
-				'        </div>',
-				'        <div class="col-50 tablet-40 desktop-40"> ',
-				'\t\t\t<h3 style="font-size:16px;color:#212121;"><span id="DLG1.LIST_CARRITO.NOMBRE_PRODUCTO.I.{*dataRow}">{nombre_producto}</span></h3>     \t',
-				'        </div>',
-				'\t\t<div class="col-10 tablet-10 desktop-10">',
-				'\t\t\t<i class="fa fa-times-circle fa-lg"></i>',
-				'\t\t</div>',
-				'      </div>',
-				'    </div>',
-				'</div>',
-				'',
-				'',
-				'<div class="block no-margin no-padding" align="right">',
-				'\t<div class="row">',
-				'\t\t<div class="col-60">',
-				'\t\t\t<h4 style="font-size:14px;color:#c62828;">{precio:number(\'$#.##;$ (#.##);------\')}</h4>',
-				'\t\t</div>',
-				'\t</div>',
-				'</div>'			
-]
+			'<div class="display-flex justify-content-center align-content-center no-margin no-padding">',
+			'    <div class="block" style="width:100%;">',
+			'      <div class="row">',
+			'        <div class="col-40 tablet-50 desktop-50"> ',
+			'\t\t\t<span id="DLG1.LIST_CARRITO.URL_IMAGEN.I.{*dataRow}"><img id="DLG1.LIST_CARRITO.URL_IMAGEN.IMG.{*dataRow}"  style="height:78px;width:78px;" src="{url_imagen}" /></span>',
+			'        </div>',
+			'        <div class="col-55 tablet-45 desktop-45"> ',
+			'\t\t\t<h3 style="text-align:left;font-size:16px;color:#212121;"><span id="DLG1.LIST_CARRITO.NOMBRE_PRODUCTO.I.{*dataRow}">{nombre_producto}</span></h3>     \t',
+			'        </div>',
+			'\t\t<div class="col-5 tablet-5 desktop-5">',
+			'\t\t\t<i class="fa fa-times-circle fa-lg" onclick="app.deleteProd({id_producto})"></i>',
+			'\t\t</div>',
+			'      </div>',
+			'\t\t<div class="row">',
+			'\t\t\t<div class="col-100">',
+			'\t\t\t\t<h4 style="text-align:right;font-size:20px;color:#c62828;">{precio:number(\'$#.##;$ (#.##);------\')}</h4>',
+			'\t\t\t</div>',
+			'\t\t</div>',
+			'    </div>',
+			'</div>',
+			'<hr>',
+			'',
+			'',
+			'',
+			'']
 		}
 	},
 	captureFocus: false,
@@ -2637,7 +3076,7 @@ if(!this._searchPartHas) return true;
 	refreshChildLists: function() {DLG1_DlgObj._listRefreshCascadingLists('LIST_CARRITO'); },
 	rowExpander: function(rowNumber) { 
 	var mode = typeof arguments[2] != 'undefined' ? arguments[2] : 'toggle';
-	if(typeof rowNumber == 'undefined' || rowNumber == '' ) {
+	if(typeof rowNumber === 'undefined' || rowNumber === '' ) {
 		rowNumber = this.selection[0];
 		if(typeof rowNumber == 'undefined') return false;
 	}
@@ -2878,7 +3317,2650 @@ if(ele) ele.innerHTML = rowCount;
 },
 	_searchHighlighting: false
 };
-DLG1_DlgObj._listViewData['LIST_ALL_PRODUCTS'] = [{'*static': '<div style="color: red; border: solid 1px red;">Could not execute query.<br>Success</div>'}]; 
+DLG1_DlgObj._listViewSettings['LIST_DETALLE_COMPRAS'] = {
+	_hasDependentLists: false,
+	_dataSourceType: 'SQL',
+	_listFields: [
+{
+	name: 'id_venta',
+	defaultValue: 'return this._controlDefaultValueForListField(\'id_venta\');'
+},
+{
+	name: 'fecha_venta',
+	defaultValue: 'return this._controlDefaultValueForListField(\'fecha_venta\');'
+},
+{
+	name: 'tiempo_venta',
+	defaultValue: 'return this._controlDefaultValueForListField(\'tiempo_venta\');'
+},
+{
+	name: 'id_usuario',
+	defaultValue: 'return this._controlDefaultValueForListField(\'id_usuario\');'
+},
+{
+	name: 'cant_productos',
+	defaultValue: 'return this._controlDefaultValueForListField(\'cant_productos\');'
+},
+{
+	name: 'total',
+	defaultValue: 'return this._controlDefaultValueForListField(\'total\');'
+},
+{
+	name: 'authCode',
+	defaultValue: 'return this._controlDefaultValueForListField(\'authCode\');'
+},
+{
+	name: 'buyOrder',
+	defaultValue: 'return this._controlDefaultValueForListField(\'buyOrder\');'
+},
+{
+	name: 'cardType',
+	defaultValue: 'return this._controlDefaultValueForListField(\'cardType\');'
+},
+{
+	name: 'last4Digits',
+	defaultValue: 'return this._controlDefaultValueForListField(\'last4Digits\');'
+},
+{
+	name: 'transactionCode',
+	defaultValue: 'return this._controlDefaultValueForListField(\'transactionCode\');'
+}],
+	_delayRenderTillRefresh: false,
+	_searchPartHas: false,
+	_mediaFields: [],
+	_mediaTypes: {
+},
+	_mediaFieldReadOnly: [],
+	_phoneGap: {
+		mediaFiles: {
+			protectedRead: false,
+			target: 'server',
+			targetFilenameFunction: 'return \'<DeviceId>_\' +e.object.listFieldName + \'_\' + A5.ts() + \'_\' +e.name',
+			showProgress: false,
+			download: {
+				autodownloadFilesOnPullSynch: false,
+				deleteOrphansAfterSync: false,
+				targetFolder: '_AAFiles',
+				showProgress: false,
+				targetFileSystem: 'persistent'
+			},
+			onErrorFunction: function(array,fileNumber,error) { }
+		}
+	},
+	_incrementalRefreshAfterLoad: function() { },
+	_dvmode: 'enter',
+	_hasDetailView: false,
+	deselectAll: function() { 	
+	var _dlgObj = window[this._hostComponentId + '_DlgObj']; 
+	_dlgObj.setValue(this.listVariableName,'',true);
+	this._deselectAll();
+	if(this.nullOutDetailViewRecord) {
+		this.nullOutDetailViewRecord();
+		for(var i = 0; i < this.childLists.length; i++) { 
+			var lname = this.childLists[i];
+			var lobjC = DLG1_DlgObj.getControl(lname);
+			lobjC.nullOutDetailViewRecord();
+		}
+		if(this._noRecordInListIsSelectedSettingForDetailView ==  'disabledetailview') { 
+			this.disableDetailView()
+			for(var i = 0; i < this.childLists.length; i++) { 
+				var lname = this.childLists[i];
+				var lobjC = DLG1_DlgObj.getControl(lname);
+				lobjC.disableDetailView();
+			}
+		}
+	}
+}
+,
+	showHideColumn: function(columnNumber,flagShow,layoutName) { 	if(typeof layoutName == 'undefined') layoutName = this.layout;
+	this.layouts[layoutName].columns[columnNumber].show = flagShow;
+	this.refresh();
+}
+,
+	showAllColumns: function() { 
+	var l = this.layouts
+	var c = '';
+	for(var n in l) { 
+		c = l[n].columns;
+		if(typeof c != 'undefined') { 
+			for(var i = 0; i < c.length; i++) { 
+				c[i].show = true;
+			}
+		}
+	}
+	this.refresh();
+}
+,
+	_hideColumns: function() { 
+}
+,
+	theme: 'AndroidLight',
+	scroll: {
+		axis: 'both',
+		indicator: {
+			show: true,
+			h: {
+				show: true,
+				location: 'top',
+				offset: '0px',
+				left: '0px',
+				right: '0px'
+			},
+			v: {
+				show: true,
+				location: 'right',
+				offset: '0px',
+				top: '0px',
+				bottom: '0px'
+			}
+		},
+		momentum: {
+			allow: true
+		},
+		pull: {
+			y: 'auto',
+			x: 'auto'
+		}
+	},
+	layout: 'Default',
+	calculateValue: function(data) {  {var _val = '' +A5RemoveHTMLWrapper(data.id_venta); if((_val == '' ||  _val == 'undefined'  )&& typeof data['*rowGUID'] != 'undefined') _val = '_temporaryValue_' + data['*rowGUID']; return _val;}},
+	listVariableName: 'LIST_DETALLE_COMPRAS',
+	listVariableNameTrueCase: 'LIST_DETALLE_COMPRAS',
+	_hostComponentId: 'DLG1',
+	_includeCRC: false,
+	allParentLists: [],
+	__flagPersist: true,
+	__flagIncrementalRefreshAfterLoad: false,
+	__version: 1,
+	__persistWhere: 'LocalStorage',
+	__persistMode: 'full',
+	_beforePersistToStorage: function(obj) { 	this._executeEvent('onBeforePersistToLocalStorage',obj)
+	if(typeof obj.userData == 'undefined') obj.userData = {};
+	this.__userData = obj.userData;
+	//snapshot the list data in case the persist fails
+	this._dataSnapshot = [].concat(this._data);
+}
+,
+	persistToStorage: function(obj) { 	//system generated beforePersistToStorage code here
+	var flagSuspendPersist = false;
+	if(typeof this.suspendPersist != 'undefined') flagSuspendPersist = this.suspendPersist;
+	if(flagSuspendPersist) return true;
+	if(typeof obj.submode != 'undefined') { 
+		if(obj.submode == 'ListViewData') { 
+			var _wh = DLG1_DlgObj.__persistWhere(this.listVariableName);
+			//see comment in a5DialogHelper_ListViewData() line 450
+			if(_wh == 'fs') return;
+		}
+	}
+	var result = DLG1_DlgObj.persistListToLocalStorage(this,obj);
+	delete this.__userData;
+	if(result) {
+		delete this._dataSnapshot;
+	} else { 
+		this.populate(this._dataSnapshot,false,false,false);  //need to .populate() without firing events
+		delete this._dataSnapshot;
+	}
+	obj.success = result
+	this._executeEvent('onPersistToLocalStorage',obj);
+	this._flagPersistDataOK = result;
+	//if persist to local storage after a server-side search fails, fire event
+	if(!result) { 
+		if(typeof this._tempFlagServerSideSearch != 'undefined') { 
+			if(this._tempFlagServerSideSearch) {
+				this._executeEvent('onSearchResultTooLargeForLocalStorage',obj);
+			}
+			delete this._tempFlagServerSideSearch;
+		}
+	}
+}
+,
+	onBeforePopulate: function(data) {if(!this._isInit && !this._restoringList) this._beforePersistToStorage({mode:'populate', data: data});
+},
+	onPopulate: function(data) {if(!this._isInit && !this._restoringList) {this.persistToStorage({mode:'populate', data: data});  }},
+	onBeforeUpdateRow: function(index,data){this._beforePersistToStorage({mode:'update', data: data, index: index});},
+	onUpdateRow: function(index,data){this.persistToStorage({mode:'update', data: data, index: index});},
+	onBeforeAddRows: function(data,info){this._beforePersistToStorage({mode:'add', data: data});},
+	onAddRows: function(data,info){this.persistToStorage({mode:'add', data: data});},
+	onBeforeRemoveRows: function(rows){this._beforePersistToStorage({mode:'remove', rows: rows});},
+	onRemoveRows: function(rows){this.persistToStorage({mode:'remove', data: rows});},
+	onListDraw: function(data,startIndex) {
+if(A5.flags.isMobile) $e.add(this.contId+'.CONTENT','abstractdown',function(e) {$e.preventDefault(e);});},
+	childLists: [],
+	childListEndpoints: ['LIST_DETALLE_COMPRAS'],
+	_populateAllChildLists: function() { },
+	onSelect: function() {DLG1_DlgObj._listRowSelect('LIST_DETALLE_COMPRAS',this);
+ this._selectedRow = this.selection[0];if(typeof this._selectedRow != 'undefined') { };;
+this._selectedRow = this.selection[0];
+;},
+	onClick: function() {
+DLG1_DlgObj._listSystemOnClick('LIST_DETALLE_COMPRAS',this.selection[0]);},
+	layouts: {
+		Default: {
+			type: 'template',
+			item: {
+				height: '220px'
+			},
+			template: [
+			'<div class="block" style="margin-top:5px;margin-bottom:5px;">',
+			'<div class="row">',
+			'      <div class="col-100 tablet-800 desktop-60 no-margin-top" style="margin-left:10px">',
+			'        <div>',
+			'            <p style="font-size: 18px;color:#37474f;margin-bottom:5px;"> Compra realizada el d&iacute;a {fecha_venta} a las {tiempo_venta}  </p>',
+			'\t\t\t<p style="font-size: 18px;color:#37474f;margin-bottom:5px;"> Cantidad de productos: <span id="DLG1.LIST_DETALLE_COMPRAS.CANT_PRODUCTOS.I.{*dataRow}">{cant_productos}</span> </p>',
+			'\t\t\t<p style="font-size: 16px;color:#37474f;margin-bottom:5px;"> Pago realizado con: {cardType} </p>',
+			'\t\t\t<p style="font-size: 14px;color:#37474f;margin-bottom:8px;"> Tarjeta: XXXXXXXXXXXXXX{last4Digits}</p>',
+			'\t\t\t<p  align="right" style="font-size: 19px;color:#b71c1c;margin-bottom:5px;"> Total: {total:number(\'$#.##;$ (#,##);------\')}</i>       ',
+			'        </div>',
+			'      </div>',
+			'    </div>',
+			'</div>',
+			'',
+			'<hr>']
+		}
+	},
+	captureFocus: true,
+	content: {
+		header: {
+			show: false
+		},
+		footer: {
+			show: false
+		}
+	},
+	systemEvents: {
+		onTap: function(e) {},
+		afterAjaxCallback: function(e) {},
+		afterClientSideFilter: function(e) {},
+		beforeServerSideSort: function(e) {},
+		afterServerSideSort: function(e) {},
+		onSwipe: function(e) {},
+		onScroll: function(e) {},
+		onPullRelease: function(e) {},
+		onPull: function(e) {},
+		onPullEnd: function(e) {},
+		afterSearchComplete: function(e) {},
+		beforeSearch: function(e) {},
+		onSearchResultTooLarge: function(e) {},
+		onSearchResultTooLargeForLocalStorage: function(e) {},
+		onBeforePersistToLocalStorage: function(e) {},
+		onPersistToLocalStorage: function(e) {},
+		onRestoreFromLocalStorage: function(e) {},
+		onListReady: function(e) {},
+		afterRenderComplete: function(e) {},
+		beforeFetchMore: function(e) {},
+		afterFetchMore: function(e) {},
+		beforePageNavigate: function(e) {},
+		afterPageNavigate: function(e) {},
+		beforeRefreshRow: function(e) {},
+		afterRefreshRow: function(e) {},
+		afterRefreshData: function(e) {},
+		afterServerSideSummaryCompute: function(summary) {},
+		_afterAjaxCallback: function() {this._refreshStateMessages();}
+	},
+	_clientsideSummary: [],
+	computeClientSideSummaryValues: function(e) {},
+	_executeEvent: function(event,obj) { 
+	return DLG1_DlgObj._list_executeEvent('LIST_DETALLE_COMPRAS',event,obj);
+}
+,
+	_selectAll: function() {
+	var v = this._values;
+	var v2 = [].concat(v);
+	this.setValue(v2,false);
+}
+,
+	searchList: function() { 
+	if(this._searchPartStyle == 'querybyform') { 
+		if(this._dvmode != 'search') return false;
+	}
+	var obj = typeof arguments[0] != 'undefined' ? arguments[0] : {};
+	var mode = 'serverSide';
+	if(typeof obj.searchMode != 'undefined') mode = obj.searchMode;
+	mode = mode.toLowerCase();
+	if(mode.indexOf('auto') == 0) { 
+		if(this.listIsDirty()) mode = 'clientside';
+		else {
+			if(this._dataSourceType.toLowerCase() == 'sql' || this._dataSourceType.toLowerCase() == 'dbf') {
+				mode = 'serverside';
+			} else { 
+				mode = 'clientside';
+			}
+		}
+	}
+	if(this._dataSourceType.toLowerCase() == 'static') mode = 'clientside';
+	var parentList = this.parentList;
+	if(typeof parentList != 'undefined') {
+		if(parentList != '') mode = 'clientside';
+	}
+	var flagDirty = false;
+	if(this.listIsDirty) flagDirty = this.listIsDirty();
+	var flagResult = DLG1_DlgObj._list_executeEvent(this.listVariableName,'beforeSearch',{searchMode: 'search', searchWhere: mode, listIsDirty: flagDirty});
+	if(!flagResult) return false;
+	if(mode == 'serverside') {
+		this._searchListServerSide(obj);
+	} else if(mode == 'clientside') { 
+		this._searchPartSubmit_clientSideFilter();
+		var rowCount = this._rData.length;
+		DLG1_DlgObj._list_executeEvent(this.listVariableName,'afterSearchComplete',{searchMode: 'search', searchWhere: mode, recordsInQuery: rowCount});
+	}
+}
+,
+	_searchListServerSide: function() { 
+	var obj = typeof arguments[0] != 'undefined' ? arguments[0] : {};
+	var _d={};
+	var flagDirty = false;
+	if(this.listIsDirty) flagDirty = this.listIsDirty();
+	if(flagDirty) { 
+		alert('Can\'t execute server-side search because List has edits that have not yet been synchronized.');
+		return false;
+	}
+	_d.listId = this.listVariableName
+	var _data = A5.ajax.buildURLParam('__searchInfo',JSON.stringify(_d));
+	_data = _data + '&' + A5.ajax.buildURLParam('__searchOptions',JSON.stringify(obj));
+	this.filter = false;
+	DLG1_DlgObj.ajaxCallback('','','system:ListSearchPart','',_data);
+}
+,
+	setListSize: function(height,width) {
+	var l = $(this.contId);
+	if(typeof height != 'undefined') l.style.height = ''+ height; 
+	if(typeof width != 'undefined') l.style.width = '' + width;
+	this.resize();
+}
+,
+	clearSearchList: function() { 
+	var obj = typeof arguments[0] != 'undefined' ? arguments[0] : {};
+	var mode = 'serverSide';
+	if(typeof obj.searchMode != 'undefined') mode = obj.searchMode;
+	mode = mode.toLowerCase();
+	if(mode.indexOf('auto') == 0) { 
+		if(this.listIsDirty()) mode = 'clientside';
+		else mode = 'serverside';
+	}
+	if(this._dataSourceType.toLowerCase() == 'static') mode = 'clientside';
+	var parentList = this.parentList;
+	if(typeof parentList != 'undefined') {
+		if(parentList != '') mode = 'clientside';
+	}
+	var flagResult = DLG1_DlgObj._list_executeEvent(this.listVariableName,'beforeSearch',{searchMode: 'clear', searchWhere: mode});
+	if(!flagResult) return false;
+	if(mode == 'serverside') {
+		this._clearSearchListServerSide();
+	} else if(mode == 'clientside') { 
+		this._searchPartSubmit_clientSideFilterClear();
+		var rowCount = this._rData.length;
+		DLG1_DlgObj._list_executeEvent(this.listVariableName,'afterSearchComplete',{searchMode: 'clear', searchWhere: mode, recordsInQuery: rowCount});
+	}
+}
+,
+	_clearSearchListServerSide: function() { 
+	var _d={};
+	_d.listId = this.listVariableName
+	var _data = A5.ajax.buildURLParam('__searchInfo',JSON.stringify(_d));
+	DLG1_DlgObj.ajaxCallback('','','system:ListSearchPartClear','',_data);
+}
+,
+	_str: function(txt) {
+	txt = txt.replace("'","\\'");
+	txt = '\'' + txt + '\'';
+	return txt;
+}
+,
+	_QBF: function(txt) { 
+	var o = {};
+	o.v2 = '';
+	o.v1 = txt;
+	o.flag = false;
+	if(txt.indexOf('>=') >= 0) {
+		o.op = '>=';
+		o.v1 = txt.substr(2);
+		o.flag = true;
+	} else if (txt.indexOf('<=') >= 0 ) { 
+		o.op = '<=';
+		o.v1 = txt.substr(2);
+		o.flag = true;
+	} else if (txt.indexOf('>') >= 0 ) {
+		o.op = '>';
+		o.v1 = txt.substr(1);
+		o.flag = true;
+	} else if (txt.indexOf('<') >= 0)  { 
+		o.op = '<';
+		o.v1 = txt.substr(1);
+		o.flag = true;
+	} else if (txt.indexOf('..') == 0)  {
+		o.op = '<=';
+		o.v1 = txt.substr(2);
+		o.flag = true;
+	} else if ( txt.indexOf('..', txt.length - '..'.length) !== -1 ) { 
+		//ends with ..
+		o.op = '>=';
+		txt = txt.split('..')
+		o.v1 = txt[0];
+		o.flag = true;
+	} else if (txt.indexOf('..') > 0 ) {
+		o.op = 'between'
+		txt = txt.split('..');
+		o.v1 = txt[0];
+		o.v2 = txt[1];
+		o.flag = true;
+	}
+	return o;
+}
+,
+	_match: function(data,field,val,obj) { 
+	var flagKeyword = false;
+	if(typeof obj.flagKeyword != 'undefined') flagKeyword = obj.flagKeyword;
+	if(flagKeyword) { 
+		var obj_i = this._searchFieldOptions[field.toUpperCase()];
+		this._setSearchOps(obj,obj_i);
+	}
+	var _d = '';
+	var _v = val;
+	var flagC = false;
+	if(obj.type == 'c') {
+		flagC = true;
+		if(!obj.caseSensitive) _v = _v.toLowerCase();
+	} else { 
+		//non mumeric searches are only mode 1 or -1
+		if(obj.mode > 1) obj.mode = 1;
+		if(obj.mode < -1) obj.mode = -1;
+	}
+	var flag = false;
+	obj.usesQBFOperator = false;
+	if(obj.qbf) { 
+		_v = _v.split(',');
+	} else {
+		_v = [_v];
+	}
+	var o = {}
+	var r = '';
+	var _vals = [];
+	for(var i = 0; i < _v.length; i++) { 
+		if(obj.qbf) {
+			o = this._QBF(_v[i]);
+		} else {
+			o.flag = false;
+			o.v1 = _v[i];
+			o.v2 = '';
+		}
+		if(typeof data[field] != 'undefined') {
+			if(data[field] != null) { 
+				_d = data[field];
+				if(obj.type == 'n') { 
+					o.v1 = Number(o.v1);
+					o.v2 = Number(o.v2);
+					_d = Number(_d);
+				} else if (obj.type == 'l') { 
+					o.v1 = $u.s.toBool(o.v1);
+					o.v2 = $u.s.toBool(o.v2);
+					_d = $u.s.toBool(_d);
+				} else if (obj.type == 'd') { 
+					o.v1 = A5.stringToDate(o.v1,obj.dateFormat);
+					o.v2 = A5.stringToDate(o.v2,obj.dateFormat);
+					if(typeof _d == 'string') _d = A5.stringToDate(_d,obj.dateFormat);
+					if(o.v1 != '' && o.v1 != null ) o.v1 = o.v1.getTime();
+					if(o.v2 != '' && o.v2 != null ) o.v2 = o.v2.getTime();
+					if(_d != '' && _d != null ) _d = _d.getTime();
+				}
+				if(flagC) {if(!obj.caseSensitive && typeof _d == 'string') _d = _d.toLowerCase();}
+				if(o.flag) { 
+					//has qbf operators
+					if(o.op == 'between') {
+						if(flagC) {
+							if(_d.substr(0,o.v1.length) >= o.v1 && _d.substr(0,o.v2.length) <= o.v2 ) flag = true;
+						} else { 
+							if(_d >= o.v1 && _d <= o.v2 && (typeof _d == typeof o.v1)  ) flag = true;
+						}
+					} else { 
+						if(flagC) _d = _d.substr(0,o.v1.length)
+						if(o.op == '>=') if( _d >= o.v1) flag = true;
+						if(o.op == '<=') if( _d <= o.v1) flag = true;
+						if(o.op == '>') if(_d > o.v1) flag = true;
+						if(o.op == '<') if(_d < o.v1) flag = true;
+					}
+				} else { 
+					if(obj.mode == 1 || obj.mode == -1 ) {
+						if(obj.mode == 1) if(_d == o.v1) flag = true;; //match
+						if(obj.mode == -1) if(!(_d == o.v1)) flag = true;; //match
+					} else if (obj.mode == 2 || obj.mode == -2) { 
+						if(obj.mode == 2) if(_d.indexOf(o.v1) > -1) flag = true; //contains
+						if(obj.mode == -2) if(!(_d.indexOf(o.v1) > -1)) flag = true;
+					} else if (obj.mode == 3 || obj.mode == -3) { 
+						if(obj.mode == 3) if(_d.indexOf(o.v1) == 0) flag = true; //starts with
+						if(obj.mode == -3) if(!(_d.indexOf(o.v1) == 0)) flag = true; //starts with
+					}
+				}
+				if(o.v1 != '') {
+					if(_vals.indexOf(o.v1) == -1) { 
+						_vals.push(o.v1);
+					}
+				}
+				if(o.v2 != '') {
+					if(_vals.indexOf(o.v2) == -1) { 
+						_vals.push(o.v2);
+					}
+				}
+			}
+		}
+	}
+	if(flag) { 
+		if(typeof this._state.highlight == 'undefined') this._state.highlight = {};
+		this._state.highlight[field.toUpperCase()] = _vals;
+	} else { 
+		//this._state.highlight[field.toUpperCase()] = [];
+	}
+	return flag;
+}
+,
+	_setSearchOps: function(obj,obj_i) { 
+	obj.mode = obj_i.option;
+	obj.qbf = obj_i.qbf;
+	obj.type = obj_i.type;
+	//obj.treatAs = obj_i.treatAs;
+}
+,
+	_searchPartOperator: '&&',
+	_searchPartSubmit_clientSideFilter: function() { 
+	if(!this._searchPartHas) return true;
+	//_searchPartStyle: 'individualcontrols'
+	this._state.highlight = {};
+	if(this._searchPartStyle == 'singlekeywordcontrol') { 
+		var searchFor = DLG1_DlgObj.getValue(this._keywordSearchControl);
+		var arr = this._keywordSearchFields;
+		var expn = [];
+		var expn_i = '';
+		var obj = {};
+		//obj.caseSensitive = false;
+		//obj.qbf = true;
+		//obj.mode = 1;
+		obj.flagKeyword = true;
+		var objStr = JSON.stringify(obj)
+		for(var i = 0; i < arr.length; i++) { 
+			expn_i = 'this._match(data,' +this._str(arr[i]) + ',' + this._str(searchFor) + ','+objStr+')';
+			expn.push(expn_i);
+		}
+		expn = expn.join('||');
+		//alert(expn);
+	} else if ( this._searchPartStyle == 'individualcontrols' || this._searchPartStyle == 'querybyform'  ) { 
+		var map = this._searchPart.fieldMap;
+		var val = '';
+		var expn = [];
+		var expn_i = '';
+		var obj = {};
+		obj.caseSensitive = false;
+		//obj.qbf = true;
+		//obj.mode = 2;
+		//var objStr = JSON.stringify(obj)
+		var ac = [];
+		var aco = {};
+		var _highlight = {};
+		if(this._searchPartStyle == 'individualcontrols') {
+			for(var i = 0; i < map.length; i++) { 
+				val = DLG1_DlgObj.getValue(map[i].control);
+				if(val != '') {
+					obj_i = this._searchFieldOptions[map[i].field.toUpperCase()];
+					this._setSearchOps(obj,obj_i);
+					expn_i = 'this._match(data,' +this._str(map[i].field) + ',' + this._str(val) + ','+JSON.stringify(obj)+')';
+					expn.push(expn_i);
+				}
+			}
+		} else if (this._searchPartStyle == 'querybyform' ) { 
+			var controlName = '';
+			for(var i = 0; i < this._listFields.length; i++) { 
+				controlName = this._getUXDetailViewControlName(this._listFields[i].name);
+				if(controlName != '') {
+					val = DLG1_DlgObj.getValue(controlName);
+					if(val != '') {
+						obj_i = this._searchFieldOptions[map[i].field.toUpperCase()];
+						this._setSearchOps(obj,obj_i);
+						expn_i = 'this._match(data,' +this._str(this._listFields[i].name) + ',' + this._str(val) + ','+JSON.stringify(obj)+')';
+						expn.push(expn_i);
+						aco.control = controlName;
+						aco.value = val;
+						ac.push(aco);
+					}
+				}
+			}
+			this.__queryByFormValues = ac;
+			DLG1_DlgObj._setDVClean(this);
+		}	
+		var operator = '&&';
+		if(typeof this._searchPartOperator != 'undefined') operator = this._searchPartOperator;
+		expn = expn.join(' '+operator+' ');
+	} 
+	if (this._showSearchDebugInfo) {
+		var ele = $('DLG1.V.R1.' + this._searchDebugPH);
+		if(ele) ele.innerHTML = expn;
+	}
+	//user did not fill in any search fields
+	if(expn == '') return true;
+	var fnTxt = 'if(' + expn + ') {return true;} else { return false;}'
+	var searchFunction = new Function('data',fnTxt);
+	this.setFilter(searchFunction);
+	if(this._rData.length > 0) this.setValue(0);
+}
+,
+	_searchPartSubmit_clientSideFilterClear: function() { 
+if(!this._searchPartHas) return true;
+	this._state.highlight = {};
+	this.setFilter(false);
+	var map = this._searchPart.fieldMap;
+	var val = '';
+	var od = DLG1_DlgObj.originalValues[0];
+	for(var i = 0; i < map.length; i++) {
+		var val = od[map[i].control.toUpperCase()];
+		if(typeof val != 'undefined') DLG1_DlgObj.setValue(map[i].control,val,false);
+	}
+	this.setFilter(false);
+	delete this.__queryByFormValues;
+	DLG1_DlgObj._setDVClean(this);
+	if(this._data.length > 0) this.setValue(0);
+	if (this._showSearchDebugInfo) {
+		var ele = $('DLG1.V.R1.' + this._searchDebugPH);
+		if(ele) ele.innerHTML = '';
+	}
+}
+,
+	detailViewIsDirty: function() { return false; },
+	populateUXControls: function() { return true; },
+	listIsDirty: function() { return false; },
+	lookupValue: function(key,name,keyValue) {	var _d = this._data;
+	var indx = A5FindPropInArray(_d,key,keyValue);
+	var rv = '';
+	if(indx >=0) {
+		if(name == '__rowData__') return _d[indx];
+		rv =  _d[indx][name];
+	} else {
+		//null out all properties in row
+		var _d2 = {};
+		if(typeof _d[0] == 'undefined') { return {}} ;
+		for(var n in _d[0]) {
+			_d2[n] = '&nbsp;';
+		}
+		rv = _d2;
+	}
+	return rv;
+}
+,
+	allowNullSelection: true,
+	allowTextSelection: false,
+	allowAnyValue: false,
+	allowNullDeselection: false,
+	loopNavigate: false,
+	loopNavigateNullSelection: false,
+	refreshChildLists: function() {DLG1_DlgObj._listRefreshCascadingLists('LIST_DETALLE_COMPRAS'); },
+	rowExpander: function(rowNumber) { 
+	var mode = typeof arguments[2] != 'undefined' ? arguments[2] : 'toggle';
+	if(typeof rowNumber === 'undefined' || rowNumber === '' ) {
+		rowNumber = this.selection[0];
+		if(typeof rowNumber == 'undefined') return false;
+	}
+	var animObj = typeof arguments[1] != 'undefined' ? arguments[1] : {};
+	var ele = $(this._hostComponentId + '.' + this.listVariableName + '.ROWEXPANDER.' + rowNumber);
+	if(ele) {
+		if(mode == 'toggle') A5.u.element.toggle(ele,animObj);
+		if(mode == 'show') A5.u.element.show(ele,animObj);
+		if(mode == 'hide') A5.u.element.hide(ele,animObj);
+	}
+}
+,
+	afterClientSideSummaryCompute: function(csSummary) { },
+	selectCurrentLayout: function(name) { 
+var pl = this.layouts[name];
+if(typeof pl == 'undefined') return false;
+this.setLayout(name);
+if(pl.type == 'column') {
+	this.columnLayout.header.show = this.layouts[name].showColumnTitles; 
+	this.refresh();
+}
+},
+	onFilter: function() { 	var e = {}; 
+	e.rowCount = this._values.length;  
+	var ele = $('DLG1.__listId__.RECORDCOUNT'); 
+	if(ele) {ele.innerHTML = e.rowCount;}; 
+	if(this.persistToStorage) { this.persistToStorage({});} 
+	(function(e) {   })(e);
+}
+,
+	serverSideSort: function(column) {
+var e = {};
+e.column = column;
+var result = this.systemEvents.beforeServerSideSort(e);
+if(result == false) return false;
+var obj = {};
+obj.cmd = 'sort';
+obj.column = column;
+obj.layoutName = this.layout;
+obj.listState = this._state;
+var data = '_listId=LIST_DETALLE_COMPRAS&' + A5.ajax.buildURLParam('_cmdObj',$u.o.toJSON(obj));
+DLG1_DlgObj.ajaxCallback('','','system:listServerSideSort','',data);
+},
+	filterListClientSide: function(searchFor) {
+searchFor =  searchFor.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&");
+//var result = this.systemEvents.beforeClientSideFilter();
+//if(result == false) return false;
+if(searchFor != '') {
+	//fixes bug in Chrome when searching on dates strings that use forward slashes
+	searchFor = searchFor.replace(/\//g,'\\/');
+	this.setFilter({'id_venta': RegExp('' + searchFor,'i'), 'fecha_venta': RegExp('' + searchFor,'i'), 'tiempo_venta': RegExp('' + searchFor,'i'), 'id_usuario': RegExp('' + searchFor,'i'), 'cant_productos': RegExp('' + searchFor,'i'), 'total': RegExp('' + searchFor,'i'), 'authCode': RegExp('' + searchFor,'i'), 'buyOrder': RegExp('' + searchFor,'i'), 'cardType': RegExp('' + searchFor,'i'), 'last4Digits': RegExp('' + searchFor,'i'), 'transactionCode': RegExp('' + searchFor,'i')});
+} else this.setFilter(false);
+var rowCount = this._values.length;
+//var e = {};
+//e.rowCount = rowCount;
+//this.systemEvents.afterClientSideFilter(e);
+var ele = $('DLG1.LIST_DETALLE_COMPRAS.RECORDCOUNT');
+if(ele) ele.innerHTML = rowCount;
+}
+,
+	scrollToClosestValue: function(val) { 	
+	if(typeof val != 'string') val = val.join('');
+	var flagCI = typeof arguments[1] != 'undefined' ? arguments[1] : false;
+	var pos = typeof arguments[2] != 'undefined' ? arguments[2] : 'top';
+	var anim = typeof arguments[3] != 'undefined' ? arguments[3] : {}
+	var _d = this._rData;
+	var len = val.length;
+	var _d2;
+	var i2 = -1;
+	if(flagCI) val = val.toLowerCase();
+	for(var i = 0 ; i < _d.length; i++) {
+		i2 = i;
+		_d2 = String(_d[i]['*value']);
+		_d2 = _d2.substr(0,len);
+		_d2 = $u.s.pad(_d2,len,' ','l');
+		if(flagCI) _d2 = _d2.toLowerCase();
+		if(val <= _d2){
+			 break;
+		}
+	}
+	if(i2 > -1) { 
+		this.scrollToItem(i2,{mode: pos, animation: anim});
+	}
+}
+,
+	_refreshStateMessages: function() {
+	if(DLG1_DlgObj._listStateChange) DLG1_DlgObj._listStateChange(this.listVariableName);
+	var ele = '';
+	ele = $('DLG1.LIST_DETALLE_COMPRAS.PAGENUMBER');
+	if(ele) ele.innerHTML = this._state.page;
+	ele = $('DLG1.LIST_DETALLE_COMPRAS.PAGECOUNT');
+	if(ele) ele.innerHTML = this._state.pageCount;
+	ele = $('DLG1.LIST_DETALLE_COMPRAS.PAGECOUNT.PAGESELECTOR');
+	if(ele) ele.innerHTML = this._state.pageCount;	
+	ele = $('DLG1.LIST_DETALLE_COMPRAS.LISTSTATE');
+	if(ele) {
+		var listState = $u.o.toJSON(this._state);
+		ele.innerHTML = listState;
+	}
+	//navigation buttons	
+	ele = DLG1_DlgObj._buttons['BUTTON_LISTNAV_NEXT.LIST_DETALLE_COMPRAS'];
+	if(ele) {
+		if(this._state.page == this._state.pageCount || this._state.pageCount == 0) ele.setDisabled(true);
+		else ele.setDisabled(false);
+	}
+	ele = DLG1_DlgObj._buttons['BUTTON_LISTNAV_LAST.LIST_DETALLE_COMPRAS'];
+	if(ele) {
+		if(this._state.page == this._state.pageCount || this._state.pageCount == 0) ele.setDisabled(true);
+		else ele.setDisabled(false);
+	}
+	ele = DLG1_DlgObj._buttons['BUTTON_LISTNAV_FIRST.LIST_DETALLE_COMPRAS'];
+	if(ele) {
+		if(this._state.page == 1 || this._state.pageCount == 0) ele.setDisabled(true);
+		else ele.setDisabled(false);
+	}
+	ele = DLG1_DlgObj._buttons['BUTTON_LISTNAV_PREV.LIST_DETALLE_COMPRAS'];
+	if(ele) {
+		if(this._state.page == 1 || this._state.pageCount == 0 ) ele.setDisabled(true);
+		else ele.setDisabled(false);
+	}
+	ele = $('DLG1.V.R1.A5SYSTEM_LIST_PAGESELECTOR_LIST_DETALLE_COMPRAS');
+	if(ele) {
+		var data = this._recordNavigatorLinks;
+		if(data) A5.form.populateSelect(ele,this._state.page,data,true);
+	}
+}
+,
+	header: {
+	},
+	_getRoute: function() { 
+	var obj  = typeof arguments[1] != 'undefined' ? arguments[1] : [];
+	var mode = typeof arguments[0] != 'undefined' ? arguments[0] : 'rowNumber'; //
+	if(typeof this.selection == 'undefined') return false;
+	if(typeof this.selection[0] == 'undefined') return false;
+	if(typeof this.getData(this.selection[0]) == 'undefined') return false;
+	if(mode != 'rowNumber') { 
+		var _d = this.getData(this.selection[0]);
+		if(typeof _d.__primaryKey == 'undefined') { 
+			mode = 'rowNumber';
+		}
+	}
+	if(mode == 'rowNumber') {
+		obj.push({list: this.listVariableName, row: this.getData(this.selection[0])['*key']});
+	} else {
+		var _d = this.getData(this.selection[0]);
+		var _pk = _d.__primaryKey;
+		if(typeof _d.__primaryKey == 'undefined') { 
+			_pk = _d['*rowGUID'];
+		}
+		obj.push({list: this.listVariableName, row: _pk});
+	}
+	for(var i = 0; i < this.childLists.length; i++) { 
+		var lname = this.childLists[i];
+		var lObj = window[this._hostComponentId + '_DlgObj'].getControl(lname);
+		if(lObj) lObj._getRoute(mode,obj);
+	}
+	return obj;
+}
+,
+	_getRouteOLD: function() { 
+	var obj  = typeof arguments[1] != 'undefined' ? arguments[1] : [];
+	var mode = typeof arguments[0] != 'undefined' ? arguments[0] : 'rowNumber'; //
+	if(typeof this.selection == 'undefined') return false;
+	if(typeof this.selection[0] == 'undefined') return false;
+	if(typeof this.getData(this.selection[0]) == 'undefined') return false;
+	if(mode == 'rowNumber') obj.push({list: this.listVariableName, row: this.getData(this.selection[0])['*key']});
+	else obj.push({list: this.listVariableName, row: this.getData(this.selection[0]).__primaryKey});
+	for(var i = 0; i < this.childLists.length; i++) { 
+		var lname = this.childLists[i];
+		var lObj = window[this._hostComponentId + '_DlgObj'].getControl(lname);
+		if(lObj) lObj._getRoute(mode,obj);
+	}
+	return obj;
+}
+,
+	_setRoute: function(route) { 
+	if(typeof route == 'undefined') { 
+		route = this.__currentRoute;
+		if(typeof route == 'undefined') return false;
+	}
+	var mode = typeof arguments[1] != 'undefined' ? arguments[1] : 'rowNumber'; //
+	if(mode == 'primaryKey') { 
+		if(typeof this._data != 'undefined') { 
+			var _d = this._data;
+			if(typeof _d[0] != 'undefined') { 
+				if(typeof _d[0].__primaryKey == 'undefined') { 
+					mode = 'rowNumber';
+				}
+			}
+		}
+	}
+	var lObj = '';
+	var row = '';
+	var _pk = '';
+	for(var i = 0; i < route.length; i++) {
+		lObj = window[this._hostComponentId + '_DlgObj'].getControl(route[i].list);
+		row = route[i].row;
+		if(mode == 'primaryKey') _pk = row;
+		/*
+		if(mode != 'rowNumber') { 
+			var _d = lObj._rData;
+			var _i2 = -1;
+			for(var j = 0; j < _d.length; j++) { 
+				if(_d[j].__primaryKey == row) { 
+					_i2 = j;
+					break;
+				}
+			}
+			row = _i2
+		}
+		*/
+		var flag = typeof this._restoringList != 'undefined' ? !this._restoringList : true;
+		if(mode == 'rowNumber') { 
+			if(typeof row != 'undefined') {
+				var rowFixed = '';
+				if(typeof lObj._dataMap == 'undefined') return false;
+				if(mode != 'rowNumber')  { 
+					rowFixed = row;
+					} else {
+				rowFixed = lObj._dataMap.indexOf(route[i].row);
+				}
+				lObj.setValue(rowFixed,flag);
+				if(this._clearServerSideErrors) this._clearServerSideErrors();
+				if(this._showServerSideErrors) this._showServerSideErrors();
+				if(this._showWriteConflictErrors) this._showWriteConflictErrors();
+			}
+		} else { 
+			lObj.setValue(''+_pk,flag);
+			if(this._clearServerSideErrors) this._clearServerSideErrors();
+			if(this._showServerSideErrors) this._showServerSideErrors();
+			if(this._showWriteConflictErrors) this._showWriteConflictErrors();
+		}
+	}
+}
+,
+	_useServerSideSyncLog: false,
+	items: {
+},
+	_searchHighlighting: false
+};
+DLG1_DlgObj._listViewSettings['LIST_TARJETAS_USUARIO'] = {
+	_hasDependentLists: false,
+	_dataSourceType: 'SQL',
+	_listFields: [
+{
+	name: 'id_card_token',
+	defaultValue: 'return this._controlDefaultValueForListField(\'id_card_token\');'
+},
+{
+	name: 'token',
+	defaultValue: 'return this._controlDefaultValueForListField(\'token\');'
+},
+{
+	name: 'id_card_token_1',
+	defaultValue: 'return this._controlDefaultValueForListField(\'id_card_token_1\');'
+},
+{
+	name: 'creditCardType',
+	defaultValue: 'return this._controlDefaultValueForListField(\'creditCardType\');'
+},
+{
+	name: 'last4CardDigits',
+	defaultValue: 'return this._controlDefaultValueForListField(\'last4CardDigits\');'
+},
+{
+	name: 'tbkUser',
+	defaultValue: 'return this._controlDefaultValueForListField(\'tbkUser\');'
+}],
+	_delayRenderTillRefresh: false,
+	_searchPartHas: false,
+	_mediaFields: [],
+	_mediaTypes: {
+},
+	_mediaFieldReadOnly: [],
+	_phoneGap: {
+		mediaFiles: {
+			protectedRead: false,
+			target: 'server',
+			targetFilenameFunction: 'return \'<DeviceId>_\' +e.object.listFieldName + \'_\' + A5.ts() + \'_\' +e.name',
+			showProgress: false,
+			download: {
+				autodownloadFilesOnPullSynch: false,
+				deleteOrphansAfterSync: false,
+				targetFolder: '_AAFiles',
+				showProgress: false,
+				targetFileSystem: 'persistent'
+			},
+			onErrorFunction: function(array,fileNumber,error) { }
+		}
+	},
+	_incrementalRefreshAfterLoad: function() { },
+	_dvmode: 'enter',
+	_hasDetailView: false,
+	deselectAll: function() { 	
+	var _dlgObj = window[this._hostComponentId + '_DlgObj']; 
+	_dlgObj.setValue(this.listVariableName,'',true);
+	this._deselectAll();
+	if(this.nullOutDetailViewRecord) {
+		this.nullOutDetailViewRecord();
+		for(var i = 0; i < this.childLists.length; i++) { 
+			var lname = this.childLists[i];
+			var lobjC = DLG1_DlgObj.getControl(lname);
+			lobjC.nullOutDetailViewRecord();
+		}
+		if(this._noRecordInListIsSelectedSettingForDetailView ==  'disabledetailview') { 
+			this.disableDetailView()
+			for(var i = 0; i < this.childLists.length; i++) { 
+				var lname = this.childLists[i];
+				var lobjC = DLG1_DlgObj.getControl(lname);
+				lobjC.disableDetailView();
+			}
+		}
+	}
+}
+,
+	showHideColumn: function(columnNumber,flagShow,layoutName) { 	if(typeof layoutName == 'undefined') layoutName = this.layout;
+	this.layouts[layoutName].columns[columnNumber].show = flagShow;
+	this.refresh();
+}
+,
+	showAllColumns: function() { 
+	var l = this.layouts
+	var c = '';
+	for(var n in l) { 
+		c = l[n].columns;
+		if(typeof c != 'undefined') { 
+			for(var i = 0; i < c.length; i++) { 
+				c[i].show = true;
+			}
+		}
+	}
+	this.refresh();
+}
+,
+	_hideColumns: function() { 
+}
+,
+	theme: 'AndroidLight',
+	scroll: {
+		axis: 'both',
+		indicator: {
+			show: true,
+			h: {
+				show: true,
+				location: 'top',
+				offset: '0px',
+				left: '0px',
+				right: '0px'
+			},
+			v: {
+				show: true,
+				location: 'right',
+				offset: '0px',
+				top: '0px',
+				bottom: '0px'
+			}
+		},
+		momentum: {
+			allow: true
+		},
+		pull: {
+			y: 'auto',
+			x: 'auto'
+		}
+	},
+	layout: 'Default',
+	listVariableName: 'LIST_TARJETAS_USUARIO',
+	listVariableNameTrueCase: 'LIST_TARJETAS_USUARIO',
+	_hostComponentId: 'DLG1',
+	_includeCRC: false,
+	allParentLists: [],
+	__flagPersist: false,
+	__flagIncrementalRefreshAfterLoad: false,
+	onBeforeUpdateRow: function(index,data){;},
+	onUpdateRow: function(index,data){;},
+	onBeforeAddRows: function(data,info){;},
+	onAddRows: function(data,info){;},
+	onBeforeRemoveRows: function(rows){;},
+	onRemoveRows: function(rows){;},
+	onListDraw: function(data,startIndex) {
+if(A5.flags.isMobile) $e.add(this.contId+'.CONTENT','abstractdown',function(e) {$e.preventDefault(e);});},
+	childLists: [],
+	childListEndpoints: ['LIST_TARJETAS_USUARIO'],
+	_populateAllChildLists: function() { },
+	onSelect: function() {DLG1_DlgObj._listRowSelect('LIST_TARJETAS_USUARIO',this);
+ this._selectedRow = this.selection[0];if(typeof this._selectedRow != 'undefined') { };;
+this._selectedRow = this.selection[0];
+;},
+	onClick: function() {
+DLG1_DlgObj._listSystemOnClick('LIST_TARJETAS_USUARIO',this.selection[0]);},
+	layouts: {
+		Default: {
+			type: 'template',
+			item: {
+			},
+			template: [
+			'<div class="block" style="margin-top:5px;margin-bottom:5px;width:100%;">',
+			'    <div class="row" style="width:100%;">',
+			'      <div class="col-40 tablet-40 desktop-50" style="max-width:120px;max-height:120px;">',
+			'        {*if creditCardType == \'Visa\'}',
+			'\t\t\t<img src="img/Visa_Logo.png" height="50px" width="80px"/>',
+			'\t\t{*elseif creditCardType == \'MasterCard\'}',
+			'\t\t\t<img src="img/MasterCard_Logo.png" height="50px" width="80px" />',
+			'\t\t{*else}',
+			'\t\t\tput else here',
+			'\t\t{*endif}',
+			'      </div>',
+			'      <div class="col-60 tablet-60 desktop-50 no-margin-top" style="margin-left:15x;">',
+			'        <div align="left">',
+			'            <p style="font-size: 18px;color:#37474f;" class="no-margin"> <span id="DLG1.LIST_TARJETAS_USUARIO.CREDITCARDTYPE.I.{*dataRow}">{creditCardType}</span></p>',
+			'            <p style="font-size: 12px;color:#b71c1c;" class="no-margin"> XXXXXXXXXXXXXXX<span id="DLG1.LIST_TARJETAS_USUARIO.LAST4CARDDIGITS.I.{*dataRow}">{last4CardDigits}</span></p>',
+			'        </div>',
+			'        <div style="vertical-align: bottom" align="right">',
+			'            <i class="fa fa-trash fa-lg" onclick="deleteCard(\'{tbkUser}\')"></i>',
+			'        </div>',
+			'      </div>',
+			'    </div>',
+			'</div>',
+			'<hr>']
+		}
+	},
+	captureFocus: false,
+	content: {
+		header: {
+			show: false
+		},
+		footer: {
+			show: false
+		}
+	},
+	systemEvents: {
+		onTap: function(e) {},
+		afterAjaxCallback: function(e) {},
+		afterClientSideFilter: function(e) {},
+		beforeServerSideSort: function(e) {},
+		afterServerSideSort: function(e) {},
+		onSwipe: function(e) {},
+		onScroll: function(e) {},
+		onPullRelease: function(e) {},
+		onPull: function(e) {},
+		onPullEnd: function(e) {},
+		afterSearchComplete: function(e) {},
+		beforeSearch: function(e) {},
+		onSearchResultTooLarge: function(e) {},
+		onSearchResultTooLargeForLocalStorage: function(e) {},
+		onBeforePersistToLocalStorage: function(e) {},
+		onPersistToLocalStorage: function(e) {},
+		onRestoreFromLocalStorage: function(e) {},
+		onListReady: function(e) {},
+		afterRenderComplete: function(e) {},
+		beforeFetchMore: function(e) {},
+		afterFetchMore: function(e) {},
+		beforePageNavigate: function(e) {},
+		afterPageNavigate: function(e) {},
+		beforeRefreshRow: function(e) {},
+		afterRefreshRow: function(e) {},
+		afterRefreshData: function(e) {},
+		afterServerSideSummaryCompute: function(summary) {},
+		_afterAjaxCallback: function() {this._refreshStateMessages();}
+	},
+	_clientsideSummary: [],
+	computeClientSideSummaryValues: function(e) {},
+	_executeEvent: function(event,obj) { 
+	return DLG1_DlgObj._list_executeEvent('LIST_TARJETAS_USUARIO',event,obj);
+}
+,
+	_selectAll: function() {
+	var v = this._values;
+	var v2 = [].concat(v);
+	this.setValue(v2,false);
+}
+,
+	searchList: function() { 
+	if(this._searchPartStyle == 'querybyform') { 
+		if(this._dvmode != 'search') return false;
+	}
+	var obj = typeof arguments[0] != 'undefined' ? arguments[0] : {};
+	var mode = 'serverSide';
+	if(typeof obj.searchMode != 'undefined') mode = obj.searchMode;
+	mode = mode.toLowerCase();
+	if(mode.indexOf('auto') == 0) { 
+		if(this.listIsDirty()) mode = 'clientside';
+		else {
+			if(this._dataSourceType.toLowerCase() == 'sql' || this._dataSourceType.toLowerCase() == 'dbf') {
+				mode = 'serverside';
+			} else { 
+				mode = 'clientside';
+			}
+		}
+	}
+	if(this._dataSourceType.toLowerCase() == 'static') mode = 'clientside';
+	var parentList = this.parentList;
+	if(typeof parentList != 'undefined') {
+		if(parentList != '') mode = 'clientside';
+	}
+	var flagDirty = false;
+	if(this.listIsDirty) flagDirty = this.listIsDirty();
+	var flagResult = DLG1_DlgObj._list_executeEvent(this.listVariableName,'beforeSearch',{searchMode: 'search', searchWhere: mode, listIsDirty: flagDirty});
+	if(!flagResult) return false;
+	if(mode == 'serverside') {
+		this._searchListServerSide(obj);
+	} else if(mode == 'clientside') { 
+		this._searchPartSubmit_clientSideFilter();
+		var rowCount = this._rData.length;
+		DLG1_DlgObj._list_executeEvent(this.listVariableName,'afterSearchComplete',{searchMode: 'search', searchWhere: mode, recordsInQuery: rowCount});
+	}
+}
+,
+	_searchListServerSide: function() { 
+	var obj = typeof arguments[0] != 'undefined' ? arguments[0] : {};
+	var _d={};
+	var flagDirty = false;
+	if(this.listIsDirty) flagDirty = this.listIsDirty();
+	if(flagDirty) { 
+		alert('Can\'t execute server-side search because List has edits that have not yet been synchronized.');
+		return false;
+	}
+	_d.listId = this.listVariableName
+	var _data = A5.ajax.buildURLParam('__searchInfo',JSON.stringify(_d));
+	_data = _data + '&' + A5.ajax.buildURLParam('__searchOptions',JSON.stringify(obj));
+	this.filter = false;
+	DLG1_DlgObj.ajaxCallback('','','system:ListSearchPart','',_data);
+}
+,
+	setListSize: function(height,width) {
+	var l = $(this.contId);
+	if(typeof height != 'undefined') l.style.height = ''+ height; 
+	if(typeof width != 'undefined') l.style.width = '' + width;
+	this.resize();
+}
+,
+	clearSearchList: function() { 
+	var obj = typeof arguments[0] != 'undefined' ? arguments[0] : {};
+	var mode = 'serverSide';
+	if(typeof obj.searchMode != 'undefined') mode = obj.searchMode;
+	mode = mode.toLowerCase();
+	if(mode.indexOf('auto') == 0) { 
+		if(this.listIsDirty()) mode = 'clientside';
+		else mode = 'serverside';
+	}
+	if(this._dataSourceType.toLowerCase() == 'static') mode = 'clientside';
+	var parentList = this.parentList;
+	if(typeof parentList != 'undefined') {
+		if(parentList != '') mode = 'clientside';
+	}
+	var flagResult = DLG1_DlgObj._list_executeEvent(this.listVariableName,'beforeSearch',{searchMode: 'clear', searchWhere: mode});
+	if(!flagResult) return false;
+	if(mode == 'serverside') {
+		this._clearSearchListServerSide();
+	} else if(mode == 'clientside') { 
+		this._searchPartSubmit_clientSideFilterClear();
+		var rowCount = this._rData.length;
+		DLG1_DlgObj._list_executeEvent(this.listVariableName,'afterSearchComplete',{searchMode: 'clear', searchWhere: mode, recordsInQuery: rowCount});
+	}
+}
+,
+	_clearSearchListServerSide: function() { 
+	var _d={};
+	_d.listId = this.listVariableName
+	var _data = A5.ajax.buildURLParam('__searchInfo',JSON.stringify(_d));
+	DLG1_DlgObj.ajaxCallback('','','system:ListSearchPartClear','',_data);
+}
+,
+	_str: function(txt) {
+	txt = txt.replace("'","\\'");
+	txt = '\'' + txt + '\'';
+	return txt;
+}
+,
+	_QBF: function(txt) { 
+	var o = {};
+	o.v2 = '';
+	o.v1 = txt;
+	o.flag = false;
+	if(txt.indexOf('>=') >= 0) {
+		o.op = '>=';
+		o.v1 = txt.substr(2);
+		o.flag = true;
+	} else if (txt.indexOf('<=') >= 0 ) { 
+		o.op = '<=';
+		o.v1 = txt.substr(2);
+		o.flag = true;
+	} else if (txt.indexOf('>') >= 0 ) {
+		o.op = '>';
+		o.v1 = txt.substr(1);
+		o.flag = true;
+	} else if (txt.indexOf('<') >= 0)  { 
+		o.op = '<';
+		o.v1 = txt.substr(1);
+		o.flag = true;
+	} else if (txt.indexOf('..') == 0)  {
+		o.op = '<=';
+		o.v1 = txt.substr(2);
+		o.flag = true;
+	} else if ( txt.indexOf('..', txt.length - '..'.length) !== -1 ) { 
+		//ends with ..
+		o.op = '>=';
+		txt = txt.split('..')
+		o.v1 = txt[0];
+		o.flag = true;
+	} else if (txt.indexOf('..') > 0 ) {
+		o.op = 'between'
+		txt = txt.split('..');
+		o.v1 = txt[0];
+		o.v2 = txt[1];
+		o.flag = true;
+	}
+	return o;
+}
+,
+	_match: function(data,field,val,obj) { 
+	var flagKeyword = false;
+	if(typeof obj.flagKeyword != 'undefined') flagKeyword = obj.flagKeyword;
+	if(flagKeyword) { 
+		var obj_i = this._searchFieldOptions[field.toUpperCase()];
+		this._setSearchOps(obj,obj_i);
+	}
+	var _d = '';
+	var _v = val;
+	var flagC = false;
+	if(obj.type == 'c') {
+		flagC = true;
+		if(!obj.caseSensitive) _v = _v.toLowerCase();
+	} else { 
+		//non mumeric searches are only mode 1 or -1
+		if(obj.mode > 1) obj.mode = 1;
+		if(obj.mode < -1) obj.mode = -1;
+	}
+	var flag = false;
+	obj.usesQBFOperator = false;
+	if(obj.qbf) { 
+		_v = _v.split(',');
+	} else {
+		_v = [_v];
+	}
+	var o = {}
+	var r = '';
+	var _vals = [];
+	for(var i = 0; i < _v.length; i++) { 
+		if(obj.qbf) {
+			o = this._QBF(_v[i]);
+		} else {
+			o.flag = false;
+			o.v1 = _v[i];
+			o.v2 = '';
+		}
+		if(typeof data[field] != 'undefined') {
+			if(data[field] != null) { 
+				_d = data[field];
+				if(obj.type == 'n') { 
+					o.v1 = Number(o.v1);
+					o.v2 = Number(o.v2);
+					_d = Number(_d);
+				} else if (obj.type == 'l') { 
+					o.v1 = $u.s.toBool(o.v1);
+					o.v2 = $u.s.toBool(o.v2);
+					_d = $u.s.toBool(_d);
+				} else if (obj.type == 'd') { 
+					o.v1 = A5.stringToDate(o.v1,obj.dateFormat);
+					o.v2 = A5.stringToDate(o.v2,obj.dateFormat);
+					if(typeof _d == 'string') _d = A5.stringToDate(_d,obj.dateFormat);
+					if(o.v1 != '' && o.v1 != null ) o.v1 = o.v1.getTime();
+					if(o.v2 != '' && o.v2 != null ) o.v2 = o.v2.getTime();
+					if(_d != '' && _d != null ) _d = _d.getTime();
+				}
+				if(flagC) {if(!obj.caseSensitive && typeof _d == 'string') _d = _d.toLowerCase();}
+				if(o.flag) { 
+					//has qbf operators
+					if(o.op == 'between') {
+						if(flagC) {
+							if(_d.substr(0,o.v1.length) >= o.v1 && _d.substr(0,o.v2.length) <= o.v2 ) flag = true;
+						} else { 
+							if(_d >= o.v1 && _d <= o.v2 && (typeof _d == typeof o.v1)  ) flag = true;
+						}
+					} else { 
+						if(flagC) _d = _d.substr(0,o.v1.length)
+						if(o.op == '>=') if( _d >= o.v1) flag = true;
+						if(o.op == '<=') if( _d <= o.v1) flag = true;
+						if(o.op == '>') if(_d > o.v1) flag = true;
+						if(o.op == '<') if(_d < o.v1) flag = true;
+					}
+				} else { 
+					if(obj.mode == 1 || obj.mode == -1 ) {
+						if(obj.mode == 1) if(_d == o.v1) flag = true;; //match
+						if(obj.mode == -1) if(!(_d == o.v1)) flag = true;; //match
+					} else if (obj.mode == 2 || obj.mode == -2) { 
+						if(obj.mode == 2) if(_d.indexOf(o.v1) > -1) flag = true; //contains
+						if(obj.mode == -2) if(!(_d.indexOf(o.v1) > -1)) flag = true;
+					} else if (obj.mode == 3 || obj.mode == -3) { 
+						if(obj.mode == 3) if(_d.indexOf(o.v1) == 0) flag = true; //starts with
+						if(obj.mode == -3) if(!(_d.indexOf(o.v1) == 0)) flag = true; //starts with
+					}
+				}
+				if(o.v1 != '') {
+					if(_vals.indexOf(o.v1) == -1) { 
+						_vals.push(o.v1);
+					}
+				}
+				if(o.v2 != '') {
+					if(_vals.indexOf(o.v2) == -1) { 
+						_vals.push(o.v2);
+					}
+				}
+			}
+		}
+	}
+	if(flag) { 
+		if(typeof this._state.highlight == 'undefined') this._state.highlight = {};
+		this._state.highlight[field.toUpperCase()] = _vals;
+	} else { 
+		//this._state.highlight[field.toUpperCase()] = [];
+	}
+	return flag;
+}
+,
+	_setSearchOps: function(obj,obj_i) { 
+	obj.mode = obj_i.option;
+	obj.qbf = obj_i.qbf;
+	obj.type = obj_i.type;
+	//obj.treatAs = obj_i.treatAs;
+}
+,
+	_searchPartOperator: '&&',
+	_searchPartSubmit_clientSideFilter: function() { 
+	if(!this._searchPartHas) return true;
+	//_searchPartStyle: 'individualcontrols'
+	this._state.highlight = {};
+	if(this._searchPartStyle == 'singlekeywordcontrol') { 
+		var searchFor = DLG1_DlgObj.getValue(this._keywordSearchControl);
+		var arr = this._keywordSearchFields;
+		var expn = [];
+		var expn_i = '';
+		var obj = {};
+		//obj.caseSensitive = false;
+		//obj.qbf = true;
+		//obj.mode = 1;
+		obj.flagKeyword = true;
+		var objStr = JSON.stringify(obj)
+		for(var i = 0; i < arr.length; i++) { 
+			expn_i = 'this._match(data,' +this._str(arr[i]) + ',' + this._str(searchFor) + ','+objStr+')';
+			expn.push(expn_i);
+		}
+		expn = expn.join('||');
+		//alert(expn);
+	} else if ( this._searchPartStyle == 'individualcontrols' || this._searchPartStyle == 'querybyform'  ) { 
+		var map = this._searchPart.fieldMap;
+		var val = '';
+		var expn = [];
+		var expn_i = '';
+		var obj = {};
+		obj.caseSensitive = false;
+		//obj.qbf = true;
+		//obj.mode = 2;
+		//var objStr = JSON.stringify(obj)
+		var ac = [];
+		var aco = {};
+		var _highlight = {};
+		if(this._searchPartStyle == 'individualcontrols') {
+			for(var i = 0; i < map.length; i++) { 
+				val = DLG1_DlgObj.getValue(map[i].control);
+				if(val != '') {
+					obj_i = this._searchFieldOptions[map[i].field.toUpperCase()];
+					this._setSearchOps(obj,obj_i);
+					expn_i = 'this._match(data,' +this._str(map[i].field) + ',' + this._str(val) + ','+JSON.stringify(obj)+')';
+					expn.push(expn_i);
+				}
+			}
+		} else if (this._searchPartStyle == 'querybyform' ) { 
+			var controlName = '';
+			for(var i = 0; i < this._listFields.length; i++) { 
+				controlName = this._getUXDetailViewControlName(this._listFields[i].name);
+				if(controlName != '') {
+					val = DLG1_DlgObj.getValue(controlName);
+					if(val != '') {
+						obj_i = this._searchFieldOptions[map[i].field.toUpperCase()];
+						this._setSearchOps(obj,obj_i);
+						expn_i = 'this._match(data,' +this._str(this._listFields[i].name) + ',' + this._str(val) + ','+JSON.stringify(obj)+')';
+						expn.push(expn_i);
+						aco.control = controlName;
+						aco.value = val;
+						ac.push(aco);
+					}
+				}
+			}
+			this.__queryByFormValues = ac;
+			DLG1_DlgObj._setDVClean(this);
+		}	
+		var operator = '&&';
+		if(typeof this._searchPartOperator != 'undefined') operator = this._searchPartOperator;
+		expn = expn.join(' '+operator+' ');
+	} 
+	if (this._showSearchDebugInfo) {
+		var ele = $('DLG1.V.R1.' + this._searchDebugPH);
+		if(ele) ele.innerHTML = expn;
+	}
+	//user did not fill in any search fields
+	if(expn == '') return true;
+	var fnTxt = 'if(' + expn + ') {return true;} else { return false;}'
+	var searchFunction = new Function('data',fnTxt);
+	this.setFilter(searchFunction);
+	if(this._rData.length > 0) this.setValue(0);
+}
+,
+	_searchPartSubmit_clientSideFilterClear: function() { 
+if(!this._searchPartHas) return true;
+	this._state.highlight = {};
+	this.setFilter(false);
+	var map = this._searchPart.fieldMap;
+	var val = '';
+	var od = DLG1_DlgObj.originalValues[0];
+	for(var i = 0; i < map.length; i++) {
+		var val = od[map[i].control.toUpperCase()];
+		if(typeof val != 'undefined') DLG1_DlgObj.setValue(map[i].control,val,false);
+	}
+	this.setFilter(false);
+	delete this.__queryByFormValues;
+	DLG1_DlgObj._setDVClean(this);
+	if(this._data.length > 0) this.setValue(0);
+	if (this._showSearchDebugInfo) {
+		var ele = $('DLG1.V.R1.' + this._searchDebugPH);
+		if(ele) ele.innerHTML = '';
+	}
+}
+,
+	detailViewIsDirty: function() { return false; },
+	populateUXControls: function() { return true; },
+	listIsDirty: function() { return false; },
+	lookupValue: function(key,name,keyValue) {	var _d = this._data;
+	var indx = A5FindPropInArray(_d,key,keyValue);
+	var rv = '';
+	if(indx >=0) {
+		if(name == '__rowData__') return _d[indx];
+		rv =  _d[indx][name];
+	} else {
+		//null out all properties in row
+		var _d2 = {};
+		if(typeof _d[0] == 'undefined') { return {}} ;
+		for(var n in _d[0]) {
+			_d2[n] = '&nbsp;';
+		}
+		rv = _d2;
+	}
+	return rv;
+}
+,
+	allowNullSelection: true,
+	allowTextSelection: false,
+	allowAnyValue: false,
+	allowNullDeselection: false,
+	loopNavigate: false,
+	loopNavigateNullSelection: false,
+	refreshChildLists: function() {DLG1_DlgObj._listRefreshCascadingLists('LIST_TARJETAS_USUARIO'); },
+	rowExpander: function(rowNumber) { 
+	var mode = typeof arguments[2] != 'undefined' ? arguments[2] : 'toggle';
+	if(typeof rowNumber === 'undefined' || rowNumber === '' ) {
+		rowNumber = this.selection[0];
+		if(typeof rowNumber == 'undefined') return false;
+	}
+	var animObj = typeof arguments[1] != 'undefined' ? arguments[1] : {};
+	var ele = $(this._hostComponentId + '.' + this.listVariableName + '.ROWEXPANDER.' + rowNumber);
+	if(ele) {
+		if(mode == 'toggle') A5.u.element.toggle(ele,animObj);
+		if(mode == 'show') A5.u.element.show(ele,animObj);
+		if(mode == 'hide') A5.u.element.hide(ele,animObj);
+	}
+}
+,
+	afterClientSideSummaryCompute: function(csSummary) { },
+	selectCurrentLayout: function(name) { 
+var pl = this.layouts[name];
+if(typeof pl == 'undefined') return false;
+this.setLayout(name);
+if(pl.type == 'column') {
+	this.columnLayout.header.show = this.layouts[name].showColumnTitles; 
+	this.refresh();
+}
+},
+	onFilter: function() { 	var e = {}; 
+	e.rowCount = this._values.length;  
+	var ele = $('DLG1.__listId__.RECORDCOUNT'); 
+	if(ele) {ele.innerHTML = e.rowCount;}; 
+	if(this.persistToStorage) { this.persistToStorage({});} 
+	(function(e) {   })(e);
+}
+,
+	serverSideSort: function(column) {
+var e = {};
+e.column = column;
+var result = this.systemEvents.beforeServerSideSort(e);
+if(result == false) return false;
+var obj = {};
+obj.cmd = 'sort';
+obj.column = column;
+obj.layoutName = this.layout;
+obj.listState = this._state;
+var data = '_listId=LIST_TARJETAS_USUARIO&' + A5.ajax.buildURLParam('_cmdObj',$u.o.toJSON(obj));
+DLG1_DlgObj.ajaxCallback('','','system:listServerSideSort','',data);
+},
+	filterListClientSide: function(searchFor) {
+searchFor =  searchFor.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&");
+//var result = this.systemEvents.beforeClientSideFilter();
+//if(result == false) return false;
+if(searchFor != '') {
+	//fixes bug in Chrome when searching on dates strings that use forward slashes
+	searchFor = searchFor.replace(/\//g,'\\/');
+	this.setFilter({'id_card_token': RegExp('' + searchFor,'i'), 'token': RegExp('' + searchFor,'i'), 'id_card_token_1': RegExp('' + searchFor,'i'), 'creditCardType': RegExp('' + searchFor,'i'), 'last4CardDigits': RegExp('' + searchFor,'i'), 'tbkUser': RegExp('' + searchFor,'i')});
+} else this.setFilter(false);
+var rowCount = this._values.length;
+//var e = {};
+//e.rowCount = rowCount;
+//this.systemEvents.afterClientSideFilter(e);
+var ele = $('DLG1.LIST_TARJETAS_USUARIO.RECORDCOUNT');
+if(ele) ele.innerHTML = rowCount;
+}
+,
+	scrollToClosestValue: function(val) { 	
+	if(typeof val != 'string') val = val.join('');
+	var flagCI = typeof arguments[1] != 'undefined' ? arguments[1] : false;
+	var pos = typeof arguments[2] != 'undefined' ? arguments[2] : 'top';
+	var anim = typeof arguments[3] != 'undefined' ? arguments[3] : {}
+	var _d = this._rData;
+	var len = val.length;
+	var _d2;
+	var i2 = -1;
+	if(flagCI) val = val.toLowerCase();
+	for(var i = 0 ; i < _d.length; i++) {
+		i2 = i;
+		_d2 = String(_d[i]['*value']);
+		_d2 = _d2.substr(0,len);
+		_d2 = $u.s.pad(_d2,len,' ','l');
+		if(flagCI) _d2 = _d2.toLowerCase();
+		if(val <= _d2){
+			 break;
+		}
+	}
+	if(i2 > -1) { 
+		this.scrollToItem(i2,{mode: pos, animation: anim});
+	}
+}
+,
+	_refreshStateMessages: function() {
+	if(DLG1_DlgObj._listStateChange) DLG1_DlgObj._listStateChange(this.listVariableName);
+	var ele = '';
+	ele = $('DLG1.LIST_TARJETAS_USUARIO.PAGENUMBER');
+	if(ele) ele.innerHTML = this._state.page;
+	ele = $('DLG1.LIST_TARJETAS_USUARIO.PAGECOUNT');
+	if(ele) ele.innerHTML = this._state.pageCount;
+	ele = $('DLG1.LIST_TARJETAS_USUARIO.PAGECOUNT.PAGESELECTOR');
+	if(ele) ele.innerHTML = this._state.pageCount;	
+	ele = $('DLG1.LIST_TARJETAS_USUARIO.LISTSTATE');
+	if(ele) {
+		var listState = $u.o.toJSON(this._state);
+		ele.innerHTML = listState;
+	}
+	//navigation buttons	
+	ele = DLG1_DlgObj._buttons['BUTTON_LISTNAV_NEXT.LIST_TARJETAS_USUARIO'];
+	if(ele) {
+		if(this._state.page == this._state.pageCount || this._state.pageCount == 0) ele.setDisabled(true);
+		else ele.setDisabled(false);
+	}
+	ele = DLG1_DlgObj._buttons['BUTTON_LISTNAV_LAST.LIST_TARJETAS_USUARIO'];
+	if(ele) {
+		if(this._state.page == this._state.pageCount || this._state.pageCount == 0) ele.setDisabled(true);
+		else ele.setDisabled(false);
+	}
+	ele = DLG1_DlgObj._buttons['BUTTON_LISTNAV_FIRST.LIST_TARJETAS_USUARIO'];
+	if(ele) {
+		if(this._state.page == 1 || this._state.pageCount == 0) ele.setDisabled(true);
+		else ele.setDisabled(false);
+	}
+	ele = DLG1_DlgObj._buttons['BUTTON_LISTNAV_PREV.LIST_TARJETAS_USUARIO'];
+	if(ele) {
+		if(this._state.page == 1 || this._state.pageCount == 0 ) ele.setDisabled(true);
+		else ele.setDisabled(false);
+	}
+	ele = $('DLG1.V.R1.A5SYSTEM_LIST_PAGESELECTOR_LIST_TARJETAS_USUARIO');
+	if(ele) {
+		var data = this._recordNavigatorLinks;
+		if(data) A5.form.populateSelect(ele,this._state.page,data,true);
+	}
+}
+,
+	header: {
+	},
+	_getRoute: function() { 
+	var obj  = typeof arguments[1] != 'undefined' ? arguments[1] : [];
+	var mode = typeof arguments[0] != 'undefined' ? arguments[0] : 'rowNumber'; //
+	if(typeof this.selection == 'undefined') return false;
+	if(typeof this.selection[0] == 'undefined') return false;
+	if(typeof this.getData(this.selection[0]) == 'undefined') return false;
+	if(mode != 'rowNumber') { 
+		var _d = this.getData(this.selection[0]);
+		if(typeof _d.__primaryKey == 'undefined') { 
+			mode = 'rowNumber';
+		}
+	}
+	if(mode == 'rowNumber') {
+		obj.push({list: this.listVariableName, row: this.getData(this.selection[0])['*key']});
+	} else {
+		var _d = this.getData(this.selection[0]);
+		var _pk = _d.__primaryKey;
+		if(typeof _d.__primaryKey == 'undefined') { 
+			_pk = _d['*rowGUID'];
+		}
+		obj.push({list: this.listVariableName, row: _pk});
+	}
+	for(var i = 0; i < this.childLists.length; i++) { 
+		var lname = this.childLists[i];
+		var lObj = window[this._hostComponentId + '_DlgObj'].getControl(lname);
+		if(lObj) lObj._getRoute(mode,obj);
+	}
+	return obj;
+}
+,
+	_getRouteOLD: function() { 
+	var obj  = typeof arguments[1] != 'undefined' ? arguments[1] : [];
+	var mode = typeof arguments[0] != 'undefined' ? arguments[0] : 'rowNumber'; //
+	if(typeof this.selection == 'undefined') return false;
+	if(typeof this.selection[0] == 'undefined') return false;
+	if(typeof this.getData(this.selection[0]) == 'undefined') return false;
+	if(mode == 'rowNumber') obj.push({list: this.listVariableName, row: this.getData(this.selection[0])['*key']});
+	else obj.push({list: this.listVariableName, row: this.getData(this.selection[0]).__primaryKey});
+	for(var i = 0; i < this.childLists.length; i++) { 
+		var lname = this.childLists[i];
+		var lObj = window[this._hostComponentId + '_DlgObj'].getControl(lname);
+		if(lObj) lObj._getRoute(mode,obj);
+	}
+	return obj;
+}
+,
+	_setRoute: function(route) { 
+	if(typeof route == 'undefined') { 
+		route = this.__currentRoute;
+		if(typeof route == 'undefined') return false;
+	}
+	var mode = typeof arguments[1] != 'undefined' ? arguments[1] : 'rowNumber'; //
+	if(mode == 'primaryKey') { 
+		if(typeof this._data != 'undefined') { 
+			var _d = this._data;
+			if(typeof _d[0] != 'undefined') { 
+				if(typeof _d[0].__primaryKey == 'undefined') { 
+					mode = 'rowNumber';
+				}
+			}
+		}
+	}
+	var lObj = '';
+	var row = '';
+	var _pk = '';
+	for(var i = 0; i < route.length; i++) {
+		lObj = window[this._hostComponentId + '_DlgObj'].getControl(route[i].list);
+		row = route[i].row;
+		if(mode == 'primaryKey') _pk = row;
+		/*
+		if(mode != 'rowNumber') { 
+			var _d = lObj._rData;
+			var _i2 = -1;
+			for(var j = 0; j < _d.length; j++) { 
+				if(_d[j].__primaryKey == row) { 
+					_i2 = j;
+					break;
+				}
+			}
+			row = _i2
+		}
+		*/
+		var flag = typeof this._restoringList != 'undefined' ? !this._restoringList : true;
+		if(mode == 'rowNumber') { 
+			if(typeof row != 'undefined') {
+				var rowFixed = '';
+				if(typeof lObj._dataMap == 'undefined') return false;
+				if(mode != 'rowNumber')  { 
+					rowFixed = row;
+					} else {
+				rowFixed = lObj._dataMap.indexOf(route[i].row);
+				}
+				lObj.setValue(rowFixed,flag);
+				if(this._clearServerSideErrors) this._clearServerSideErrors();
+				if(this._showServerSideErrors) this._showServerSideErrors();
+				if(this._showWriteConflictErrors) this._showWriteConflictErrors();
+			}
+		} else { 
+			lObj.setValue(''+_pk,flag);
+			if(this._clearServerSideErrors) this._clearServerSideErrors();
+			if(this._showServerSideErrors) this._showServerSideErrors();
+			if(this._showWriteConflictErrors) this._showWriteConflictErrors();
+		}
+	}
+}
+,
+	_useServerSideSyncLog: false,
+	items: {
+},
+	_searchHighlighting: false
+};
+DLG1_DlgObj._listViewSettings['LIST_SELECT_CARD'] = {
+	_hasDependentLists: false,
+	_dataSourceType: 'SQL',
+	_listFields: [
+{
+	name: 'id_card_token',
+	defaultValue: 'return this._controlDefaultValueForListField(\'id_card_token\');'
+},
+{
+	name: 'token',
+	defaultValue: 'return this._controlDefaultValueForListField(\'token\');'
+},
+{
+	name: 'id_card_token_1',
+	defaultValue: 'return this._controlDefaultValueForListField(\'id_card_token_1\');'
+},
+{
+	name: 'creditCardType',
+	defaultValue: 'return this._controlDefaultValueForListField(\'creditCardType\');'
+},
+{
+	name: 'last4CardDigits',
+	defaultValue: 'return this._controlDefaultValueForListField(\'last4CardDigits\');'
+},
+{
+	name: 'tbkUser',
+	defaultValue: 'return this._controlDefaultValueForListField(\'tbkUser\');'
+}],
+	_delayRenderTillRefresh: false,
+	_searchPartHas: false,
+	_mediaFields: [],
+	_mediaTypes: {
+},
+	_mediaFieldReadOnly: [],
+	_phoneGap: {
+		mediaFiles: {
+			protectedRead: false,
+			target: 'server',
+			targetFilenameFunction: 'return \'<DeviceId>_\' +e.object.listFieldName + \'_\' + A5.ts() + \'_\' +e.name',
+			showProgress: false,
+			download: {
+				autodownloadFilesOnPullSynch: false,
+				deleteOrphansAfterSync: false,
+				targetFolder: '_AAFiles',
+				showProgress: false,
+				targetFileSystem: 'persistent'
+			},
+			onErrorFunction: function(array,fileNumber,error) { }
+		}
+	},
+	_incrementalRefreshAfterLoad: function() { },
+	_dvmode: 'enter',
+	_hasDetailView: false,
+	deselectAll: function() { 	
+	var _dlgObj = window[this._hostComponentId + '_DlgObj']; 
+	_dlgObj.setValue(this.listVariableName,'',true);
+	this._deselectAll();
+	if(this.nullOutDetailViewRecord) {
+		this.nullOutDetailViewRecord();
+		for(var i = 0; i < this.childLists.length; i++) { 
+			var lname = this.childLists[i];
+			var lobjC = DLG1_DlgObj.getControl(lname);
+			lobjC.nullOutDetailViewRecord();
+		}
+		if(this._noRecordInListIsSelectedSettingForDetailView ==  'disabledetailview') { 
+			this.disableDetailView()
+			for(var i = 0; i < this.childLists.length; i++) { 
+				var lname = this.childLists[i];
+				var lobjC = DLG1_DlgObj.getControl(lname);
+				lobjC.disableDetailView();
+			}
+		}
+	}
+}
+,
+	showHideColumn: function(columnNumber,flagShow,layoutName) { 	if(typeof layoutName == 'undefined') layoutName = this.layout;
+	this.layouts[layoutName].columns[columnNumber].show = flagShow;
+	this.refresh();
+}
+,
+	showAllColumns: function() { 
+	var l = this.layouts
+	var c = '';
+	for(var n in l) { 
+		c = l[n].columns;
+		if(typeof c != 'undefined') { 
+			for(var i = 0; i < c.length; i++) { 
+				c[i].show = true;
+			}
+		}
+	}
+	this.refresh();
+}
+,
+	_hideColumns: function() { 
+}
+,
+	theme: 'AndroidLight',
+	scroll: {
+		axis: 'both',
+		indicator: {
+			show: true,
+			h: {
+				show: true,
+				location: 'top',
+				offset: '0px',
+				left: '0px',
+				right: '0px'
+			},
+			v: {
+				show: true,
+				location: 'right',
+				offset: '0px',
+				top: '0px',
+				bottom: '0px'
+			}
+		},
+		momentum: {
+			allow: true
+		},
+		pull: {
+			y: 'auto',
+			x: 'auto'
+		}
+	},
+	layout: 'Default',
+	calculateValue: function(data) {  {var _val = '' +A5RemoveHTMLWrapper(data.tbkUser); if((_val == '' ||  _val == 'undefined'  )&& typeof data['*rowGUID'] != 'undefined') _val = '_temporaryValue_' + data['*rowGUID']; return _val;}},
+	listVariableName: 'LIST_SELECT_CARD',
+	listVariableNameTrueCase: 'LIST_SELECT_CARD',
+	_hostComponentId: 'DLG1',
+	_includeCRC: false,
+	allParentLists: [],
+	__flagPersist: false,
+	__flagIncrementalRefreshAfterLoad: false,
+	onBeforeUpdateRow: function(index,data){;},
+	onUpdateRow: function(index,data){;},
+	onBeforeAddRows: function(data,info){;},
+	onAddRows: function(data,info){;},
+	onBeforeRemoveRows: function(rows){;},
+	onRemoveRows: function(rows){;},
+	onListDraw: function(data,startIndex) {
+if(A5.flags.isMobile) $e.add(this.contId+'.CONTENT','abstractdown',function(e) {$e.preventDefault(e);});},
+	childLists: [],
+	childListEndpoints: ['LIST_SELECT_CARD'],
+	_populateAllChildLists: function() { },
+	onSelect: function() {DLG1_DlgObj._listRowSelect('LIST_SELECT_CARD',this);
+ this._selectedRow = this.selection[0];if(typeof this._selectedRow != 'undefined') { };;
+this._selectedRow = this.selection[0];
+;},
+	onClick: function() {
+var tarjeta = this.value;
+var cod = tarjeta[0];
+console.log(cod);
+DLG1_DlgObj.setValue('TXT_TOKEN_USER', cod);
+DLG1_DlgObj.closeContainerWindow('WINDOW_2');
+DLG1_DlgObj.ajaxCallback('','','oneclick_pagar','','',{deviceOfflineFunction: function() {   }});
+DLG1_DlgObj.panelSetActive('PANELCARD_10');
+DLG1_DlgObj._listSystemOnClick('LIST_SELECT_CARD',this.selection[0]);},
+	layouts: {
+		Default: {
+			type: 'template',
+			item: {
+				className: 'col-100 tablet-80 desktop-75'
+			},
+			template: [
+			'<div class="block" style="margin-top:5px;margin-bottom:5px;">',
+			'    <div class="row">',
+			'      <div class="col-30 tablet-30 desktop-500" style="max-width:120px;max-height:120px;">',
+			'        {*if creditCardType == \'Visa\'}',
+			'\t\t\t<img src="img/Visa_Logo.png" height="50px" width="70px"/>',
+			'\t\t{*elseif creditCardType == \'MasterCard\'}',
+			'\t\t\t<img src="img/MasterCard_Logo.png" height="50px" width="70px" />',
+			'\t\t{*else}',
+			'\t\t\tput else here',
+			'\t\t{*endif}',
+			'      </div>',
+			'      <div class="col-70 tablet-70 desktop-50 no-margin-top" style="margin-left:10px">',
+			'        <div>',
+			'            <p style="font-size: 18px;color:#37474f;" class="no-margin"> <span id="DLG1.LIST_SELECT_CARD.CREDITCARDTYPE.I.{*dataRow}">{creditCardType}</span></p>',
+			'            <p style="font-size: 14px;color:#b71c1c;" class="no-margin"> XXXXXXXXXXXXXXX<span id="DLG1.LIST_SELECT_CARD.LAST4CARDDIGITS.I.{*dataRow}">{last4CardDigits}</span></p>',
+			'        </div>',
+			'        <div style="vertical-align: bottom">',
+			'            <p style="font-size: 14px;color:#37474f;"></p><i class="far fa-trash-alt fa-lg"></i></p>',
+			'        </div>',
+			'      </div>',
+			'    </div>',
+			'</div>']
+		}
+	},
+	captureFocus: true,
+	content: {
+		header: {
+			show: false
+		},
+		footer: {
+			show: false
+		}
+	},
+	systemEvents: {
+		onTap: function(e) {},
+		afterAjaxCallback: function(e) {},
+		afterClientSideFilter: function(e) {},
+		beforeServerSideSort: function(e) {},
+		afterServerSideSort: function(e) {},
+		onSwipe: function(e) {},
+		onScroll: function(e) {},
+		onPullRelease: function(e) {},
+		onPull: function(e) {},
+		onPullEnd: function(e) {},
+		afterSearchComplete: function(e) {},
+		beforeSearch: function(e) {},
+		onSearchResultTooLarge: function(e) {},
+		onSearchResultTooLargeForLocalStorage: function(e) {},
+		onBeforePersistToLocalStorage: function(e) {},
+		onPersistToLocalStorage: function(e) {},
+		onRestoreFromLocalStorage: function(e) {},
+		onListReady: function(e) {},
+		afterRenderComplete: function(e) {},
+		beforeFetchMore: function(e) {},
+		afterFetchMore: function(e) {},
+		beforePageNavigate: function(e) {},
+		afterPageNavigate: function(e) {},
+		beforeRefreshRow: function(e) {},
+		afterRefreshRow: function(e) {},
+		afterRefreshData: function(e) {},
+		afterServerSideSummaryCompute: function(summary) {},
+		_afterAjaxCallback: function() {this._refreshStateMessages();}
+	},
+	_clientsideSummary: [],
+	computeClientSideSummaryValues: function(e) {},
+	_executeEvent: function(event,obj) { 
+	return DLG1_DlgObj._list_executeEvent('LIST_SELECT_CARD',event,obj);
+}
+,
+	_selectAll: function() {
+	var v = this._values;
+	var v2 = [].concat(v);
+	this.setValue(v2,false);
+}
+,
+	searchList: function() { 
+	if(this._searchPartStyle == 'querybyform') { 
+		if(this._dvmode != 'search') return false;
+	}
+	var obj = typeof arguments[0] != 'undefined' ? arguments[0] : {};
+	var mode = 'serverSide';
+	if(typeof obj.searchMode != 'undefined') mode = obj.searchMode;
+	mode = mode.toLowerCase();
+	if(mode.indexOf('auto') == 0) { 
+		if(this.listIsDirty()) mode = 'clientside';
+		else {
+			if(this._dataSourceType.toLowerCase() == 'sql' || this._dataSourceType.toLowerCase() == 'dbf') {
+				mode = 'serverside';
+			} else { 
+				mode = 'clientside';
+			}
+		}
+	}
+	if(this._dataSourceType.toLowerCase() == 'static') mode = 'clientside';
+	var parentList = this.parentList;
+	if(typeof parentList != 'undefined') {
+		if(parentList != '') mode = 'clientside';
+	}
+	var flagDirty = false;
+	if(this.listIsDirty) flagDirty = this.listIsDirty();
+	var flagResult = DLG1_DlgObj._list_executeEvent(this.listVariableName,'beforeSearch',{searchMode: 'search', searchWhere: mode, listIsDirty: flagDirty});
+	if(!flagResult) return false;
+	if(mode == 'serverside') {
+		this._searchListServerSide(obj);
+	} else if(mode == 'clientside') { 
+		this._searchPartSubmit_clientSideFilter();
+		var rowCount = this._rData.length;
+		DLG1_DlgObj._list_executeEvent(this.listVariableName,'afterSearchComplete',{searchMode: 'search', searchWhere: mode, recordsInQuery: rowCount});
+	}
+}
+,
+	_searchListServerSide: function() { 
+	var obj = typeof arguments[0] != 'undefined' ? arguments[0] : {};
+	var _d={};
+	var flagDirty = false;
+	if(this.listIsDirty) flagDirty = this.listIsDirty();
+	if(flagDirty) { 
+		alert('Can\'t execute server-side search because List has edits that have not yet been synchronized.');
+		return false;
+	}
+	_d.listId = this.listVariableName
+	var _data = A5.ajax.buildURLParam('__searchInfo',JSON.stringify(_d));
+	_data = _data + '&' + A5.ajax.buildURLParam('__searchOptions',JSON.stringify(obj));
+	this.filter = false;
+	DLG1_DlgObj.ajaxCallback('','','system:ListSearchPart','',_data);
+}
+,
+	setListSize: function(height,width) {
+	var l = $(this.contId);
+	if(typeof height != 'undefined') l.style.height = ''+ height; 
+	if(typeof width != 'undefined') l.style.width = '' + width;
+	this.resize();
+}
+,
+	clearSearchList: function() { 
+	var obj = typeof arguments[0] != 'undefined' ? arguments[0] : {};
+	var mode = 'serverSide';
+	if(typeof obj.searchMode != 'undefined') mode = obj.searchMode;
+	mode = mode.toLowerCase();
+	if(mode.indexOf('auto') == 0) { 
+		if(this.listIsDirty()) mode = 'clientside';
+		else mode = 'serverside';
+	}
+	if(this._dataSourceType.toLowerCase() == 'static') mode = 'clientside';
+	var parentList = this.parentList;
+	if(typeof parentList != 'undefined') {
+		if(parentList != '') mode = 'clientside';
+	}
+	var flagResult = DLG1_DlgObj._list_executeEvent(this.listVariableName,'beforeSearch',{searchMode: 'clear', searchWhere: mode});
+	if(!flagResult) return false;
+	if(mode == 'serverside') {
+		this._clearSearchListServerSide();
+	} else if(mode == 'clientside') { 
+		this._searchPartSubmit_clientSideFilterClear();
+		var rowCount = this._rData.length;
+		DLG1_DlgObj._list_executeEvent(this.listVariableName,'afterSearchComplete',{searchMode: 'clear', searchWhere: mode, recordsInQuery: rowCount});
+	}
+}
+,
+	_clearSearchListServerSide: function() { 
+	var _d={};
+	_d.listId = this.listVariableName
+	var _data = A5.ajax.buildURLParam('__searchInfo',JSON.stringify(_d));
+	DLG1_DlgObj.ajaxCallback('','','system:ListSearchPartClear','',_data);
+}
+,
+	_str: function(txt) {
+	txt = txt.replace("'","\\'");
+	txt = '\'' + txt + '\'';
+	return txt;
+}
+,
+	_QBF: function(txt) { 
+	var o = {};
+	o.v2 = '';
+	o.v1 = txt;
+	o.flag = false;
+	if(txt.indexOf('>=') >= 0) {
+		o.op = '>=';
+		o.v1 = txt.substr(2);
+		o.flag = true;
+	} else if (txt.indexOf('<=') >= 0 ) { 
+		o.op = '<=';
+		o.v1 = txt.substr(2);
+		o.flag = true;
+	} else if (txt.indexOf('>') >= 0 ) {
+		o.op = '>';
+		o.v1 = txt.substr(1);
+		o.flag = true;
+	} else if (txt.indexOf('<') >= 0)  { 
+		o.op = '<';
+		o.v1 = txt.substr(1);
+		o.flag = true;
+	} else if (txt.indexOf('..') == 0)  {
+		o.op = '<=';
+		o.v1 = txt.substr(2);
+		o.flag = true;
+	} else if ( txt.indexOf('..', txt.length - '..'.length) !== -1 ) { 
+		//ends with ..
+		o.op = '>=';
+		txt = txt.split('..')
+		o.v1 = txt[0];
+		o.flag = true;
+	} else if (txt.indexOf('..') > 0 ) {
+		o.op = 'between'
+		txt = txt.split('..');
+		o.v1 = txt[0];
+		o.v2 = txt[1];
+		o.flag = true;
+	}
+	return o;
+}
+,
+	_match: function(data,field,val,obj) { 
+	var flagKeyword = false;
+	if(typeof obj.flagKeyword != 'undefined') flagKeyword = obj.flagKeyword;
+	if(flagKeyword) { 
+		var obj_i = this._searchFieldOptions[field.toUpperCase()];
+		this._setSearchOps(obj,obj_i);
+	}
+	var _d = '';
+	var _v = val;
+	var flagC = false;
+	if(obj.type == 'c') {
+		flagC = true;
+		if(!obj.caseSensitive) _v = _v.toLowerCase();
+	} else { 
+		//non mumeric searches are only mode 1 or -1
+		if(obj.mode > 1) obj.mode = 1;
+		if(obj.mode < -1) obj.mode = -1;
+	}
+	var flag = false;
+	obj.usesQBFOperator = false;
+	if(obj.qbf) { 
+		_v = _v.split(',');
+	} else {
+		_v = [_v];
+	}
+	var o = {}
+	var r = '';
+	var _vals = [];
+	for(var i = 0; i < _v.length; i++) { 
+		if(obj.qbf) {
+			o = this._QBF(_v[i]);
+		} else {
+			o.flag = false;
+			o.v1 = _v[i];
+			o.v2 = '';
+		}
+		if(typeof data[field] != 'undefined') {
+			if(data[field] != null) { 
+				_d = data[field];
+				if(obj.type == 'n') { 
+					o.v1 = Number(o.v1);
+					o.v2 = Number(o.v2);
+					_d = Number(_d);
+				} else if (obj.type == 'l') { 
+					o.v1 = $u.s.toBool(o.v1);
+					o.v2 = $u.s.toBool(o.v2);
+					_d = $u.s.toBool(_d);
+				} else if (obj.type == 'd') { 
+					o.v1 = A5.stringToDate(o.v1,obj.dateFormat);
+					o.v2 = A5.stringToDate(o.v2,obj.dateFormat);
+					if(typeof _d == 'string') _d = A5.stringToDate(_d,obj.dateFormat);
+					if(o.v1 != '' && o.v1 != null ) o.v1 = o.v1.getTime();
+					if(o.v2 != '' && o.v2 != null ) o.v2 = o.v2.getTime();
+					if(_d != '' && _d != null ) _d = _d.getTime();
+				}
+				if(flagC) {if(!obj.caseSensitive && typeof _d == 'string') _d = _d.toLowerCase();}
+				if(o.flag) { 
+					//has qbf operators
+					if(o.op == 'between') {
+						if(flagC) {
+							if(_d.substr(0,o.v1.length) >= o.v1 && _d.substr(0,o.v2.length) <= o.v2 ) flag = true;
+						} else { 
+							if(_d >= o.v1 && _d <= o.v2 && (typeof _d == typeof o.v1)  ) flag = true;
+						}
+					} else { 
+						if(flagC) _d = _d.substr(0,o.v1.length)
+						if(o.op == '>=') if( _d >= o.v1) flag = true;
+						if(o.op == '<=') if( _d <= o.v1) flag = true;
+						if(o.op == '>') if(_d > o.v1) flag = true;
+						if(o.op == '<') if(_d < o.v1) flag = true;
+					}
+				} else { 
+					if(obj.mode == 1 || obj.mode == -1 ) {
+						if(obj.mode == 1) if(_d == o.v1) flag = true;; //match
+						if(obj.mode == -1) if(!(_d == o.v1)) flag = true;; //match
+					} else if (obj.mode == 2 || obj.mode == -2) { 
+						if(obj.mode == 2) if(_d.indexOf(o.v1) > -1) flag = true; //contains
+						if(obj.mode == -2) if(!(_d.indexOf(o.v1) > -1)) flag = true;
+					} else if (obj.mode == 3 || obj.mode == -3) { 
+						if(obj.mode == 3) if(_d.indexOf(o.v1) == 0) flag = true; //starts with
+						if(obj.mode == -3) if(!(_d.indexOf(o.v1) == 0)) flag = true; //starts with
+					}
+				}
+				if(o.v1 != '') {
+					if(_vals.indexOf(o.v1) == -1) { 
+						_vals.push(o.v1);
+					}
+				}
+				if(o.v2 != '') {
+					if(_vals.indexOf(o.v2) == -1) { 
+						_vals.push(o.v2);
+					}
+				}
+			}
+		}
+	}
+	if(flag) { 
+		if(typeof this._state.highlight == 'undefined') this._state.highlight = {};
+		this._state.highlight[field.toUpperCase()] = _vals;
+	} else { 
+		//this._state.highlight[field.toUpperCase()] = [];
+	}
+	return flag;
+}
+,
+	_setSearchOps: function(obj,obj_i) { 
+	obj.mode = obj_i.option;
+	obj.qbf = obj_i.qbf;
+	obj.type = obj_i.type;
+	//obj.treatAs = obj_i.treatAs;
+}
+,
+	_searchPartOperator: '&&',
+	_searchPartSubmit_clientSideFilter: function() { 
+	if(!this._searchPartHas) return true;
+	//_searchPartStyle: 'individualcontrols'
+	this._state.highlight = {};
+	if(this._searchPartStyle == 'singlekeywordcontrol') { 
+		var searchFor = DLG1_DlgObj.getValue(this._keywordSearchControl);
+		var arr = this._keywordSearchFields;
+		var expn = [];
+		var expn_i = '';
+		var obj = {};
+		//obj.caseSensitive = false;
+		//obj.qbf = true;
+		//obj.mode = 1;
+		obj.flagKeyword = true;
+		var objStr = JSON.stringify(obj)
+		for(var i = 0; i < arr.length; i++) { 
+			expn_i = 'this._match(data,' +this._str(arr[i]) + ',' + this._str(searchFor) + ','+objStr+')';
+			expn.push(expn_i);
+		}
+		expn = expn.join('||');
+		//alert(expn);
+	} else if ( this._searchPartStyle == 'individualcontrols' || this._searchPartStyle == 'querybyform'  ) { 
+		var map = this._searchPart.fieldMap;
+		var val = '';
+		var expn = [];
+		var expn_i = '';
+		var obj = {};
+		obj.caseSensitive = false;
+		//obj.qbf = true;
+		//obj.mode = 2;
+		//var objStr = JSON.stringify(obj)
+		var ac = [];
+		var aco = {};
+		var _highlight = {};
+		if(this._searchPartStyle == 'individualcontrols') {
+			for(var i = 0; i < map.length; i++) { 
+				val = DLG1_DlgObj.getValue(map[i].control);
+				if(val != '') {
+					obj_i = this._searchFieldOptions[map[i].field.toUpperCase()];
+					this._setSearchOps(obj,obj_i);
+					expn_i = 'this._match(data,' +this._str(map[i].field) + ',' + this._str(val) + ','+JSON.stringify(obj)+')';
+					expn.push(expn_i);
+				}
+			}
+		} else if (this._searchPartStyle == 'querybyform' ) { 
+			var controlName = '';
+			for(var i = 0; i < this._listFields.length; i++) { 
+				controlName = this._getUXDetailViewControlName(this._listFields[i].name);
+				if(controlName != '') {
+					val = DLG1_DlgObj.getValue(controlName);
+					if(val != '') {
+						obj_i = this._searchFieldOptions[map[i].field.toUpperCase()];
+						this._setSearchOps(obj,obj_i);
+						expn_i = 'this._match(data,' +this._str(this._listFields[i].name) + ',' + this._str(val) + ','+JSON.stringify(obj)+')';
+						expn.push(expn_i);
+						aco.control = controlName;
+						aco.value = val;
+						ac.push(aco);
+					}
+				}
+			}
+			this.__queryByFormValues = ac;
+			DLG1_DlgObj._setDVClean(this);
+		}	
+		var operator = '&&';
+		if(typeof this._searchPartOperator != 'undefined') operator = this._searchPartOperator;
+		expn = expn.join(' '+operator+' ');
+	} 
+	if (this._showSearchDebugInfo) {
+		var ele = $('DLG1.V.R1.' + this._searchDebugPH);
+		if(ele) ele.innerHTML = expn;
+	}
+	//user did not fill in any search fields
+	if(expn == '') return true;
+	var fnTxt = 'if(' + expn + ') {return true;} else { return false;}'
+	var searchFunction = new Function('data',fnTxt);
+	this.setFilter(searchFunction);
+	if(this._rData.length > 0) this.setValue(0);
+}
+,
+	_searchPartSubmit_clientSideFilterClear: function() { 
+if(!this._searchPartHas) return true;
+	this._state.highlight = {};
+	this.setFilter(false);
+	var map = this._searchPart.fieldMap;
+	var val = '';
+	var od = DLG1_DlgObj.originalValues[0];
+	for(var i = 0; i < map.length; i++) {
+		var val = od[map[i].control.toUpperCase()];
+		if(typeof val != 'undefined') DLG1_DlgObj.setValue(map[i].control,val,false);
+	}
+	this.setFilter(false);
+	delete this.__queryByFormValues;
+	DLG1_DlgObj._setDVClean(this);
+	if(this._data.length > 0) this.setValue(0);
+	if (this._showSearchDebugInfo) {
+		var ele = $('DLG1.V.R1.' + this._searchDebugPH);
+		if(ele) ele.innerHTML = '';
+	}
+}
+,
+	detailViewIsDirty: function() { return false; },
+	populateUXControls: function() { return true; },
+	listIsDirty: function() { return false; },
+	lookupValue: function(key,name,keyValue) {	var _d = this._data;
+	var indx = A5FindPropInArray(_d,key,keyValue);
+	var rv = '';
+	if(indx >=0) {
+		if(name == '__rowData__') return _d[indx];
+		rv =  _d[indx][name];
+	} else {
+		//null out all properties in row
+		var _d2 = {};
+		if(typeof _d[0] == 'undefined') { return {}} ;
+		for(var n in _d[0]) {
+			_d2[n] = '&nbsp;';
+		}
+		rv = _d2;
+	}
+	return rv;
+}
+,
+	allowNullSelection: true,
+	allowTextSelection: false,
+	allowAnyValue: false,
+	allowNullDeselection: false,
+	loopNavigate: false,
+	loopNavigateNullSelection: false,
+	refreshChildLists: function() {DLG1_DlgObj._listRefreshCascadingLists('LIST_SELECT_CARD'); },
+	rowExpander: function(rowNumber) { 
+	var mode = typeof arguments[2] != 'undefined' ? arguments[2] : 'toggle';
+	if(typeof rowNumber === 'undefined' || rowNumber === '' ) {
+		rowNumber = this.selection[0];
+		if(typeof rowNumber == 'undefined') return false;
+	}
+	var animObj = typeof arguments[1] != 'undefined' ? arguments[1] : {};
+	var ele = $(this._hostComponentId + '.' + this.listVariableName + '.ROWEXPANDER.' + rowNumber);
+	if(ele) {
+		if(mode == 'toggle') A5.u.element.toggle(ele,animObj);
+		if(mode == 'show') A5.u.element.show(ele,animObj);
+		if(mode == 'hide') A5.u.element.hide(ele,animObj);
+	}
+}
+,
+	afterClientSideSummaryCompute: function(csSummary) { },
+	selectCurrentLayout: function(name) { 
+var pl = this.layouts[name];
+if(typeof pl == 'undefined') return false;
+this.setLayout(name);
+if(pl.type == 'column') {
+	this.columnLayout.header.show = this.layouts[name].showColumnTitles; 
+	this.refresh();
+}
+},
+	onFilter: function() { 	var e = {}; 
+	e.rowCount = this._values.length;  
+	var ele = $('DLG1.__listId__.RECORDCOUNT'); 
+	if(ele) {ele.innerHTML = e.rowCount;}; 
+	if(this.persistToStorage) { this.persistToStorage({});} 
+	(function(e) {   })(e);
+}
+,
+	serverSideSort: function(column) {
+var e = {};
+e.column = column;
+var result = this.systemEvents.beforeServerSideSort(e);
+if(result == false) return false;
+var obj = {};
+obj.cmd = 'sort';
+obj.column = column;
+obj.layoutName = this.layout;
+obj.listState = this._state;
+var data = '_listId=LIST_SELECT_CARD&' + A5.ajax.buildURLParam('_cmdObj',$u.o.toJSON(obj));
+DLG1_DlgObj.ajaxCallback('','','system:listServerSideSort','',data);
+},
+	filterListClientSide: function(searchFor) {
+searchFor =  searchFor.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&");
+//var result = this.systemEvents.beforeClientSideFilter();
+//if(result == false) return false;
+if(searchFor != '') {
+	//fixes bug in Chrome when searching on dates strings that use forward slashes
+	searchFor = searchFor.replace(/\//g,'\\/');
+	this.setFilter({'id_card_token': RegExp('' + searchFor,'i'), 'token': RegExp('' + searchFor,'i'), 'id_card_token_1': RegExp('' + searchFor,'i'), 'creditCardType': RegExp('' + searchFor,'i'), 'last4CardDigits': RegExp('' + searchFor,'i'), 'tbkUser': RegExp('' + searchFor,'i')});
+} else this.setFilter(false);
+var rowCount = this._values.length;
+//var e = {};
+//e.rowCount = rowCount;
+//this.systemEvents.afterClientSideFilter(e);
+var ele = $('DLG1.LIST_SELECT_CARD.RECORDCOUNT');
+if(ele) ele.innerHTML = rowCount;
+}
+,
+	scrollToClosestValue: function(val) { 	
+	if(typeof val != 'string') val = val.join('');
+	var flagCI = typeof arguments[1] != 'undefined' ? arguments[1] : false;
+	var pos = typeof arguments[2] != 'undefined' ? arguments[2] : 'top';
+	var anim = typeof arguments[3] != 'undefined' ? arguments[3] : {}
+	var _d = this._rData;
+	var len = val.length;
+	var _d2;
+	var i2 = -1;
+	if(flagCI) val = val.toLowerCase();
+	for(var i = 0 ; i < _d.length; i++) {
+		i2 = i;
+		_d2 = String(_d[i]['*value']);
+		_d2 = _d2.substr(0,len);
+		_d2 = $u.s.pad(_d2,len,' ','l');
+		if(flagCI) _d2 = _d2.toLowerCase();
+		if(val <= _d2){
+			 break;
+		}
+	}
+	if(i2 > -1) { 
+		this.scrollToItem(i2,{mode: pos, animation: anim});
+	}
+}
+,
+	_refreshStateMessages: function() {
+	if(DLG1_DlgObj._listStateChange) DLG1_DlgObj._listStateChange(this.listVariableName);
+	var ele = '';
+	ele = $('DLG1.LIST_SELECT_CARD.PAGENUMBER');
+	if(ele) ele.innerHTML = this._state.page;
+	ele = $('DLG1.LIST_SELECT_CARD.PAGECOUNT');
+	if(ele) ele.innerHTML = this._state.pageCount;
+	ele = $('DLG1.LIST_SELECT_CARD.PAGECOUNT.PAGESELECTOR');
+	if(ele) ele.innerHTML = this._state.pageCount;	
+	ele = $('DLG1.LIST_SELECT_CARD.LISTSTATE');
+	if(ele) {
+		var listState = $u.o.toJSON(this._state);
+		ele.innerHTML = listState;
+	}
+	//navigation buttons	
+	ele = DLG1_DlgObj._buttons['BUTTON_LISTNAV_NEXT.LIST_SELECT_CARD'];
+	if(ele) {
+		if(this._state.page == this._state.pageCount || this._state.pageCount == 0) ele.setDisabled(true);
+		else ele.setDisabled(false);
+	}
+	ele = DLG1_DlgObj._buttons['BUTTON_LISTNAV_LAST.LIST_SELECT_CARD'];
+	if(ele) {
+		if(this._state.page == this._state.pageCount || this._state.pageCount == 0) ele.setDisabled(true);
+		else ele.setDisabled(false);
+	}
+	ele = DLG1_DlgObj._buttons['BUTTON_LISTNAV_FIRST.LIST_SELECT_CARD'];
+	if(ele) {
+		if(this._state.page == 1 || this._state.pageCount == 0) ele.setDisabled(true);
+		else ele.setDisabled(false);
+	}
+	ele = DLG1_DlgObj._buttons['BUTTON_LISTNAV_PREV.LIST_SELECT_CARD'];
+	if(ele) {
+		if(this._state.page == 1 || this._state.pageCount == 0 ) ele.setDisabled(true);
+		else ele.setDisabled(false);
+	}
+	ele = $('DLG1.V.R1.A5SYSTEM_LIST_PAGESELECTOR_LIST_SELECT_CARD');
+	if(ele) {
+		var data = this._recordNavigatorLinks;
+		if(data) A5.form.populateSelect(ele,this._state.page,data,true);
+	}
+}
+,
+	header: {
+	},
+	_getRoute: function() { 
+	var obj  = typeof arguments[1] != 'undefined' ? arguments[1] : [];
+	var mode = typeof arguments[0] != 'undefined' ? arguments[0] : 'rowNumber'; //
+	if(typeof this.selection == 'undefined') return false;
+	if(typeof this.selection[0] == 'undefined') return false;
+	if(typeof this.getData(this.selection[0]) == 'undefined') return false;
+	if(mode != 'rowNumber') { 
+		var _d = this.getData(this.selection[0]);
+		if(typeof _d.__primaryKey == 'undefined') { 
+			mode = 'rowNumber';
+		}
+	}
+	if(mode == 'rowNumber') {
+		obj.push({list: this.listVariableName, row: this.getData(this.selection[0])['*key']});
+	} else {
+		var _d = this.getData(this.selection[0]);
+		var _pk = _d.__primaryKey;
+		if(typeof _d.__primaryKey == 'undefined') { 
+			_pk = _d['*rowGUID'];
+		}
+		obj.push({list: this.listVariableName, row: _pk});
+	}
+	for(var i = 0; i < this.childLists.length; i++) { 
+		var lname = this.childLists[i];
+		var lObj = window[this._hostComponentId + '_DlgObj'].getControl(lname);
+		if(lObj) lObj._getRoute(mode,obj);
+	}
+	return obj;
+}
+,
+	_getRouteOLD: function() { 
+	var obj  = typeof arguments[1] != 'undefined' ? arguments[1] : [];
+	var mode = typeof arguments[0] != 'undefined' ? arguments[0] : 'rowNumber'; //
+	if(typeof this.selection == 'undefined') return false;
+	if(typeof this.selection[0] == 'undefined') return false;
+	if(typeof this.getData(this.selection[0]) == 'undefined') return false;
+	if(mode == 'rowNumber') obj.push({list: this.listVariableName, row: this.getData(this.selection[0])['*key']});
+	else obj.push({list: this.listVariableName, row: this.getData(this.selection[0]).__primaryKey});
+	for(var i = 0; i < this.childLists.length; i++) { 
+		var lname = this.childLists[i];
+		var lObj = window[this._hostComponentId + '_DlgObj'].getControl(lname);
+		if(lObj) lObj._getRoute(mode,obj);
+	}
+	return obj;
+}
+,
+	_setRoute: function(route) { 
+	if(typeof route == 'undefined') { 
+		route = this.__currentRoute;
+		if(typeof route == 'undefined') return false;
+	}
+	var mode = typeof arguments[1] != 'undefined' ? arguments[1] : 'rowNumber'; //
+	if(mode == 'primaryKey') { 
+		if(typeof this._data != 'undefined') { 
+			var _d = this._data;
+			if(typeof _d[0] != 'undefined') { 
+				if(typeof _d[0].__primaryKey == 'undefined') { 
+					mode = 'rowNumber';
+				}
+			}
+		}
+	}
+	var lObj = '';
+	var row = '';
+	var _pk = '';
+	for(var i = 0; i < route.length; i++) {
+		lObj = window[this._hostComponentId + '_DlgObj'].getControl(route[i].list);
+		row = route[i].row;
+		if(mode == 'primaryKey') _pk = row;
+		/*
+		if(mode != 'rowNumber') { 
+			var _d = lObj._rData;
+			var _i2 = -1;
+			for(var j = 0; j < _d.length; j++) { 
+				if(_d[j].__primaryKey == row) { 
+					_i2 = j;
+					break;
+				}
+			}
+			row = _i2
+		}
+		*/
+		var flag = typeof this._restoringList != 'undefined' ? !this._restoringList : true;
+		if(mode == 'rowNumber') { 
+			if(typeof row != 'undefined') {
+				var rowFixed = '';
+				if(typeof lObj._dataMap == 'undefined') return false;
+				if(mode != 'rowNumber')  { 
+					rowFixed = row;
+					} else {
+				rowFixed = lObj._dataMap.indexOf(route[i].row);
+				}
+				lObj.setValue(rowFixed,flag);
+				if(this._clearServerSideErrors) this._clearServerSideErrors();
+				if(this._showServerSideErrors) this._showServerSideErrors();
+				if(this._showWriteConflictErrors) this._showWriteConflictErrors();
+			}
+		} else { 
+			lObj.setValue(''+_pk,flag);
+			if(this._clearServerSideErrors) this._clearServerSideErrors();
+			if(this._showServerSideErrors) this._showServerSideErrors();
+			if(this._showWriteConflictErrors) this._showWriteConflictErrors();
+		}
+	}
+}
+,
+	_useServerSideSyncLog: false,
+	items: {
+},
+	_searchHighlighting: false
+};
+DLG1_DlgObj._listViewData['LIST_ALL_PRODUCTS'] = A5DataArrayToObject(['id_producto','nombre_producto','precio','nombre_categoria','url_imagen'],[ [ "1" , "Cafetera Nespresso Inissia Single Red + 14 Cápsulas" , "79990" , "Electrodomesticos" , "img/imagenes_productos/electrodomesticos/3c683eb5921cea6a3e51666aa728a55a-product.jpg" ]
+, [ "2" , "Trapeador iRobot Braava 380" , "179990" , "Electrodomesticos" , "img/imagenes_productos/electrodomesticos/eb12ba002814ac63b34176f2e1934e6d-product.jpg" ]
+, [ "3" , "Cafetera Dolce Gusto Jovia - Blanco" , "49990" , "Electrodomesticos" , "img/imagenes_productos/electrodomesticos/6335e4c3159aadc58d33618560ae35dc-product.jpg" ]
+, [ "4" , "Samsung Galaxy S8 Dual Sim 64GB - Midnight Black" , "409900" , "Celulares" , "img/imagenes_productos/celulares/63915c96f0c3161e1d58f084615b7116-product.jpg" ]
+, [ "5" , "Motorola Moto G5s Plus 32GB - Gris" , "209900" , "Celulares" , "img/imagenes_productos/celulares/4ef2e79822e7d6922b21a28961bbfc6d-product.jpg" ]
+, [ "6" , "Sony Xperia L1 16GB - Negro" , "119990" , "Celulares" , "img/imagenes_productos/celulares/cd7ee932c6dfb4bb3facbf3b0c5559ef-product.jpg" ]
+, [ "7" , "Zapatillas New Balance WL220SG Fashion Mujer-Beige" , "39990" , "Moda" , "img/imagenes_productos/moda/7ec1031a774fdd103c9437df6e888061-product.jpg" ]
+, [ "8" , "Zapatillas New Balance WL373BSS Fashion Mujer-Burdeo" , "39990" , "Moda" , "img/imagenes_productos/moda/ecda8fcc06562c9576e8bbcb3f839b8a-product.jpg" ]
+, [ "9" , "Zapatillas New Balance ML373KGS FASHION Man-AZUL" , "39990" , "Moda" , "img/imagenes_productos/moda/6faaf8419afba3d99c075bd174201f36-product.jpg" ]
+, [ "10" , "Green Lantern Escudo 1 Polera Verde Manga Corta" , "7990" , "Moda" , "img/imagenes_productos/moda/b953f426d8ae365f3691e002e07b5b8c-product.jpg" ]
+ ]); 
 DLG1_DlgObj._listViewData['LIST_CARRITO'] = [{
 	cant:0,
 	id_producto: "0",
@@ -2887,7 +5969,19 @@ DLG1_DlgObj._listViewData['LIST_CARRITO'] = [{
 	precio: "",
 	url_imagen: ""
 }]
-;
+; 
+DLG1_DlgObj._listViewData['LIST_DETALLE_COMPRAS'] = A5DataArrayToObject(['id_venta','fecha_venta','tiempo_venta','id_usuario','cant_productos','total','authCode','buyOrder','cardType','last4Digits','transactionCode'],[ [ "29" , "26/03/2018" , "06:09:48 00 pm" , "scardoza@nubison.cl" , "1" , "79990" , "1213" , "30665" , "Visa" , "6623" , "4698042" ]
+, [ "30" , "27/03/2018" , "09:27:23 00 am" , "scardoza@nubison.cl" , "2" , "87980" , "1213" , "18776" , "Visa" , "6623" , "4705856" ]
+, [ "31" , "27/03/2018" , "09:29:37 00 am" , "scardoza@nubison.cl" , "1" , "79990" , "1213" , "4794" , "Visa" , "6623" , "4705942" ]
+, [ "32" , "27/03/2018" , "10:45:11 00 am" , "scardoza@nubison.cl" , "1" , "79990" , "1213" , "30298" , "Visa" , "6623" , "4707633" ]
+, [ "33" , "27/03/2018" , "11:26:34 00 am" , "scardoza@nubison.cl" , "1" , "39990" , "1213" , "22207" , "Visa" , "6623" , "4708424" ]
+ ]); 
+DLG1_DlgObj._listViewData['LIST_TARJETAS_USUARIO'] = A5DataArrayToObject(['id_card_token','token','id_card_token_1','creditCardType','last4CardDigits','tbkUser'],[ [ "4" , "e56dae62d14be362da086d1ad42751bf3edb05f44b9a5c29a68978d618570370" , "4" , "Visa" , "6623" , "9e8cb471-02a2-44ed-84b9-9f3df72847ae" ]
+, [ "5" , "ecf04eed3e561b288e1b5d809f7c9a314bbc2eb860af477ddab0a5b990f0bb46" , "5" , "Visa" , "6623" , "9e8cb471-02a2-44ed-84b9-9f3df72847ae" ]
+ ]); 
+DLG1_DlgObj._listViewData['LIST_SELECT_CARD'] = A5DataArrayToObject(['id_card_token','token','id_card_token_1','creditCardType','last4CardDigits','tbkUser'],[ [ "4" , "e56dae62d14be362da086d1ad42751bf3edb05f44b9a5c29a68978d618570370" , "4" , "Visa" , "6623" , "9e8cb471-02a2-44ed-84b9-9f3df72847ae" ]
+, [ "5" , "ecf04eed3e561b288e1b5d809f7c9a314bbc2eb860af477ddab0a5b990f0bb46" , "5" , "Visa" , "6623" , "9e8cb471-02a2-44ed-84b9-9f3df72847ae" ]
+ ]);
 ;
 DLG1_DlgObj.setStateInfo({ 	"__dialogGuid": "8a12d810-5f7c-4293-a42e-381214ae7f52", 	"argumentsBoundToCotrols": "", 	"__sgr": "", 	"__dtfmt": "MM/dd/yyyy", 	"__tfmt": "", 	"value":  null  });
 DLG1_DlgObj._controls['LIST_ALL_PRODUCTS'] =  { type: 'list',  data: DLG1_DlgObj._listViewData['LIST_ALL_PRODUCTS'],  onInitialize: function() { var that = this; setTimeout(function() {that._onSelect(); delete that; },10);
@@ -2904,9 +5998,36 @@ DLG1_DlgObj._controls['LIST_CARRITO'] =  { type: 'list',  data: DLG1_DlgObj._lis
 			$acn(pe,_cn);
 		}
 },  settings: DLG1_DlgObj._listViewSettings['LIST_CARRITO'] }
+DLG1_DlgObj._controls['LIST_DETALLE_COMPRAS'] =  { type: 'list',  data: DLG1_DlgObj._listViewData['LIST_DETALLE_COMPRAS'],  onInitialize: function() { 
+		var pe = $(this.contId).parentElement;
+		if(typeof this.listVariableName != 'undefined') { 
+			var _cn = 'DLG1_' + this.listVariableName.toUpperCase() + '_2';
+			$acn(pe,_cn);
+		}
+},  settings: DLG1_DlgObj._listViewSettings['LIST_DETALLE_COMPRAS'] }
+DLG1_DlgObj._controls['LIST_TARJETAS_USUARIO'] =  { type: 'list',  data: DLG1_DlgObj._listViewData['LIST_TARJETAS_USUARIO'],  onInitialize: function() { 
+		var pe = $(this.contId).parentElement;
+		if(typeof this.listVariableName != 'undefined') { 
+			var _cn = 'DLG1_' + this.listVariableName.toUpperCase() + '_2';
+			$acn(pe,_cn);
+		}
+},  settings: DLG1_DlgObj._listViewSettings['LIST_TARJETAS_USUARIO'] }
+DLG1_DlgObj._controls['LIST_SELECT_CARD'] =  { type: 'list',  data: DLG1_DlgObj._listViewData['LIST_SELECT_CARD'],  onInitialize: function() { 
+		var pe = $(this.contId).parentElement;
+		if(typeof this.listVariableName != 'undefined') { 
+			var _cn = 'DLG1_' + this.listVariableName.toUpperCase() + '_2';
+			$acn(pe,_cn);
+		}
+},  settings: DLG1_DlgObj._listViewSettings['LIST_SELECT_CARD'] }
 DLG1_DlgObj.setVariables({});
 DLG1_DlgObj._dataBoundControls = [];
 DLG1_DlgObj._primaryTableAlias = '';
+DLG1_DlgObj._actions = {};
+DLG1_DlgObj._actions['sendEmail'] = 'DLG1_ACTION_sendEmail(1,\'1\',this);';
+;
+window['DLG1_ACTION_sendEmail'] = function(rowNum,rowId,objEle) {
+DLG1_DlgObj.ajaxCallback('O',1,'__a5SystemSendEmail','','_getData=true&__metaDataFunction=sendEmail_5b93d136_2cdc_42b2_b2f6_cdf6a9dd5576&_part=O');
+}
 DLG1_DlgObj._listControlsInfo = {};
 DLG1_DlgObj.createWindow('DLG1_CONTAINERWINDOW_WINDOW_1','modalpopup',
 	{
@@ -2959,6 +6080,78 @@ DLG1_DlgObj._functions._showContainerWindow_WINDOW_1 = function(objEle) {
 	if(typeof DLG1_DlgObj._openWindows == 'undefined') DLG1_DlgObj._openWindows = {};
 	DLG1_DlgObj._openWindows['WINDOW_1'] = currWindow;
 	currWindow.show('dock','left');
+	}	
+DLG1_DlgObj.createWindow('DLG1_CONTAINERWINDOW_WINDOW_2','modalpopup-resizable',
+	{
+	lockUIClassName: 'overlay',
+	body: {
+		content: {
+			type: 'element',
+			elementId: 'DLG1.V.R1.WINDOW_2'
+		},
+		scroll: {
+			axis: 'both',
+			stopPropogation: false,
+			pull: {
+				y: 'auto',
+				x: 'auto'
+			},
+			indicator: {
+				show: true,
+				h: {
+					show: true,
+					location: 'top',
+					offset: '0px',
+					left: '0px',
+					right: '0px'
+				},
+				v: {
+					show: true,
+					location: 'right',
+					offset: '0px',
+					top: '0px',
+					bottom: '0px'
+				}
+			}
+		},
+		style: 'background-color: #fff; padding: 20px;border-radius:5px;'
+	},
+	height: '80%',
+	width: '95%',
+	title: {
+		html: 'Window',
+		show: false,
+		tools: {
+			items: false
+		},
+		location: 'top',
+		direction: 'ltr'
+	},
+	disableMove: false,
+	theme: 'AndroidLight',
+	onShow: function() {var obj = DLG1_DlgObj.getControl('LIST_SELECT_CARD');
+obj.refresh();
+;},
+	onResize: function() {var obj = DLG1_DlgObj.getControl('LIST_SELECT_CARD');
+obj.refresh();
+;},
+	animation: {
+		show: {
+			type: 'css-slide',
+			duration: 900
+		},
+		hide: {
+			type: 'css-slide',
+			duration: 'slow'
+		}
+	}
+}
+	);
+DLG1_DlgObj._functions._showContainerWindow_WINDOW_2 = function(objEle) {
+	var currWindow = DLG1_DlgObj.getWindow('DLG1_CONTAINERWINDOW_WINDOW_2');
+	if(typeof DLG1_DlgObj._openWindows == 'undefined') DLG1_DlgObj._openWindows = {};
+	DLG1_DlgObj._openWindows['WINDOW_2'] = currWindow;
+	currWindow.show();
 	}
 DLG1_DlgObj._hasPanels = true;
 DLG1_DlgObj._hasOnSynchronizeEvent = false;
@@ -6292,13 +9485,15 @@ DLG1_DlgObj._phoneGapOpenNativeLow = function(obj,_onSuccess,_onError) {
 		forEach(_actions,_allDone,_fatal);
 	}
 }
+DLG1_DlgObj._loginErrorPH = 'LOGIN_ERRORS';
 DLG1_DlgObj._layoutMode = 'containerwidth';
 DLG1_DlgObj._responsiveRulesMode = 'firsttrue';
 DLG1_DlgObj.__controlNesting = {
 PANELHEADER_1: [],
 PANELHEADER_19: [],
 PANELHEADER_20: [],
-WINDOW_1: []
+WINDOW_1: [],
+WINDOW_2: ['TXT_TOKEN_USER','LIST_SELECT_CARD']
 }
 DLG1_DlgObj._listsDV = ['LIST_ALL_PRODUCTS'];
 //Add methods to the List prototype for Lists with Detail Views
@@ -6819,6 +10014,12 @@ $u.o.assign(A5.ListBox.prototype,
 			window[this._hostComponentId + '_DlgObj']._list_executeEvent(this.listVariableName,'detailView.afterListRowSelectCancelled',obj);
 			if(obj.handled) return false;
 			var msg = this.customization.dv.dirtyDetailViewRecord.message;
+			if(msg.toLowerCase().indexOf('javascript:') == 0) { 
+				var fn = msg.split(':')[1];
+				fn = fn.split('(')[0];
+				window[fn].call();
+				return false;		
+			}
 			var image = this.customization.dv.dirtyDetailViewRecord.icon;
 			var iconType = window[this._hostComponentId + '_DlgObj']._iconType(image);
 			var imageHTML = window[this._hostComponentId + '_DlgObj']._getImageHTML(image,iconType);
@@ -7802,6 +11003,12 @@ $u.o.assign(A5.ListBox.prototype,
 		var classInst = this;
 		if(typeof this.customization == 'undefined') return false;
 		var msg = this.customization.dv.confirmDeleteWarning.message;
+		if(msg.toLowerCase().indexOf('javascript:') == 0) { 
+			var fn = msg.split(':')[1];
+			fn = fn.split('(')[0];
+			window[fn].call();
+			return false;		
+		}
 		var image = this.customization.dv.confirmDeleteWarning.icon;
 		var iconType = window[this._hostComponentId + '_DlgObj']._iconType(image);
 		var imageHTML = window[this._hostComponentId + '_DlgObj']._getImageHTML(image,iconType);
@@ -7825,6 +11032,12 @@ $u.o.assign(A5.ListBox.prototype,
 		}
 		var classInst = this;
 		var msg = this.customization.dv.confirmRowResetWarning.message;
+		if(msg.toLowerCase().indexOf('javascript:') == 0) { 
+			var fn = msg.split(':')[1];
+			fn = fn.split('(')[0];
+			window[fn].call();
+			return false;		
+		}
 		var image = this.customization.dv.confirmRowResetWarning.icon;
 		var iconType = window[this._hostComponentId + '_DlgObj']._iconType(image);
 		var imageHTML = window[this._hostComponentId + '_DlgObj']._getImageHTML(image,iconType);
@@ -8061,6 +11274,12 @@ $u.o.assign(A5.ListBox.prototype,
 		var msg = this.customization.dv.confirmFormResetWarning.message;
 		var image = this.customization.dv.confirmFormResetWarning.icon;
 		var title = this.customization.dv.confirmFormResetWarning.title;
+		if(msg.toLowerCase().indexOf('javascript:') == 0) { 
+			var fn = msg.split(':')[1];
+			fn = fn.split('(')[0];
+			window[fn].call();
+			return false;		
+		}
 		var iconType = window[this._hostComponentId + '_DlgObj']._iconType(image);
 		var imageHTML = window[this._hostComponentId + '_DlgObj']._getImageHTML(image,iconType);
 		msg = '<div style="padding: 10px;" >' + imageHTML + msg + '<br style="clear: both;" /></div>';
@@ -9097,7 +12316,7 @@ $u.o.assign(A5.ListBox.prototype,
 }
 )
 //End section - Add methods to List prototype
-DLG1_DlgObj._listControls = ['LIST_ALL_PRODUCTS','LIST_CARRITO']
+DLG1_DlgObj._listControls = ['LIST_ALL_PRODUCTS','LIST_CARRITO','LIST_DETALLE_COMPRAS','LIST_TARJETAS_USUARIO','LIST_SELECT_CARD']
 DLG1_DlgObj._localStorageSettings = {namespace: 'ALPHA_8a12d8105f7c4293a42e381214ae7f52',friendlyName: '',description: '',persistVariableValues: false,__version: 1,persistComponentState: false,workingPreviewTestingFolder: '',restore: {variables: false,data: false,state: false},compressData: false,minify: false,variablesToNotPersist: '',workingPreviewTestingMode: 'Browser',compressListData: false}
 ;
 DLG1_DlgObj.__r = []
@@ -9108,13 +12327,29 @@ DLG1_DlgObj.styleVersion = 3
 DLG1_DlgObj.framesInfo = {
 };
 DLG1_DlgObj._noPersist = []
-DLG1_DlgObj._ssdecimal = ',';
+DLG1_DlgObj._ssdecimal = '.';
 $u.decimal = '.';
 $u.comma = ',';
 DLG1_DlgObj._mobilePreview = false;
 DLG1_DlgObj._modernFrames = {};
 ;
 ;
+
+$e.add('DLG1.V.R1.LOGIN_BUTTON',A5.d.evnts.click,function(e) {
+DLG1_DlgObj.login()
+},this,false,'DLG1.V.R1.LOGIN_BUTTON');
+
+$e.add('DLG1.V.R1.LOGOUT_BUTTON',A5.d.evnts.click,function(e) {
+DLG1_DlgObj.logout();
+},this,false,'DLG1.V.R1.LOGOUT_BUTTON');
+
+
+$e.add('DLG1.V.R1.LOGOUT_TEST',A5.d.evnts.click,function(e) {
+DLG1_DlgObj.logout();
+},this,false,'DLG1.V.R1.LOGOUT_TEST');
+
+
+
 
 $e.add('DLG1.V.R1.IMAGE_2',A5.d.evnts.click,function(e) {
 DLG1_DlgObj.showContainerWindow(this,'WINDOW_1');
@@ -9123,28 +12358,15 @@ DLG1_DlgObj.showContainerWindow(this,'WINDOW_1');
 $e.add('DLG1.V.R1.IMAGE_2','touchstart',function(e) {$e.preventDefault(e);});
 
 
+$e.add('DLG1.V.R1.IMAGE_3',A5.d.evnts.click,function(e) {
+console.log(DLG1_DlgObj.getValue('UserName'));
+},this,false,'DLG1.V.R1.IMAGE_3');
 
-
+$e.add('DLG1.V.R1.IMAGE_3','touchstart',function(e) {$e.preventDefault(e);});
 
 
 $e.add('DLG1.V.R1.IMAGE_4',A5.d.evnts.click,function(e) {
-var cart = JSON.parse(localStorage.getItem('cart'));
-if(cart === undefined || cart ==="" || cart==="{}"){
-	return;
-}else{
-
-	var objCarrito = DLG1_DlgObj.getControl('LIST_CARRITO');
-	objCarrito.populate(cart.items);
-	
-	var countTotalProducts = countTotalProductsInCart();
-	var sumTotalProducts = sumTotalProductsInCart();
-	
-	
-	document.getElementById('MAIN.V.R1.STATICTEXT_COUNTPRODUCTS').innerHTML = countTotalProducts;
-	document.getElementById('MAIN.V.R1.STATICTEXT_SUBTOTAL').innerHTML = sumTotalProducts;
-	document.getElementById('MAIN.V.R1.STATICTEXT_TOTAL').innerHTML = sumTotalProducts;
-	DLG1_DlgObj.panelSetActive('PANELCARD_4');
-}
+populateShoppingCartPanel();
 },this,false,'DLG1.V.R1.IMAGE_4');
 
 $e.add('DLG1.V.R1.IMAGE_4','touchstart',function(e) {$e.preventDefault(e);});
@@ -9180,11 +12402,40 @@ app.addToCart(id_producto);
 
 
 
-
 $e.add('DLG1.V.R1.BUTTON_2',A5.d.evnts.click,function(e) {
-DLG1_DlgObj.ajaxCallback('','','transbank','');
-DLG1_DlgObj.panelSetActive('PANELCARD_5');
+var datacart = getDataCart();
+DLG1_DlgObj.refreshListData('LIST_SELECT_CARD');
+DLG1_DlgObj.showContainerWindow(this,'WINDOW_2');
 },this,false,'DLG1.V.R1.BUTTON_2');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$e.add('DLG1.V.R1.BUTTON_6',A5.d.evnts.click,function(e) {
+DLG1_DlgObj.ajaxCallback('','','oneclick','');
+DLG1_DlgObj.panelSetActive('PANELCARD_9');
+},this,false,'DLG1.V.R1.BUTTON_6');
 
 DLG1_DlgObj.prepare();DLG1_DlgObj.populate(DLG1_DlgObj.originalValues[0]);
 DLG1_DlgObj._fireWatches(1);
@@ -9193,6 +12444,15 @@ DLG1_DlgObj._fireWatches(1);
 if(!A5.flags.isMobile) $e.add(window,'resize',DLG1_DlgObj._functions.calcOrientation,null,false,'DLG1.DIALOG');
 else $e.add(window,'orientationchange',DLG1_DlgObj._orientationChangeHandler,DLG1_DlgObj,true,'DLG1.DIALOG');
 DLG1_DlgObj._functions.calcOrientation();
+
+;
+
+
+
+
+
+
+
 
 
 
@@ -9219,7 +12479,7 @@ if(listObj) listObj._state.pageCount = 1;
 if(listObj) listObj._state.pageSize = 20;
 if(listObj) {var ele = $('DLG1.LIST_ALL_PRODUCTS.RECORDCOUNT'); if(ele) ele.innerHTML = listObj._state.recordCountFormatted;};
 if(listObj) listObj._state.paginated = false;
-
+if(listObj) listObj._state._optimizedJSON = true;
 if(listObj) listObj._state.filter = '';
 if(listObj) listObj._state.having = '';
 if(listObj) listObj._state.order = '';
@@ -9260,7 +12520,6 @@ if(listObj._refreshStateMessages) listObj._refreshStateMessages();
 
 
 
-
 var listObj = DLG1_DlgObj.getControl('LIST_CARRITO');
 if(listObj) listObj._state.recordCount = 1;
 if(listObj) listObj._state.recordCountFormatted = '1';
@@ -9269,7 +12528,7 @@ if(listObj) listObj._state.pageCount = 1;
 if(listObj) listObj._state.pageSize = 20;
 if(listObj) {var ele = $('DLG1.LIST_CARRITO.RECORDCOUNT'); if(ele) ele.innerHTML = listObj._state.recordCountFormatted;};
 if(listObj) listObj._state.paginated = false;
-
+if(listObj) listObj._state._optimizedJSON = true;
 if(listObj) listObj._state.filter = '';
 if(listObj) listObj._state.having = '';
 if(listObj) listObj._state.order = '';
@@ -9294,6 +12553,139 @@ if(listObj._refreshStateMessages) listObj._refreshStateMessages();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var listObj = DLG1_DlgObj.getControl('LIST_DETALLE_COMPRAS');
+if(listObj) listObj._state.recordCount = 5;
+if(listObj) listObj._state.recordCountFormatted = '5';
+if(listObj) listObj._state.lastBreakValue = '<None>';
+if(listObj) listObj._state.pageCount = 1;
+if(listObj) listObj._state.pageSize = 20;
+if(listObj) {var ele = $('DLG1.LIST_DETALLE_COMPRAS.RECORDCOUNT'); if(ele) ele.innerHTML = listObj._state.recordCountFormatted;};
+if(listObj) listObj._state.paginated = false;
+if(listObj) listObj._state._optimizedJSON = true;
+if(listObj) listObj._state.filter = '';
+if(listObj) listObj._state.having = '';
+if(listObj) listObj._state.order = '';
+if(listObj) listObj._state.filterParameters = '';
+if(listObj) listObj._state.highlight = {  };
+if(listObj) listObj._state.whereClause = '';
+if(listObj) listObj._state.whereParameters = '';
+		
+		var flagPersist = false;
+		if(typeof listObj._flagPersistDataOK != 'undefined') { 
+			if(listObj._flagPersistDataOK) { 
+				var data = listObj._data;
+				listObj.persistToStorage({mode:'populate', data: data, submode: 'ListViewData'});
+			}
+		}
+		
+		
+;
+if(listObj) listObj._state.pageCount = 1;
+DLG1_DlgObj._list_executeEvent('LIST_DETALLE_COMPRAS','afterRenderComplete',{});
+
+if(listObj._refreshStateMessages) listObj._refreshStateMessages();
+
+
+
+
+var listObj = DLG1_DlgObj.getControl('LIST_TARJETAS_USUARIO');
+if(listObj) listObj._state.recordCount = 2;
+if(listObj) listObj._state.recordCountFormatted = '2';
+if(listObj) listObj._state.lastBreakValue = '<None>';
+if(listObj) listObj._state.pageCount = 1;
+if(listObj) listObj._state.pageSize = 20;
+if(listObj) {var ele = $('DLG1.LIST_TARJETAS_USUARIO.RECORDCOUNT'); if(ele) ele.innerHTML = listObj._state.recordCountFormatted;};
+if(listObj) listObj._state.paginated = false;
+if(listObj) listObj._state._optimizedJSON = true;
+if(listObj) listObj._state.filter = '';
+if(listObj) listObj._state.having = '';
+if(listObj) listObj._state.order = '';
+if(listObj) listObj._state.filterParameters = '';
+if(listObj) listObj._state.highlight = {  };
+if(listObj) listObj._state.whereClause = 'car.estado = 1';
+if(listObj) listObj._state.whereParameters = '';
+		
+		var flagPersist = false;
+		if(typeof listObj._flagPersistDataOK != 'undefined') { 
+			if(listObj._flagPersistDataOK) { 
+				var data = listObj._data;
+				listObj.persistToStorage({mode:'populate', data: data, submode: 'ListViewData'});
+			}
+		}
+		
+		
+;
+if(listObj) listObj._state.pageCount = 1;
+DLG1_DlgObj._list_executeEvent('LIST_TARJETAS_USUARIO','afterRenderComplete',{});
+
+if(listObj._refreshStateMessages) listObj._refreshStateMessages();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var listObj = DLG1_DlgObj.getControl('LIST_SELECT_CARD');
+if(listObj) listObj._state.recordCount = 2;
+if(listObj) listObj._state.recordCountFormatted = '2';
+if(listObj) listObj._state.lastBreakValue = '<None>';
+if(listObj) listObj._state.pageCount = 1;
+if(listObj) listObj._state.pageSize = 20;
+if(listObj) {var ele = $('DLG1.LIST_SELECT_CARD.RECORDCOUNT'); if(ele) ele.innerHTML = listObj._state.recordCountFormatted;};
+if(listObj) listObj._state.paginated = false;
+if(listObj) listObj._state._optimizedJSON = true;
+if(listObj) listObj._state.filter = '';
+if(listObj) listObj._state.having = '';
+if(listObj) listObj._state.order = '';
+if(listObj) listObj._state.filterParameters = '';
+if(listObj) listObj._state.highlight = {  };
+if(listObj) listObj._state.whereClause = 'car.estado = 1';
+if(listObj) listObj._state.whereParameters = '';
+		
+		var flagPersist = false;
+		if(typeof listObj._flagPersistDataOK != 'undefined') { 
+			if(listObj._flagPersistDataOK) { 
+				var data = listObj._data;
+				listObj.persistToStorage({mode:'populate', data: data, submode: 'ListViewData'});
+			}
+		}
+		
+		
+;
+if(listObj) listObj._state.pageCount = 1;
+DLG1_DlgObj._list_executeEvent('LIST_SELECT_CARD','afterRenderComplete',{});
+
+if(listObj._refreshStateMessages) listObj._refreshStateMessages();
 
 
 
@@ -9359,6 +12751,7 @@ setTimeout(function() {
 	}
 
  },1);
+;
 
 var o2 = 'portrait';
 if(window.innerHeight < window.innerWidth) o2 = 'landscape';

@@ -109,3 +109,8 @@
 <maxUploadSizeMB=100>
 <sessionTimeout=15>
 >
+<authenticationKeys<tableType="SQL">
+<connectionString="">
+<tableName="">
+<fieldmap="">
+>
